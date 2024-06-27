@@ -1,8 +1,9 @@
 import Container from '@/app/ui/container'
 import Card from '@/app/ui/card'
 import Link from 'next/link'
+import Subscribe from '@/app/ui//subscribe'
 
-export default function Home() {
+export default function Page() {
   return (
     <Container>
       <main>
@@ -19,7 +20,8 @@ export default function Home() {
             <p>
               <strong>Summer 2024:</strong> 
             </p>
-            <p>Everything you need to craft your dream borb, with
+            <p>
+              Everything you need to craft your dream borb, with
               a QR code to an exclusive <Link href="/learn">tutorial</Link>.
             </p>
           </Card>
@@ -27,14 +29,15 @@ export default function Home() {
             cardBackground = "paper"
             headerBackground = "fern"
             headerColor = "white"
-            headerText = "Pre-made Borbs"
+            headerText = "Full Borbs"
             img = "/shop/shop_card_handmade_borb.png"
             alt = "Pair of needle-felted Palestine sunbirds sculpted in borb style, displayed on a keffiyeh."
           >
             <p>
               <strong>Summer/Fall 2024:</strong> 
             </p>
-            <p> Not the crafty type, but love borbs? We'll have borbs fancying a flight to your door.
+            <p> 
+              Not the crafty type, but love borbs? We'll have finished borbs fancying a flight to your door.
             </p>
           </Card>
           <Card
@@ -48,7 +51,8 @@ export default function Home() {
             <p>
               <strong>Summer/Fall 2024:</strong> 
             </p>
-            <p>Fantasies sculpted or painted with wool -- custom orders accepted.
+            <p>
+              Fantasies sculpted or painted with wool -- custom orders accepted.
             </p>
           </Card>
           <Card
@@ -62,13 +66,12 @@ export default function Home() {
             <p>
               <strong>Fall 2024:</strong> 
             </p>
-            <p> Your darling's face lovingly rendered in wool.
+            <p> 
+              Your darling cat or dog's face lovingly rendered in wool. A keepsake for you or a gift for a friend.
             </p>
           </Card>
         </div>
-          <div className="text-center m-6 md:m-12">
-            <Link href="https://subscribepage.io/meadowreveries" target="_blank" className="text-2xl bg-milkweed text-black border border-paper hover:text-white hover:border-aster p-6 rounded">Subscribe For Updates</Link> 
-          </div>
+          <Subscribe />
       </main>
     </Container>
   );
