@@ -12,7 +12,8 @@ const config: Config = {
       aster: '#6C5579',
       black: '#000000',
       fern: '#627955',
-      milkweed: '#E4C4B0',
+      ladycardinal: '#E4C4B0',
+      milkweed: '#e6aba2',
       paper: '#f1f2ec',
       seed: '#683E28',
       white: '#ffffff'

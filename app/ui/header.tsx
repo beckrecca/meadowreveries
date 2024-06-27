@@ -23,7 +23,7 @@ export default function Header() {
 	          <Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-black mr-4">
 	            About
 	          </Link>
-	          <Link href="https://subscribepage.io/meadowreveries" className="block mt-4 lg:inline-block lg:mt-0 p-2 rounded text-black bg-milkweed hover:text-white" target="_blank">
+	          <Link href="https://subscribepage.io/meadowreveries" className="block mt-4 lg:inline-block lg:mt-0 p-2 rounded text-black bg-milkweed border border-seed hover:text-black hover:bg-ladycardinal hover:border-aster" target="_blank">
 	            Subscribe 
 	          </Link>
 	        </div>
