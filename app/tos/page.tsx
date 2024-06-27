@@ -5,7 +5,7 @@ export default function Page() {
     <Container>
       <h1>Terms of Service</h1>
       <h2>Agreement to our Terms</h2>
-      <p>We are Meadow Reveries ("Company," "we," "us," "our"), a company registered in Massachusetts, United States. </p>
+      <p>We are Meadow Reveries ("Company," "we," "us," "our"), a company operating in Belchertown, Massachusetts, United States. </p>
       <p>We operate the website http://www.meadowreveries.com (the "Site"), as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").</p>
       <p>You can contact us by email at <strong>hello@meadowreveries.com</strong>.</p>
       <p>These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Meadow Reveries, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</p>
@@ -35,7 +35,7 @@ of 18 are not permitted to use or register for the Services. </p>
        <p>We make every effort to display as accurately as possible the colors, features, specifications, and details of the products available on the Services. However, we do not guarantee that the colors, features, specifications, and details of the products will be accurate, complete, reliable, current, or free of other errors, and your electronic display may not accurately reflect the actual colors and details of the products. All products are subject to availability, and we cannot guarantee that items will be in stock. We reserve the right to discontinue any products at any time for any reason. Prices for all products are subject to change.</p>
        <h2>Purchases and Payment</h2>
        <p>We accept the following forms of payment:</p>
-       <ul>
+       <ul className="p-2 list-disc">
         <li>Visa</li>
         <li>Mastercard</li>
         <li>American Express</li>
