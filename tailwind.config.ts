@@ -12,13 +12,15 @@ const config: Config = {
       aster: '#6C5579',
       black: '#000000',
       fern: '#627955',
-      paper: '#f1f2ecff',
+      milkweed: '#E4C4B0',
+      paper: '#f1f2ec',
+      seed: '#683E28',
       white: '#ffffff'
     }
   },
   extend: {
     backgroundImage: {
-      'main': "url('../assets/img/bg-main.png')",
+      'main': "url('bg-main.png')",
     }
   },
   plugins: [],
