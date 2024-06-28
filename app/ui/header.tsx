@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import {useState} from 'react';
+import Nav from '@/app/ui/nav'
+import { useState } from 'react';
 
 export default function Header() {
 	const [toggle, setToggle] = useState("hidden");
@@ -30,15 +31,7 @@ export default function Header() {
 	      	</div>
 	      	<div className={'w-full ' + toggle + ' lg:block flex-grow lg:flex lg:items-center lg:w-auto'}>
 	        	<div className="lg:flex-grow lg:text-right">
-		          	<Link href="/shop" className="block mt-4 lg:inline-block lg:mt-0 text-black mr-4">
-		            Shop
-		          	</Link>
-		          	<Link href="/learn" className="block mt-4 lg:inline-block lg:mt-0 text-black mr-4">
-		            Learn
-		          	</Link>
-		          	<Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-black mr-4">
-		            About
-		          	</Link>
+		          	<Nav />
 		          	<Link href="https://subscribepage.io/meadowreveries" className="block mt-4 lg:inline-block lg:mt-0 p-2 rounded text-black bg-milkweed border border-seed hover:text-black hover:bg-ladycardinal hover:border-aster max-w-fit" target="_blank">
 		            Subscribe 
 		          	</Link>

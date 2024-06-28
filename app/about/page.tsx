@@ -3,6 +3,7 @@ import Container from '@/app/ui/container'
 export default function Page() {
   return (
     <Container>
+      <h2>About Us</h2>
         <img 
           className = "md:float-right mx-4 rounded"
           src="/about/about_artist.jpg" 
@@ -38,7 +39,10 @@ export default function Page() {
         We aspire to feed your daydreams with our needle-felted celebrations of the Meadows,
         with special attention to its bird population. <em>Borbs</em> - very round birds,
         even <a href="https://www.audubon.org/news/whats-difference-between-borb-and-floof" target="_blank">studied by the Audubon society</a> - are a perfect point of entry to the relaxing
-        art of needle-felting. We'll grow and offer more as you dream, too.
+        art of needle-felting.
+      </p>
+      <p>
+        We'll grow and offer more as you dream with us, too.
       </p>
     </Container>
     );
