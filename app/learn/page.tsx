@@ -20,10 +20,7 @@ export default function Page() {
               <strong>Summer 2024:</strong> 
             </p>
             <p>
-              What is needle felting anyway? How does it work? How do you shape wool with a needle?
-            </p>
-            <p>
-              Basic tutorial content available for all.
+              Basic tutorial content available for all: What is needle felting anyway? How does it work? How do you shape wool with a needle?
             </p>
           </Card>
           <Card
