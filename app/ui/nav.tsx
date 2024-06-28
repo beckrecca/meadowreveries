@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Navlinks from '@/app/ui/navlinks'
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/app/ui/nav'
 import { useState } from 'react';
@@ -19,7 +20,12 @@ export default function Header() {
 	return (
 		<nav className="flex items-center justify-between flex-wrap bg-paper p-6">
 	      	<div className="flex items-center flex-shrink-0 mr-6">
-	        	<img className="fill-current mr-6" src="/meadow_reveries_sheep.png" alt="Cartoon depiction of a leaping sheep."/>
+	        	<Image 
+	        		className="fill-current mr-6" src="/meadow_reveries_sheep.png" 
+	        		alt="Cartoon depiction of a leaping sheep."
+	        		height="36"
+	        		width="46"
+	        	/>
 	        	<Link className="font-semibold text-xl tracking-wide uppercase text-black" href="/">Meadow Reveries</Link>
 	      	</div>
 	      	<div className="lg:hidden block">
