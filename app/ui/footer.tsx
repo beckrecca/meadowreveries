@@ -13,7 +13,7 @@ export default function Footer() {
 				<Link href="/tos/privacy">Privacy Policy</Link>
 			</div>
 			<div className="flex justify-center items-center">
-				<span>🍪 This website doesn't use cookies because I scream every time I have to dismiss another cookie banner, but you may encounter them via <Link href="https://snipcart.com/terms-of-service">Snipcart</Link> if you buy an item from the shop.</span> 
+				<span>🍪 This website doesn't use cookies because I scream every time I have to dismiss another cookie banner, but shoppers may encounter them via <Link href="https://snipcart.com/terms-of-service">Snipcart</Link>.</span> 
 			</div>
 		</footer>
 		</>
