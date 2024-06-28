@@ -1,4 +1,3 @@
-import { AppProps } from 'next/app';
 import Image from 'next/image';
 
 export default function Card({
@@ -9,7 +8,7 @@ export default function Card({
 	img = "/card_default.png",
 	alt = "Image description",
 	children
-}: AppProps ) {
+}) {
 	return (
 		<div className={"bg-" + cardBackground + ' p-6 ml-10 my-6 rounded max-w-96'}>
 			<div className={"bg-" + headerBackground + ' text-' + headerColor + ' rounded-t p-2'}>
