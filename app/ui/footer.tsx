@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -5,7 +6,12 @@ export default function Footer() {
 		<>
 		<footer className="bg-paper p-6 text-sm">
 			<div className="flex justify-center items-center">
-				<img src="/meadow_reveries_flowers.png" alt="Decorative cartoon depiction of wildflowers."/>
+				<Image 
+					src="/meadow_reveries_flowers.png" 
+					alt="Decorative cartoon depiction of wildflowers."
+					width="287"
+					height="132"
+				/>
 			</div>
 			<div className="flex justify-center items-center p-4">
 				<span className="mr-4">Copyright <Link href="https://www.beckrecca.me" target="_blank">Rebecca Doris</Link> 2024</span>

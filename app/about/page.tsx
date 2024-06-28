@@ -1,13 +1,16 @@
+import Image from 'next/image';
 import Container from '@/app/ui/container'
 
 export default function Page() {
   return (
     <Container>
       <h2>About Us</h2>
-        <img 
+        <Image 
           className = "md:float-right mx-4 rounded"
           src="/about/about_artist.jpg" 
           alt="Rebecca Doris stands in the meadows with a sunset in the background, facing the camera and smiling laughing." 
+          width="336"
+          height="300"
         />
       <p>
         In rural-suburban Pioneer Valley, Massachusetts, former hayfields offer sustenance and 
