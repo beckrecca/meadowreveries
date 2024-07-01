@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import Container from '@/app/ui/container'
+import Container from '@/app/ui/container';
+import Subscribeform from '@/app/ui/subscribeform';
 
 export default function Page() {
   return (
@@ -47,6 +48,7 @@ export default function Page() {
       <p>
         We'll grow and offer more as you dream with us, too.
       </p>
+      <Subscribeform />
     </Container>
     );
 }
