@@ -26,7 +26,7 @@ export default function Header() {
 	        		height="36"
 	        		width="46"
 	        	/>
-	        	<Link className="font-semibold text-xl tracking-wide uppercase text-black" href="/">Meadow Reveries</Link>
+	        	<a className="font-semibold text-xl tracking-wide uppercase text-black" href="/">Meadow Reveries</a>
 	      	</div>
 	      	<div className="lg:hidden block">
 	        	<button className="flex items-center px-3 py-2 border rounded text-black border-black hover:text-fern hover:border-fern"

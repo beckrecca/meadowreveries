@@ -1,7 +1,7 @@
-import Container from '@/app/ui/container'
-import Card from '@/app/ui/card'
-import Link from 'next/link'
-import Subscribe from '@/app/ui//subscribe'
+import Container from '@/app/ui/container';
+import Card from '@/app/ui/card';
+import Link from 'next/link';
+import Subscribeform from '@/app/ui//subscribeform';
 
 export default function Page() {
   return (
@@ -71,7 +71,7 @@ export default function Page() {
             </p>
           </Card>
         </div>
-          <Subscribe />
+          <Subscribeform />
       </main>
     </Container>
   );
