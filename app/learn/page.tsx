@@ -8,7 +8,7 @@ export default function Page() {
     <Container>
       <main>
         <h2 className="text-center text-aster text-2xl">Coming Soon</h2>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap sm:mx-auto">
           <Card
             cardBackground = "paper"
             headerBackground = "ladycardinal"

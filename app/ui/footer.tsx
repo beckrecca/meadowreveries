@@ -13,7 +13,15 @@ export default function Footer() {
 					height="132"
 				/>
 			</div>
-			<div className="flex justify-center items-center p-4">
+			<div className="flex justify-center items-center p-4"> 
+				<Link className="mr-4" href="https://www.instagram.com/meadowreveries" target="_blank">
+					<Image
+						src="/instagram.png"
+						alt="Follow us on Instagram"
+						width="20"
+						height="20"
+					/>
+				</Link>
 				<span className="mr-4">Copyright <Link href="https://www.beckrecca.me" target="_blank">Rebecca Doris</Link> 2024</span>
 				<Link className="mr-4" href="/tos">Terms of Service</Link>
 				<Link href="/tos/privacy">Privacy Policy</Link>

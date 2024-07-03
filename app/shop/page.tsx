@@ -18,7 +18,7 @@ export default function Page() {
             alt = "Rolls of beautiful roving wool in shades of grey, black, yellow and rusty orange."
           >
             <p>
-              <strong>Summer 2024:</strong> 
+              <strong>July-August 2024:</strong> 
             </p>
             <p>
               Everything you need to craft your dream borb, with
@@ -34,7 +34,7 @@ export default function Page() {
             alt = "Pair of needle-felted Palestine sunbirds sculpted in borb style, displayed on a keffiyeh."
           >
             <p>
-              <strong>Summer/Fall 2024:</strong> 
+              <strong>August-September 2024:</strong> 
             </p>
             <p> 
               Not the crafty type, but love borbs? We'll have finished borbs fancying a flight to your door.
@@ -49,7 +49,7 @@ export default function Page() {
             alt = "2D needle felted depiction of two geese watching a meteor pass in the night sky above."
           >
             <p>
-              <strong>Summer/Fall 2024:</strong> 
+              <strong>August-September 2024:</strong> 
             </p>
             <p>
               Fantasies sculpted or painted with wool -- custom orders accepted.

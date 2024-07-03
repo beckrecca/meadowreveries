@@ -5,7 +5,10 @@ import Subscribeform from '@/app/ui/subscribeform';
 export default function Page() {
   return (
     <Container>
-      <h2>About Us</h2>
+      <h2>Contact Us</h2>
+      <p>Email us at <span className="font-bold">hello@meadowreveries.com</span> or 
+      follow us on <a href="https://www.instagram.com/meadowreveries" target="_blank">Instagram</a>.</p>
+      <h2>Inspiration</h2>
         <Image 
           className = "md:float-right mx-4 rounded"
           src="/about/about_artist.jpg" 
@@ -17,8 +20,7 @@ export default function Page() {
         In rural-suburban Pioneer Valley, Massachusetts, former hayfields offer sustenance and 
         shelter to wildlife and pollinators, and respite to neighboring residents as a public
         conservation area. 
-        Surrounded by 
-        pine-dominant woods, the Meadows share borders with a vernal pool and wetland areas. 
+        Surrounded by pine-dominant woods, the Meadows share borders with a vernal pool and wetland areas. 
 
         Birds, rabbits, deer, coyote, black bears, foxes, possums, and even a river otter tread this
         habitat. In summer, it grows tall and attracts many bees,
@@ -40,13 +42,8 @@ export default function Page() {
         If bees are few.
       </blockquote>
       <p>
-        We aspire to feed your daydreams with our needle-felted celebrations of the Meadows,
-        with special attention to its bird population. <em>Borbs</em> - very round birds,
-        even <a href="https://www.audubon.org/news/whats-difference-between-borb-and-floof" target="_blank">studied by the Audubon society</a> - are a perfect point of entry to the relaxing
-        art of needle-felting.
-      </p>
-      <p>
-        We'll grow and offer more as you dream with us, too.
+        Our ramblings in the Meadows influence our fiber art, especially the bird population.
+        May our needle-felted daydreams transport you to a happy place, too.
       </p>
       <Subscribeform />
     </Container>
