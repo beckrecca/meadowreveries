@@ -1,6 +1,6 @@
 export default function Subscribeform() {
 	return (
-		<div className="bg-paper w-10/12 md:w-1/2 p-4 sm:ml-10 md:mx-auto rounded">
+		<div className="bg-paper w-10/12 md:w-1/2 p-4 mx-auto rounded">
           <div className="bg-goldenrod p-2 rounded">
             <h2 className="my-2 text-center text-2xl"><strong>We're still growing!</strong></h2>
           </div>
