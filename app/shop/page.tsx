@@ -1,7 +1,6 @@
 import Container from '@/app/ui/container';
 import Card from '@/app/ui/card';
-import Link from 'next/link';
-import Subscribeform from '@/app/ui//subscribeform';
+import Subscribecard from '@/app/ui/subscribecard';
 
 export default function Page() {
   return (
@@ -22,7 +21,7 @@ export default function Page() {
             </p>
             <p>
               Everything you need to craft your dream borb, with
-              a QR code to an exclusive <Link href="/learn">tutorial</Link>.
+              a QR code to an exclusive <a href="/learn">tutorial</a>.
             </p>
           </Card>
           <Card
@@ -49,7 +48,7 @@ export default function Page() {
             alt = "2D needle felted depiction of two geese watching a meteor pass in the night sky above."
           >
             <p>
-              <strong>August-September 2024:</strong> 
+              <strong>August 2024:</strong> 
             </p>
             <p>
               Fantasies sculpted or painted with wool -- custom orders accepted.
@@ -69,9 +68,9 @@ export default function Page() {
             <p> 
               Your darling cat or dog's face lovingly rendered in wool. A keepsake for you or a gift for a friend.
             </p>
-          </Card>
+            </Card>
         </div>
-          <Subscribeform />
+        <Subscribecard />
       </main>
     </Container>
   );

@@ -10,7 +10,7 @@ export default function Card({
 	children
 }) {
 	return (
-		<div className={"bg-" + cardBackground + ' p-6 ml-10 my-6 rounded max-w-96'}>
+		<div className={"bg-" + cardBackground + ' p-6 ml-10 my-2 md:my-6 rounded max-w-96'}>
 			<div className={"bg-" + headerBackground + ' text-' + headerColor + ' rounded-t p-2'}>
 				<h2 className="normal-case text-center">{headerText}</h2>
 			</div>

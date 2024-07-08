@@ -1,7 +1,6 @@
 import Container from '@/app/ui/container';
 import Card from '@/app/ui/card';
-import Link from 'next/link';
-import Subscribeform from '@/app/ui//subscribeform';
+import Subscribecard from '@/app/ui/subscribecard';
 
 export default function Page() {
   return (
@@ -34,11 +33,11 @@ export default function Page() {
               <strong>Summer 2024:</strong> 
             </p>
             <p> 
-              Purchase a borb crafting kit from our <Link href="/shop">Shop</Link>, and we'll email you an exclusive link with all the instructions you need, and include a QR code in your kit too.
+              Purchase a borb crafting kit from our <a href="/shop">Shop</a>, and we'll email you an exclusive link with all the instructions you need, and include a QR code in your kit too.
             </p>
           </Card>
         </div>
-          <Subscribeform />
+        <Subscribecard />
       </main>
     </Container>
   );
