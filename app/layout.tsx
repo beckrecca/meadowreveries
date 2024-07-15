@@ -29,6 +29,7 @@ export default function RootLayout({
           }}
         />
         <Script 
+          id="snipcart"
           dangerouslySetInnerHTML={{
             __html: `
               window.SnipcartSettings = {
