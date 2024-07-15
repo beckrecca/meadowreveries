@@ -16,7 +16,7 @@ export default function Page() {
             alt = "Above a wool felting mat, a left hand holds a borb base shape in white wool, and a right hand holds a completed needle-felted chickadee borb sculpter. In the background, partially obscured needle-felted rabbit, bluebird and squirrel watch."
           >
             <p>
-              <strong>Summer 2024:</strong> 
+              <strong>August 2024</strong> 
             </p>
             <p>
               Basic tutorial content available for all: What is needle felting anyway? How does it work? How do you shape wool with a needle?
@@ -30,7 +30,7 @@ export default function Page() {
             alt = "An incomplete needle-felted American robin has a white spot of wool attached to its face's eye place with a felting needle."
           >
             <p>
-              <strong>Summer 2024:</strong> 
+              <strong>September 2024</strong> 
             </p>
             <p> 
               Purchase a borb crafting kit from our <a href="/shop">Shop</a>, and we'll email you an exclusive link with all the instructions you need, and include a QR code in your kit too.

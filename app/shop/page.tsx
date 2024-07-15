@@ -11,44 +11,13 @@ export default function Page() {
           <Card
             cardBackground = "paper"
             headerBackground = "fern"
-            headerColor = "white"
-            headerText = "Borb Kits"
-            img = "/shop/shop_card_crafting_kit.png"
-            alt = "Rolls of beautiful roving wool in shades of grey, black, yellow and rusty orange."
-          >
-            <p>
-              <strong>July-August 2024:</strong> 
-            </p>
-            <p>
-              Everything you need to craft your dream borb, with
-              a QR code to an exclusive <a href="/learn">tutorial</a>.
-            </p>
-          </Card>
-          <Card
-            cardBackground = "paper"
-            headerBackground = "fern"
-            headerColor = "white"
-            headerText = "Full Borbs"
-            img = "/shop/shop_card_handmade_borb.png"
-            alt = "Pair of needle-felted Palestine sunbirds sculpted in borb style, displayed on a keffiyeh."
-          >
-            <p>
-              <strong>August-September 2024:</strong> 
-            </p>
-            <p> 
-              Not the crafty type, but love borbs? We'll have finished borbs fancying a flight to your door.
-            </p>
-          </Card>
-          <Card
-            cardBackground = "paper"
-            headerBackground = "fern"
             headerColor  = "white"
             headerText = "Original Pieces"
             img = "/shop/shop_card_original.png"
             alt = "2D needle felted depiction of two geese watching a meteor pass in the night sky above."
           >
             <p>
-              <strong>August 2024:</strong> 
+              <strong>August 2024</strong> 
             </p>
             <p>
               Fantasies sculpted or painted with wool -- custom orders accepted.
@@ -63,12 +32,43 @@ export default function Page() {
             alt = "2D needle felted depiction of the smiley face of Sylvie the yorkie poodle mix."
           >
             <p>
-              <strong>Fall 2024:</strong> 
+              <strong>August 2024</strong> 
             </p>
             <p> 
               Your darling cat or dog's face lovingly rendered in wool. A keepsake for you or a gift for a friend.
             </p>
-            </Card>
+          </Card>
+          <Card
+            cardBackground = "paper"
+            headerBackground = "fern"
+            headerColor = "white"
+            headerText = "Full Borbs"
+            img = "/shop/shop_card_handmade_borb.png"
+            alt = "Pair of needle-felted Palestine sunbirds sculpted in borb style, displayed on a keffiyeh."
+          >
+            <p>
+              <strong>August 2024</strong> 
+            </p>
+            <p> 
+              Not the crafty type, but love borbs? We'll have finished borbs fancying a flight to your door.
+            </p>
+          </Card>
+          <Card
+            cardBackground = "paper"
+            headerBackground = "fern"
+            headerColor = "white"
+            headerText = "Borb Kits"
+            img = "/shop/shop_card_crafting_kit.png"
+            alt = "Rolls of beautiful roving wool in shades of grey, black, yellow and rusty orange."
+          >
+            <p>
+              <strong>September 2024</strong> 
+            </p>
+            <p>
+              Everything you need to craft your dream borb, with
+              a QR code to an exclusive <a href="/learn">tutorial</a>.
+            </p>
+          </Card>
         </div>
         <Subscribecard />
       </main>
