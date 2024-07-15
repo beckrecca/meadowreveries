@@ -1,3 +1,9 @@
+import Container from '@/app/ui/container';
+
 export default function Page() {
-  return <p>This is a handmade shop page!</p>;
+  return (
+    <Container>
+      <h2>Handmade products</h2>
+    </Container>
+    );
 }
