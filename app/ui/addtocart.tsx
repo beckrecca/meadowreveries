@@ -1,5 +1,5 @@
 export default function Addtocart({ item }) {
-	const itemURL = "/shop/" + item.id + "01.png";
+	const itemURL = "/shop/handmade/" + item.id
 
 	if (item.available == true) { // if this item is available
       if (item.custom1Name == "") { // if there's no custom metadata
