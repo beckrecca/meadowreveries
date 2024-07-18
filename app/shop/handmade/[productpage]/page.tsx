@@ -15,6 +15,7 @@ export default function ProductPage({params: {productpage}}: { params: { product
     notFound()
   }
   const imgsrc = "/shop/" + item.id + "01.png";
+  const itemurl = "/shop/handmade/" + item.id;
 
   return (
     <Container>
@@ -32,7 +33,17 @@ export default function ProductPage({params: {productpage}}: { params: { product
         <ul className="text-lg">
           <li>${item.price} (USD)</li>
         </ul>
-        <button className="bg-milkweed text-black hover:bg-goldenrod mx-auto my-2 p-4 rounded font-bold w-48">Add to cart</button>
+        <button 
+          className="snipcart-add-item bg-milkweed text-black hover:bg-goldenrod mx-auto my-2 p-4 rounded font-bold w-48"
+          data-item-id={item.id}
+          data-item-url={itemurl}
+          data-item-price={item.price}
+          data-item-description={item.description}
+          data-item-image={imgsrc}
+          data-item-name={item.name}
+          >
+          Add to cart
+        </button>
         <div className="max-w-96 md:max-w-prose">
           <p>
             {item.description}
