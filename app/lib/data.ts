@@ -125,14 +125,14 @@ export async function fetchExampleImages() {
 
 export async function fetchImagesByProductID(id: string) {
 	try {
-		const data = await sql<Image>`
+		const images = await sql<Image>`
 			SELECT
 				images.file,
 				images.alt
 			FROM images
 			where images.productid = ${id};
 		`;
-		return data;
+		return images.rows;
 	}
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
