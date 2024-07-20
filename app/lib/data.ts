@@ -1,7 +1,7 @@
 import { sql } from '@vercel/postgres';
 import {
-  Products,
-  Images
+  Product,
+  Image
 } from './definitions';
 
 export async function fetchProducts() {
