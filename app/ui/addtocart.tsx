@@ -15,7 +15,7 @@ export default function Addtocart({ item }) {
             >
             Add to cart
           </button>
-        )
+        );
       }
       else if (item.custom1Type == "readonly") { // if there's readonly metadata
         return (
@@ -33,7 +33,7 @@ export default function Addtocart({ item }) {
             >
             Add to cart
           </button>
-        )
+        );
       }
       else if (item.custom1Options != "") { // if there are custom metadata options
         return (
@@ -55,7 +55,7 @@ export default function Addtocart({ item }) {
     }
     else {
       return (
-        <div className="text-aster font-bold p-4">Coming Soon.</div>
-      )
+        <div className="text-aster font-bold p-4">This item is unavailable.</div>
+      );
     }
 }
