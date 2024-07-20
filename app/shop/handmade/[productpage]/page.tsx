@@ -1,8 +1,11 @@
 import Container from '@/app/ui/container';
 import Addtocart from '@/app/ui/addtocart';
+import Link from 'next/link';
 import {notFound} from 'next/navigation';
-import Image from 'next/image';
-import { fetchHandmadeProducts } from '@/app/lib/data';
+import ProductImage from '@/app/ui/productimage'
+import { fetchHandmadeProducts,
+        fetchImagesByProductID} 
+        from '@/app/lib/data';
 
 export async function generateStaticParams() {
   const products = await fetchHandmadeProducts();
@@ -17,31 +20,31 @@ export default async function ProductPage({params: {productpage}}: { params: { p
   if (!product) {
     notFound()
   }
+  const images = await fetchImagesByProductID(product.id);
 
   return (
     <Container>
-      <div className="md:float-left mr-6 md:mb-10">
-        <Image
-          src={product.image}
-          alt={product.alt}
-          height="336"
-          width="336"
-          className="rounded"
-        />
-      </div>
+      <Link href="/shop/handmade" className="text-sm text-right">&lt;&lt; back to Shop</Link>
       <div>
-        <h2>{product.name}</h2>
-        <ul className="text-lg">
-          <li>${product.price} (USD)</li>
-        </ul>
-        <Addtocart item={product}/>
-        <div className="max-w-96 md:max-w-prose">
-          <p>
-            {product.description}
-          </p>
-          <p>
-            {product.dimensions}
-          </p>
+        <div className="md:float-left mr-6">
+          <ProductImage product={product} images={images}/>
+        </div>
+        <div>
+          <h2>{product.name}</h2>
+          <ul className="text-lg">
+            <li>${product.price} (USD)</li>
+          </ul>
+          <Addtocart item={product}/>
+          <div className="sm:max-w-[336px] md:max-w-prose">
+            <h3>About</h3>
+            <p>
+              {product.description}
+            </p>
+            <h3>Dimensions</h3>
+            <p>
+              {product.dimensions}
+            </p>
+          </div>
         </div>
       </div>
 
