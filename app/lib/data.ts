@@ -51,6 +51,28 @@ export async function fetchHandmadeProducts() {
 	}
 }
 
+export async function fetchListedHandmadeProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND products.producttype = 'handmade' AND products.unlisted = false
+			GROUP BY products.name, products.id
+			ORDER BY name ASC;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch products.');
+	}
+}
+
 export async function fetchExampleProducts() {
 	try {
 		const products = await sql<Product>`
@@ -58,6 +80,22 @@ export async function fetchExampleProducts() {
 				*
 			FROM products
 			where producttype = 'customExample';
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch products.');
+	}
+}
+
+export async function fetchDiyProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+				*
+			FROM products
+			where producttype = 'diy';
 		`;
 		return products.rows;
 	}
