@@ -40,7 +40,7 @@ export default function Header() {
 		          	<Nav />
 		          	<a href="#" className="snipcart-checkout block mt-4 lg:inline-block lg:mt-0 p-2 rounded text-black bg-milkweed border border-seed hover:text-black hover:bg-ladycardinal hover:border-aster max-w-fit" target="_blank">
 			            <Image 
-			            class="float-left pt-1"
+			            className="float-left pt-1"
 		        		src="/icons/shopping-cart.png" 
 		        		alt="Shopping Cart"
 		        		height="16"
