@@ -38,10 +38,16 @@ export default function Header() {
 	      	<div className={'w-full ' + toggle + ' lg:block flex-grow lg:flex lg:items-center lg:w-auto'}>
 	        	<div className="lg:flex-grow lg:text-right">
 		          	<Nav />
-		          	<Link href="https://subscribepage.io/meadowreveries" className="block mt-4 lg:inline-block lg:mt-0 p-2 rounded text-black bg-milkweed border border-seed hover:text-black hover:bg-ladycardinal hover:border-aster max-w-fit" target="_blank">
-		            Subscribe 
-		          	</Link>
-		          	<a href="#" className="snipcart-checkout block mt-4 lg:inline-block lg:mt-0 p-2">Cart</a>
+		          	<a href="#" className="snipcart-checkout block mt-4 lg:inline-block lg:mt-0 p-2 rounded text-black bg-milkweed border border-seed hover:text-black hover:bg-ladycardinal hover:border-aster max-w-fit" target="_blank">
+			            <Image 
+			            className="float-left pt-1"
+		        		src="/icons/shopping-cart.png" 
+		        		alt="Shopping Cart"
+		        		height="16"
+		        		width="16"
+		        		/> 
+		        		&nbsp; Cart
+		          	</a>
 		        </div>
 			</div>
 	    </nav>
