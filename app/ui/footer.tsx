@@ -16,7 +16,7 @@ export default function Footer() {
 			<div className="flex justify-center items-center p-4"> 
 				<Link className="mr-4" href="https://www.instagram.com/meadowreveries" target="_blank">
 					<Image
-						src="/instagram.png"
+						src="/icons/instagram.png"
 						alt="Follow us on Instagram"
 						width="20"
 						height="20"
