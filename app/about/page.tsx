@@ -1,51 +1,64 @@
 import Image from 'next/image';
 import Container from '@/app/ui/container';
+import ExternalLink from '@/app/ui/externallink';
 import Subscribeform from '@/app/ui/subscribeform';
 
 export default function Page() {
   return (
     <Container>
-      <h2>Contact Us</h2>
-      <p>Email us at <span className="font-bold">hello@meadowreveries.com</span> or 
-      follow us on <a href="https://www.instagram.com/meadowreveries" target="_blank">Instagram</a>.</p>
-      <h2>Inspiration</h2>
-        <Image 
-          className = "md:float-right mx-4 rounded"
-          src="/about/about_artist.jpg" 
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+      <div className="border border-solid border-fern rounded p-2 max-w-[504px]">
+          <h2>Inspiration</h2>
+          <Image 
+          className="rounded"
+          src="/about/about_artist.png" 
           alt="Rebecca Doris stands in the meadows with a sunset in the background, facing the camera and smiling laughing." 
-          width="336"
-          height="300"
-        />
-      <p>
-        In rural-suburban Pioneer Valley, Massachusetts, former hayfields offer sustenance and 
-        shelter to wildlife and pollinators, and respite to neighboring residents as a public
-        conservation area. 
-        Surrounded by pine-dominant woods, the Meadows share borders with a vernal pool and wetland areas. 
+          width="504"
+          height="378"
+          />
+          <p>Our name <strong>Meadow Reveries</strong> comes from our local backyard Meadows combined with local poet Emily Dickinson's poem <ExternalLink url="https://poets.org/poem/make-prairie-1755" text="To make a prairie" />. The Meadows are artist Rebecca's happy place for bird watching and day dreaming. 
+          </p>
+      </div>
 
-        Birds, rabbits, deer, coyote, black bears, foxes, possums, and even a river otter tread this
-        habitat. In summer, it grows tall and attracts many bees,
-        butterflies, moths, and dragonflies.
-      </p>
-      <p>
-        It's Rebecca's happy place.
-      </p>
-      <p>
-        Our name <strong>Meadow Reveries</strong> draws inspiration from local poet 
-        Emily Dickinson's 
-        poem <a href="https://poets.org/poem/make-prairie-1755" target="_blank">To make a prairie</a>:
-      </p>
-      <blockquote className="m-4 italic">
-        To make a prairie it takes a clover and one bee, <br />
-        One clover, and a bee. <br />
-        And revery. <br />
-        The revery alone will do, <br />
-        If bees are few.
-      </blockquote>
-      <p>
-        Our ramblings in the Meadows influence our fiber art, especially the bird population.
-        May our needle-felted daydreams transport you to a happy place, too.
-      </p>
-      <Subscribeform />
+      <div className="border border-solid border-fern rounded p-2 max-w-[504px]">
+        <h2>Connect</h2>
+        <Image 
+        className="rounded"
+        src="/about/about_autumn_sunset.png" 
+        alt="Rebecca Doris stands in the meadows with a sunset in the background, facing the camera and smiling laughing." 
+        width="510"
+        height="383"
+        />
+        <p>Email us at <span className="font-bold">hello@meadowreveries.com</span> or 
+        follow us on <ExternalLink url="https://www.instagram.com/meadowreveries" text="Instagram" />.</p>
+      </div>
+      
+      <div className="border border-solid border-fern rounded p-2 max-w-[504px]">
+        <h2>Fiber Sources</h2>
+        <Image 
+          className="rounded"
+          src="/about/about_daisy_view.png" 
+          alt="A hand holds a daisy in the foreground of a photo of meadows in late spring on a blue sky day." 
+          width="510"
+          height="383"
+          />
+        <p>We source from sustainable vendors and happy sheep.</p>
+        <ul>
+          <li><ExternalLink url="https://greyfoxfelting.com/" text="Grey Fox Felting" /></li>
+          <li><ExternalLink url="https://feltedsky.com/" text="Felted Sky" /></li>
+          <li><ExternalLink url="https://paradisefibers.com/" text="Paradise Fibers" /></li>
+          <li><ExternalLink url="https://www.instagram.com/wool.for.the.dame/" text="Wool for the Dame" /></li>
+        </ul>
+      </div>
+    </div>
+    <Image 
+        className="m-auto"
+        src="/about/about_hero_bee.png" 
+        alt="A honey bee with thick pollen jackets collects pollen from goldenrod in full bloom." 
+        width="1020"
+        height="260"
+        />
+    <Subscribeform />
     </Container>
     );
 }
