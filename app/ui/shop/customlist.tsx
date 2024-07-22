@@ -11,7 +11,7 @@ export default function ExampleList( {examples} ) {
 	for (let [key, value] of Object.entries(gallery)) {
 		const inner = value;
 		for (let [key, value] of Object.entries(inner)) {
-			if (key == 1) {
+			if (key === 1) {
 				imageArray.push(value.file);
 				altArray.push(value.alt);
 				nameArray.push(value.name);
