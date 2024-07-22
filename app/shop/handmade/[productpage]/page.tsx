@@ -1,8 +1,8 @@
 import Container from '@/app/ui/container';
-import Addtocart from '@/app/ui/addtocart';
+import Addtocart from '@/app/ui//shop/addtocart';
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
-import ProductImage from '@/app/ui/productimage'
+import ProductImage from '@/app/ui/shop/productimage'
 import { fetchHandmadeProducts,
         fetchImagesByProductID} 
         from '@/app/lib/data';

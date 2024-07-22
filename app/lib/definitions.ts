@@ -12,6 +12,7 @@ export type Product = {
 	custom1Value: string;
 	available: boolean;
 	unlisted: boolean;
+	weight: number;
 };
 
 export type Image = {
