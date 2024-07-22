@@ -1,5 +1,5 @@
 export default function Addtocart({ item }) {
-	const itemURL = "/shop/handmade/" + item.id
+	const itemURL = "/shop/handmade/" + item.id;
 
 	if (item.available == true) { // if this item is available
       if (item.custom1Name == "") { // if there's no custom metadata
@@ -12,6 +12,7 @@ export default function Addtocart({ item }) {
             data-item-description={item.description}
             data-item-image={item.image}
             data-item-name={item.name}
+            data-item-weight={item.weightingrams}
             >
             Add to cart
           </button>
@@ -30,6 +31,7 @@ export default function Addtocart({ item }) {
             data-item-custom1-name={item.custom1Name}
             data-item-custom1-type={item.custom1Type}
             data-item-custom1-value={item.custom1Value}
+            data-item-weight={item.weightingrams}
             >
             Add to cart
           </button>
@@ -47,6 +49,7 @@ export default function Addtocart({ item }) {
             data-item-name={item.name}
             data-item-custom1-name={item.custom1Name}
             data-item-custom1-options={item.custom1Options}
+            data-item-weight={item.weightingrams}
             >
             Add to cart
           </button>

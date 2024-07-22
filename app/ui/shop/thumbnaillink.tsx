@@ -28,12 +28,12 @@ export default function ThumbnailLink({product}) {
 				<Image
 				  src={src}
 				  alt={product.alt}
-				  height={336}
-				  width={336}
+				  height={224}
+				  width={224}
 				  className="object-cover rounded"
 				/>
-				<div className="absolute inset-0 sm:text-left md:text-center">
-				    <h3 className="bg-white/75 p-2 text-black text-xl font-bold normal-case">{product.name}</h3>
+				<div className="absolute inset-0 text-center max-w-[224px]">
+				    <h3 className="bg-white/75 p-2 text-black font-bold normal-case">{product.name}</h3>
 				</div>
 			</Link>
 	    </div>
