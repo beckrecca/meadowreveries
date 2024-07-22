@@ -12,10 +12,12 @@ export default function ExampleList( {examples} ) {
 		const inner = value;
 		for (let [key, value] of Object.entries(inner)) {
 			if (key == "1") {
-				imageArray.push(value.file.toString());
-				altArray.push(value.alt.toString());
-				nameArray.push(value.name.toString());
-				priceArray.push(value.price.toString());
+				let val = value as object;
+				console.log(typeof val.file);
+				imageArray.push(val.file.toString());
+				altArray.push(val.alt.toString());
+				nameArray.push(val.name.toString());
+				priceArray.push(val.price.toString());
 			}
 		}
 	}
