@@ -11,12 +11,11 @@ export default function ExampleList( {examples} ) {
 	for (let [key, value] of Object.entries(gallery)) {
 		const inner = value;
 		for (let [key, value] of Object.entries(inner)) {
-			console.log(typeof key);
 			if (key == "1") {
-				imageArray.push(value.file);
-				altArray.push(value.alt);
-				nameArray.push(value.name);
-				priceArray.push(value.price);
+				imageArray.push(value.file.toString());
+				altArray.push(value.alt.toString());
+				nameArray.push(value.name.toString());
+				priceArray.push(value.price.toString());
 			}
 		}
 	}
