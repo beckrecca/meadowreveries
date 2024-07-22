@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import CartCount from '@/app/ui/header/cartcount';
 
 export default function CartButton() {
 	return (
