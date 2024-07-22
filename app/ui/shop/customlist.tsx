@@ -24,6 +24,7 @@ export default function ExampleList( {examples} ) {
 	        {examples.map((example) => {
 	          return (
 	            <GalleryModal 
+	            	key={example.productid}
 	            	example={example} 
 	            	imageArray = {imageArray} 
 	            	altArray = {altArray}
