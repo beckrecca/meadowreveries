@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import GalleryModal from '@/app/ui/shop/gallerymodal'
 
-export const responseToArray = (response: object) => {
+export const responseToArray = (response: any) => {
   const imageArray = [];
   const altArray = [];
   const nameArray = [];
