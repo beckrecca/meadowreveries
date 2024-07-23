@@ -73,11 +73,12 @@ export default function GalleryModal({example, imageArray, altArray, nameArray, 
 	            alt={example.alt}
 	            height={224}
 	            width={224}
+	            className="rounded hover:border-4 border-paper"
 	            onClick={showLightBox(example.file, example.alt, example.name, example.price)}
 	          />
 	        </div>
 	        { lightboxDisplay ?
-			  <div id="lightbox" className="z-10 fixed top-0 left-0 w-full h-full bg-paper/75 flex items-center justify-between" onClick={hideLightBox()}>
+			  <div id="lightbox" className="z-10 fixed top-0 left-0 w-full h-full bg-black/80 flex items-center justify-between" onClick={hideLightBox()}>
 				<button className="bg-milkweed p-2 md:p-4 rounded hover:bg-ladycardinal" onClick={showPrev}>
 					<Image
 					src="/icons/previous.png"
@@ -93,7 +94,7 @@ export default function GalleryModal({example, imageArray, altArray, nameArray, 
 					height={336}
 					width={336}
 					/>
-					<div className="bg-white p-2 max-w-[336px]">
+					<div className="rounded bg-white p-2 max-w-[336px]">
 						<h3>
 							{nameToDisplay}
 						</h3>
