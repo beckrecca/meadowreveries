@@ -77,9 +77,13 @@ export async function fetchExampleProducts() {
 	try {
 		const products = await sql<Product>`
 			SELECT
-				*
+				products.name,
+				products.price,
+				products.dimensions,
+				images.*
 			FROM products
-			where producttype = 'customExample';
+			JOIN images ON images.productid = products.id
+			where products.producttype = 'customExample';
 		`;
 		return products.rows;
 	}
