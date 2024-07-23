@@ -7,10 +7,10 @@ import { useEffect, useState } from 'react';
 
 export default function GalleryModal({example, imageArray, altArray, nameArray, priceArray}) {
 	const [lightboxDisplay, setLightBoxDisplay] = useState(false);
-	const [imageToShow, setImageToShow] = useState();
-	const [altToUse, setAltToUse] = useState();
-	const [nameToDisplay, setNameToDisplay] = useState();
-	const [priceToDisplay, setPriceToDisplay] = useState();
+	const [imageToShow, setImageToShow] = useState<any[]>([]);
+	const [altToUse, setAltToUse] = useState<any[]>([]);
+	const [nameToDisplay, setNameToDisplay] = useState<any[]>([]);
+	const [priceToDisplay, setPriceToDisplay] = useState<any[]>([]);
 
 	function showLightBox(image, alt, name, price) {
 		return () => {
@@ -90,16 +90,16 @@ export default function GalleryModal({example, imageArray, altArray, nameArray, 
 				<div className="rounded">
 					<Image
 					src={"/shop/" + imageToShow}
-					alt={altToUse!.toString()}
+					alt={altToUse.toString()}
 					height={336}
 					width={336}
 					/>
 					<div className="rounded bg-white p-2 max-w-[336px]">
 						<h3>
-							{nameToDisplay!.toString()}
+							{nameToDisplay.toString()}
 						</h3>
 						<p>
-							A piece similar in effort and materials might cost <span className="font-bold">${priceToDisplay!.toString()} (USD)</span>.
+							A piece similar in effort and materials might cost <span className="font-bold">${priceToDisplay.toString()} (USD)</span>.
 						</p>
 					</div>
 				</div>
