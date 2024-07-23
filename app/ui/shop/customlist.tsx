@@ -1,28 +1,18 @@
 import Image from 'next/image';
 import GalleryModal from '@/app/ui/shop/gallerymodal'
 
-export const responseToArray = (response: any) => {
-  const imageArray = [];
-  const altArray = [];
-  const nameArray = [];
-  const priceArray = [];
-
-  response.map((item) => {
-  	imageArray.push(item.file);
-  	altArray.push(item.alt);
-  	nameArray.push(item.name);
-  	priceArray.push(item.price);
-  });
-
-  return [imageArray, altArray, nameArray, priceArray];
-};
-
 export default function ExampleList( {examples} ) {
-	const examplesAsArray = responseToArray(examples);
-	const images = examplesAsArray[0];
-	const alts = examplesAsArray[1];
-	const names = examplesAsArray[2];
-	const prices = examplesAsArray[3];
+	const imageArray = [];
+  	const altArray = [];
+  	const nameArray = [];
+  	const priceArray = [];
+
+  	examples.map((example) => {
+  		imageArray.push(example.file);
+  		altArray.push(example.alt);
+  		nameArray.push(example.name);
+  		priceArray.push(example.price);
+  	});
 
 	return (
 		<div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -31,10 +21,10 @@ export default function ExampleList( {examples} ) {
 	            <GalleryModal 
 	            	key={example.file}
 	            	example={example} 
-	            	imageArray={images}
-	            	altArray={alts}
-	            	nameArray={names}
-	            	priceArray={prices}
+	            	imageArray={imageArray}
+	            	altArray={altArray}
+	            	nameArray={nameArray}
+	            	priceArray={priceArray}
 	            />
 	          );
 	        })}
