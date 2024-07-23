@@ -2,10 +2,10 @@ import Image from 'next/image';
 import GalleryModal from '@/app/ui/shop/gallerymodal'
 
 export default function ExampleList( {examples} ) {
-	const imageArray = [];
-  	const altArray = [];
-  	const nameArray = [];
-  	const priceArray = [];
+	let imageArray: any[] = [];
+  	let altArray: any[] = [];
+  	let nameArray: any[] = [];
+  	let priceArray: any[] = [];
 
   	examples.map((example) => {
   		imageArray.push(example.file);
