@@ -90,16 +90,16 @@ export default function GalleryModal({example, imageArray, altArray, nameArray, 
 				<div className="rounded">
 					<Image
 					src={"/shop/" + imageToShow}
-					alt={altToUse.toString()}
+					alt={altToUse!.toString()}
 					height={336}
 					width={336}
 					/>
 					<div className="rounded bg-white p-2 max-w-[336px]">
 						<h3>
-							{nameToDisplay.toString()}
+							{nameToDisplay!.toString()}
 						</h3>
 						<p>
-							A piece similar in effort and materials might cost <span className="font-bold">${priceToDisplay.toString()} (USD)</span>.
+							A piece similar in effort and materials might cost <span className="font-bold">${priceToDisplay!.toString()} (USD)</span>.
 						</p>
 					</div>
 				</div>
