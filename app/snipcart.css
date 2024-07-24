@@ -1,0 +1,29 @@
+.snipcart, .snipcart__font--secondary, .snipcart-item-quantity__label, .snipcart__font--tiny, .snipcart-base-button__label, .snipcart-button-link, .snipcart__font--std, .snipcart__font--subtitle {
+	font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.snipcart h1 {
+	font-size: 1.3rem; 
+	line-height: 2rem; 
+	text-align: center;
+	font-weight: bold;
+}
+.snipcart h2 {
+	font-size: 1.2rem; /* 20px */
+	line-height: 1.75rem; /* 28px */
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.snipcart h3 {
+	font-size: 1.05rem; /* 20px */
+	line-height: 1.5rem; /* 28px */
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.snipcart-modal__close-title {
+	font-size: 1rem;
+	font-weight: bold;
+}
+.snipcart-base-button__label {
+	font-size: 1.05rem; /* 20px */
+	font-weight: bold;
+}

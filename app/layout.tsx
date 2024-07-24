@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import "./snipcart.css";
 import Header from '@/app/ui/header';
 import Footer from '@/app/ui/footer';
 

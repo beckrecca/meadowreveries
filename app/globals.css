@@ -26,3 +26,136 @@
     @apply my-2;
   }
 }
+
+/* ----------------------- 
+    Snipcart Variable Overrides per https://docs.snipcart.com/v3/setup/theming
+----------------------- */
+:root {
+  /* Default */
+  --color-default: #000000; 
+  --borderColor-default: #000000; 
+  --bgColor-default: #ffffff; 
+
+  /* Alt */
+  --color-alt: #000000; 
+  --bgColor-alt: #f1f2ec; 
+
+  /* Icon */
+  --color-icon: #000000; 
+
+  /* Success */
+  --color-success: #000000; 
+  --bgColor-success: #ffffff; 
+
+  /* Error */
+  --color-error: #000000; 
+  --borderColor-error: #000000; 
+  --bgColor-error: #E4C4B0; 
+
+  /* Info */
+  --bgColor-info: #f2db02; 
+
+  /* Modal */
+  --bgColor-modal: #f1f2ec; 
+  --bgColor-modalVeil: #000000; 
+
+  /* ----------------------- 
+      PART: Button
+  ----------------------- */
+
+  /* BUTTON Default */
+  --color-buttonPrimary: #000000;
+  --borderColor-buttonPrimary: #683E28;
+  --bgColor-buttonPrimary: #e6aba2;
+
+  /* BUTTON Hover */
+  --color-buttonPrimary-hover: #000000;
+  --borderColor-buttonPrimary-hover: #683E28;
+  --bgColor-buttonPrimary-hover: #E4C4B0;
+  --shadow-buttonPrimary-hover: none;
+
+  /* BUTTON Active */
+  --color-buttonPrimary-active: #000000;
+  --borderColor-buttonPrimary-active: #6C5579;
+  --bgColor-buttonPrimary-active: #E4C4B0;
+
+  /* BUTTON Focus */
+  --color-buttonPrimary-focus: #000000;
+  --borderColor-buttonPrimary-focus: #f2db02;
+  --bgColor-buttonPrimary-focus: #e6aba2;
+
+  /* BUTTON Disabled */
+  --color-buttonPrimary-disabled: #f1f2ec;
+  --borderColor-buttonPrimary-disabled: #aaaaaa;
+  --bgColor-buttonPrimary-disabled: #000000;
+
+  /* BUTTON Success */
+  --color-buttonPrimary-success: #000000;
+  --borderColor-buttonPrimary-success: #683E28;
+  --bgColor-buttonPrimary-success: #e6aba2;
+
+  /* BUTTON Error */
+  --color-buttonPrimary-error: #ffffff;
+  --borderColor-buttonPrimary-error: #683E28;
+  --bgColor-buttonPrimary-error: #683E28;
+
+  /* ----------------------- 
+      PART: Links
+  ----------------------- */
+  /* LINK Default */
+  --color-link: #683E28;
+
+  /* LINK Hover */
+  --color-link-hover: #627955;
+
+  /* LINK Active */
+  --color-link-active: #627955;
+
+  /* LINK Focus */
+  --color-link-focus: #627955;
+
+  /* -----------------------
+      PART: Badges
+  ----------------------- */
+  /* BADGE Default (completed) */
+  --color-badge: #627955;
+  --bgColor-badge: #ffffff;
+
+  /* BADGE Active */
+  --color-badge-active: #627955;
+  --borderColor-badge-active: #627955;
+  --bgColor-badge-active: #EEFFE5;
+
+  /* BADGE Disabled */
+  --color-badge-disabled: #000000;
+  --borderColor-badge-disabled: #aaaaaa;
+  --bgColor-badge-disabled: #ffffff;
+
+ /* ----------------------- 
+      PART: Input
+  ----------------------- */
+  --color-input: #000000;
+  --borderColor-input: #f1f2ec;
+  --bgColor-input: #ffffff;
+
+  /* INPUT Hover */
+  --borderColor-input-hover: #e6aba2;
+
+  /* INPUT Focus */
+  --borderColor-input-focus: #627955;
+
+  /* INPUT Checked */
+  --color-input-checked: #000000;
+  --borderColor-input-checked: #f1f2ec;
+  --bgColor-input-checked: #ffffff;
+
+  /* INPUT Disabled */
+  --color-input-disabled: #000000;
+  --borderColor-input-disabled: #aaaaaa;
+  --bgColor-input-disabled: #f1f2ec;
+
+  /* INPUT Error */
+  --color-input-error: #000000;
+  --borderColor-input-error: #f2db02;
+  --bgColor-input-error: #ffffff;
+}
