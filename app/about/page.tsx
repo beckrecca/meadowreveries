@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Container from '@/app/ui/container';
 import ExternalLink from '@/app/ui/externallink';
-import Subscribeform from '@/app/ui/subscribeform';
 
 export default function Page() {
   return (

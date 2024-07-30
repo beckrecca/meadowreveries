@@ -1,6 +1,5 @@
 import Container from '@/app/ui/container';
 import Card from '@/app/ui/card';
-import Subscribecard from '@/app/ui/subscribecard';
 
 export default function Page() {
   return (
