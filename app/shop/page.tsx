@@ -70,7 +70,6 @@ export default function Page() {
             </p>
           </Card>
         </div>
-        <Subscribecard />
       </main>
     </Container>
   );

@@ -5,7 +5,7 @@ import ExternalLink from '@/app/ui/externallink'
 export default function Footer() {
 	return (
 		<>
-		<footer className="bg-paper p-6 text-sm">
+		<footer className="bg-paper p-6 text-sm" id="footer">
 			<div className="flex justify-center items-center">
 				<Image 
 					src="/meadow_reveries_flowers.png" 
