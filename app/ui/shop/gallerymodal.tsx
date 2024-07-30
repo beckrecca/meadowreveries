@@ -99,7 +99,7 @@ export default function GalleryModal({example, imageArray, altArray, nameArray, 
 							{nameToDisplay.toString()}
 						</h3>
 						<p>
-							A piece similar in effort and materials might cost <span className="font-bold">${priceToDisplay.toString()} (USD)</span>.
+							This piece is spoken for, but something similar in effort and materials might cost <span className="font-bold">${priceToDisplay.toString()} (USD)</span>.
 						</p>
 					</div>
 				</div>

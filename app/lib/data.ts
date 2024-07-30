@@ -167,3 +167,26 @@ export async function fetchHandmadeProductsPreview() {
 		throw new Error('Failed to fetch products.');
 	}
 }
+
+export async function fetchExampleCustomPreview() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+				products.name,
+				products.price,
+				products.dimensions,
+				images.*
+			FROM products
+			JOIN images ON images.productid = products.id
+			where products.producttype = 'customExample'
+			AND productid != 'sylvie-example'
+			ORDER BY RANDOM()
+			LIMIT 6;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch products.');
+	}
+}

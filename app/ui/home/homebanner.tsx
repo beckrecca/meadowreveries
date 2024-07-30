@@ -14,7 +14,7 @@ export default function HomeBanner() {
 		],
 		["/home_banner_chickadee.png",
 		"On the left, a needle-felted black-capped chickadee sits on a half inch section of a branch, facing 3/4 towards the left. A dried spray of goldenrod lays in the background. Its belly is white with buff sides, its face white, its goatee black, its beak black, its cap black, its wings grey. On the right, two different species of bees do their pollinating work on some goldenrod in full bloom.",
-		"Crafting tutorials and kits coming Fall 2024",
+		"Crafting tutorials & kits coming Fall 2024",
 		"Subscribe To Our Mailing List",
 		"#footer"
 		]
