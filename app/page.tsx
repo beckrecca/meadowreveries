@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import HomeBanner from '@/app/ui/home/homebanner';
 import Subscribeform from '@/app/ui/subscribeform';
+import HandmadePreview from '@/app/ui/home/handmadepreview.tsx';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
     <div>
       <main className="pb-4">
         <HomeBanner />
+        <HandmadePreview />
         <Subscribeform/>
       </main>
     </div>

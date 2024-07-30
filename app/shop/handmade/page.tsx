@@ -1,7 +1,5 @@
 import Container from '@/app/ui/container';
 import { fetchListedHandmadeProducts }  from '@/app/lib/data';
-import Link from 'next/link';
-import Image from 'next/image';
 import ProductList from '@/app/ui/shop/productlist';
 
 export default async function Page() {

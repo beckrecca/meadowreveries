@@ -143,3 +143,27 @@ export async function fetchImagesByProductID(id: string) {
 		throw new Error('Failed to fetch image data.');
 	}
 }
+
+export async function fetchHandmadeProductsPreview() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND products.producttype = 'handmade' AND products.unlisted = false
+			AND products.available = true
+			GROUP BY products.name, products.id
+			ORDER BY RANDOM()
+			LIMIT 6;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch products.');
+	}
+}

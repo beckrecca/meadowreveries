@@ -19,13 +19,6 @@ export default function HomeBanner() {
 		"#footer"
 		]
 	]
-	const nocahsBanner = "/homepage_nocaf_sheep.png";
-	const nocahsAlt = "On the left, a needle felted Northern Cardinal sits on warm-colored stones in front of a bed of wildflowers. On the right, a hand holds a needle-felted sheep up in front of a background of green meadows. The sheep is light grey with a black tail and black head, facing away from the camera to show its adorable rump.";
-	const nochasText = "Select handmade items now available";
-
-	const bcchBanner = "/home_banner_chickadee.png";
-	const bcchAlt = "On the left, a needle-felted black-capped chickadee sits on a half inch section of a branch, facing 3/4 towards the left. A dried spray of goldenrod lays in the background. Its belly is white with buff sides, its face white, its goatee black, its beak black, its cap black, its wings grey. On the right, two different species of bees do their pollinating work on some goldenrod in full bloom.";
-	const bcchText = "Tutorials & crafting kits landing in September!";
 
 	const [index, setIndex] = useState(0);
 	const [banner, setBanner] = useState(arrayOfBanners[index][0]);
