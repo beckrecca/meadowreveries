@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import HomeBanner from '@/app/ui/home/homebanner';
 import Subscribeform from '@/app/ui/subscribeform';
-import HandmadePreview from '@/app/ui/home/handmadepreview.tsx';
+import HandmadePreview from '@/app/ui/home/handmadepreview';
 
 export default function Home() {
   return (
