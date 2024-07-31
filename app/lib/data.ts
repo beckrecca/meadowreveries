@@ -62,6 +62,7 @@ export async function fetchListedHandmadeProducts() {
 			JOIN images ON images.productid = products.id
 			WHERE images.file NOT LIKE '%01.png'
 			AND products.producttype = 'handmade' AND products.unlisted = false
+			AND products.available = true
 			GROUP BY products.name, products.id
 			ORDER BY name ASC;
 		`;
