@@ -1,4 +1,4 @@
-import ShopNavButton from '@/app/ui/shop/shopNavButton';
+import ShopNavButton from '@/app/ui/shop/shopnavbutton';
 
 export default function ShopNav() {
 	return (
