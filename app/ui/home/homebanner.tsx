@@ -11,11 +11,16 @@ export default function HomeBanner() {
 		"Shop Select Handmade Pieces",
 		"/shop"
 		],
+		["/homepage_pabu.png",
+		"A needle-felted red panda sits facing 3/4 towards the right on top of a plastic branch.",
+		"Custom Orders Accepted",
+		"/shop/custom"
+		],
 		["/homepage_diy_coming_soon.png",
 		"Assorted needle-felted critters, some wearing spectacles, gather around a notebook where HOW TO BORB is written, surrounded by various needle felting supplies including needles, felting wool, scissors, a wooden dowel, and partially obscured Meadow Reveries business cards. Clockwise from left, there's a bespectacled black-capped chickadee, Bouldy from the Hades game, an Eastern grey squirrel, a bespectacled American robin, and another blackc-capped chickadee.",
 		"Felting Kits Coming Fall 2024",
 		"#footer"
-		]
+		],
 	]
 
 	const [index, setIndex] = useState(0);
@@ -74,7 +79,7 @@ export default function HomeBanner() {
 	          width={720}
 	          className="w-full lg:max-w-[1280px] lg:mx-auto"
 	        />
-	        <div className="absolute top-auto left-[47px] sm:top-[47px] sm:left-[94px]">
+	        <div className="absolute bottom-3 left-1.5 sm:top-[26px] sm:left-[86px]">
 			    <Link href={link} className="bg-white/85 text-lg sm:text-2xl p-2 py-4 underline rounded leading-10 inflex-flex items-center">{subtext}</Link>
 			</div>
 	    	<button className="absolute right-0 bg-fern p-2 rounded hover:bg-black" onClick={reverseCarousel}>
