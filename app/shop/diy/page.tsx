@@ -1,7 +1,7 @@
 import Container from '@/app/ui/container';
 import ShopNav from '@/app/ui/shop/shopnav';
 import Subscribeform from '@/app/ui/subscribeform';
-import DiyComingSoon from '@/app/ui/shop/diy/diycomingsoon.tsx';
+import DiyComingSoon from '@/app/ui/shop/diy/diycomingsoon';
 
 export default function Page() {
   return (
