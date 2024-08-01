@@ -6,16 +6,14 @@ import { useState, useEffect } from 'react';
 
 export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
-		["/homepage_nocaf_sheep.png",
-		"On the left, a needle felted Northern Cardinal sits on warm-colored stones in front of a bed of wildflowers. On the right, a hand holds a needle-felted sheep up in front of a background of green meadows. The sheep is light grey with a black tail and black head, facing away from the camera to show its adorable rump.",
-		"Meadow Reveries has fledged!",
+		["/homepage_fledge_noca.png",
+		"A needle felted female Northern Cardinal, mostly in shadow from the morning sunlight, flies mid-air across a blue sky.",
 		"Shop Select Handmade Pieces",
 		"/shop"
 		],
-		["/home_banner_chickadee.png",
-		"On the left, a needle-felted black-capped chickadee sits on a half inch section of a branch, facing 3/4 towards the left. A dried spray of goldenrod lays in the background. Its belly is white with buff sides, its face white, its goatee black, its beak black, its cap black, its wings grey. On the right, two different species of bees do their pollinating work on some goldenrod in full bloom.",
-		"Crafting tutorials & kits coming Fall 2024",
-		"Subscribe To Our Mailing List",
+		["/homepage_diy_coming_soon.png",
+		"Assorted needle-felted critters, some wearing spectacles, gather around a notebook where HOW TO BORB is written, surrounded by various needle felting supplies including needles, felting wool, scissors, a wooden dowel, and partially obscured Meadow Reveries business cards. Clockwise from left, there's a bespectacled black-capped chickadee, Bouldy from the Hades game, an Eastern grey squirrel, a bespectacled American robin, and another blackc-capped chickadee.",
+		"Felting Kits Coming Fall 2024",
 		"#footer"
 		]
 	]
@@ -23,9 +21,8 @@ export default function HomeBanner() {
 	const [index, setIndex] = useState(0);
 	const [banner, setBanner] = useState(arrayOfBanners[index][0]);
 	const [alt, setAlt] = useState(arrayOfBanners[index][1]);
-	const [text, setText] = useState(arrayOfBanners[index][2]);
-	const [subtext, setSubtext] = useState(arrayOfBanners[index][3]);
-	const [link, setLink] = useState(arrayOfBanners[index][4]);
+	const [subtext, setSubtext] = useState(arrayOfBanners[index][2]);
+	const [link, setLink] = useState(arrayOfBanners[index][3]);
 
 	function moveCarousel() {
 		let i = index + 1;
@@ -37,9 +34,8 @@ export default function HomeBanner() {
 		}
 		setBanner(arrayOfBanners[index][0]);
 		setAlt(arrayOfBanners[index][1]);
-		setText(arrayOfBanners[index][2]);
-		setSubtext(arrayOfBanners[index][3]);
-		setLink(arrayOfBanners[index][4]);
+		setSubtext(arrayOfBanners[index][2]);
+		setLink(arrayOfBanners[index][3]);
 	}
 
 	function reverseCarousel() {
@@ -52,9 +48,8 @@ export default function HomeBanner() {
 		}
 		setBanner(arrayOfBanners[index][0]);
 		setAlt(arrayOfBanners[index][1]);
-		setText(arrayOfBanners[index][2]);
-		setSubtext(arrayOfBanners[index][3]);
-		setLink(arrayOfBanners[index][4]);
+		setSubtext(arrayOfBanners[index][2]);
+		setLink(arrayOfBanners[index][3]);
 	}
 
 	useEffect(() => {
@@ -68,8 +63,8 @@ export default function HomeBanner() {
 				<Image
 				src="/icons/previous_light.png"
 				alt="Navigate to previous image"
-				height={32}
-				width={32}
+				height={24}
+				width={24}
 				/>
 			</button>
 	        <Image 
@@ -79,16 +74,15 @@ export default function HomeBanner() {
 	          width={720}
 	          className="w-full lg:max-w-[1280px] lg:mx-auto"
 	        />
-	        <div className="absolute inset-0 text-center">
-			    <h2 className="bg-goldenrod p-2 text-black font-bold normal-case mb-6">{text}</h2>
-			    <div><Link href={link} className="bg-white/85 text-lg p-4 md:p-6 underline rounded">{subtext}</Link></div>
+	        <div className="absolute top-auto left-[47px] sm:top-[47px] sm:left-[94px]">
+			    <Link href={link} className="bg-white/85 text-lg sm:text-2xl p-2 py-4 underline rounded leading-10 inflex-flex items-center">{subtext}</Link>
 			</div>
 	    	<button className="absolute right-0 bg-fern p-2 rounded hover:bg-black" onClick={reverseCarousel}>
 				<Image
 				src="/icons/next_light.png"
 				alt="Navigate to next image"
-				height={32}
-				width={32}
+				height={24}
+				width={24}
 				/>
 			</button>
 	    </div>
