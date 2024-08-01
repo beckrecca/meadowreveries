@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import HomePreviewButton from '@/app/ui/home/homepreviewbutton';
-import DiyComingSoon from '@/app/ui/shop/diy/diycomingsoon.tsx';
+import DiyComingSoon from '@/app/ui/shop/diy/diycomingsoon';
 
 export default function DiyPreview() {
 	return (
