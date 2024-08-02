@@ -46,7 +46,7 @@ export default async function ProductPage({params: {productpage}}: { params: { p
           <Addtocart item={product}/>
           <div className="sm:max-w-[336px] md:max-w-prose">
             <h3>About</h3>
-            <p className="whitespace-pre-wrap">
+            <p className="whitespace-pre-line">
               {product.description}
               <br/>
             </p>

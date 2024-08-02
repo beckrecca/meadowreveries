@@ -1,14 +1,18 @@
 import Container from '@/app/ui/container';
 import CustomList from '@/app/ui/shop/customlist';
 import { fetchExampleProducts }  from '@/app/lib/data';
-import Link from 'next/link';
+import ShopNav from '@/app/ui/shop/shopnav';
 
 export default async function Page() {
   const examples = await fetchExampleProducts();
   return (
     <Container>
-      <h2>Example Gallery</h2>
-      <CustomList examples={examples} />
+      <main>
+        <ShopNav />
+        <h2>Custom Piece Gallery</h2>
+        <p>To place an order for a custom piece, email <strong>orders@meadowreveries.com</strong>. These orders might take a little longer to complete.</p>
+        <CustomList examples={examples} />
+      </main>
     </Container>
     );
 }

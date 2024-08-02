@@ -1,8 +1,8 @@
 export default function Addtocart({ item }) {
-	const itemURL = "/shop/handmade/" + item.id;
+	const itemURL = "/shop/" + item.producttype + '/' + item.id;
 
 	if (item.available == true) { // if this item is available
-      if (item.custom1Name == "") { // if there's no custom metadata
+      if (item.custom1name == "") { // if there's no custom metadata
         return (
           <button 
             className="snipcart-add-item bg-milkweed text-black border border-seed hover:bg-goldenrod mx-auto my-2 p-4 rounded font-bold w-48"
@@ -18,7 +18,7 @@ export default function Addtocart({ item }) {
           </button>
         );
       }
-      else if (item.custom1Type == "readonly") { // if there's readonly metadata
+      else if (item.custom1type == "readonly") { // if there's readonly metadata
         return (
           <button 
             className="snipcart-add-item bg-milkweed text-black border border-seed hover:bg-goldenrod mx-auto my-2 p-4 rounded font-bold w-48"
@@ -28,16 +28,16 @@ export default function Addtocart({ item }) {
             data-item-description={item.description}
             data-item-image={item.image}
             data-item-name={item.name}
-            data-item-custom1-name={item.custom1Name}
-            data-item-custom1-type={item.custom1Type}
-            data-item-custom1-value={item.custom1Value}
+            data-item-custom1-name={item.custom1name}
+            data-item-custom1-type={item.custom1type}
+            data-item-custom1-value={item.custom1value}
             data-item-weight={item.weightingrams}
             >
             Add to cart
           </button>
         );
       }
-      else if (item.custom1Options != "") { // if there are custom metadata options
+      else if (item.custom1options != "" && item.custom1options != null && item.custom1options != "null") { // if there are custom metadata options
         return (
           <button 
             className="snipcart-add-item bg-milkweed text-black border border-seed hover:bg-goldenrod mx-auto my-2 p-4 rounded font-bold w-48"
@@ -47,8 +47,8 @@ export default function Addtocart({ item }) {
             data-item-description={item.description}
             data-item-image={item.image}
             data-item-name={item.name}
-            data-item-custom1-name={item.custom1Name}
-            data-item-custom1-options={item.custom1Options}
+            data-item-custom1-name={item.custom1name}
+            data-item-custom1-options={item.custom1options}
             data-item-weight={item.weightingrams}
             >
             Add to cart

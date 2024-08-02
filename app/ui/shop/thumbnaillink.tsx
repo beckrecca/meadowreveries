@@ -24,7 +24,7 @@ export default function ThumbnailLink({product}) {
 			onMouseEnter={handleMouseEnter("/shop/"+product.image2)}
 			onMouseLeave={handleMouseLeave(product.image)}
 			>
-			<Link href={"/shop/handmade/" + product.id}>
+			<Link href={"/shop/" + product.producttype + "/" + product.id}>
 				<Image
 				  src={src}
 				  alt={product.alt}

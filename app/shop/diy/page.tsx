@@ -1,3 +1,17 @@
+import Container from '@/app/ui/container';
+import ShopNav from '@/app/ui/shop/shopnav';
+import Subscribeform from '@/app/ui/subscribeform';
+import DiyComingSoon from '@/app/ui/shop/diy/diycomingsoon';
+
 export default function Page() {
-  return <p>This is a DIY shop page!</p>;
+  return (
+      <Container>
+        <main>
+          <ShopNav />
+          <h2>Felting Kits</h2>
+          <DiyComingSoon />
+          <Subscribeform />
+        </main>
+      </Container>
+    );
 }

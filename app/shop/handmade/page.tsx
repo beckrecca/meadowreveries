@@ -1,15 +1,17 @@
 import Container from '@/app/ui/container';
 import { fetchListedHandmadeProducts }  from '@/app/lib/data';
-import Link from 'next/link';
-import Image from 'next/image';
 import ProductList from '@/app/ui/shop/productlist';
+import ShopNav from '@/app/ui/shop/shopnav';
 
 export default async function Page() {
   const products = await fetchListedHandmadeProducts();
   return (
     <Container>
-      <h2>Handmade products</h2>
-      <ProductList products={products}/>
+      <main>
+        <ShopNav />
+        <h2>Handmade Pieces</h2>
+        <ProductList products={products}/>
+      </main>
     </Container>
     );
 }
