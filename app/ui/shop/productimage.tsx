@@ -28,11 +28,11 @@ export default function ProductImage( {product, images} ) {
 			<Image
 	          src={src}
 	          alt={alt}
-	          height="336"
-	          width="336"
+	          height="448"
+	          width="448"
 	          className="rounded" 
 	        />
-	        <div className="flex overflow-auto w-[336px] h-[128px]">
+	        <div className="flex overflow-auto max-w-[448px] h-[128px]">
         	{gallery.map((image) => {
 				return (
 					<>

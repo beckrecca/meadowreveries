@@ -24,7 +24,7 @@ export default function Nav() {
 							className={clsx(
 								'block mt-4 lg:inline-block lg:mt-0 text-black mr-4',
 								{
-									'underline': pathname === link.href,
+									'underline': pathname.startsWith(link.href),
 								}
 							)}
 						>

@@ -91,10 +91,10 @@ export default function GalleryModal({example, imageArray, altArray, nameArray, 
 					<Image
 					src={"/shop/" + imageToShow}
 					alt={altToUse.toString()}
-					height={336}
-					width={336}
+					height={448}
+					width={448}
 					/>
-					<div className="rounded bg-white p-2 max-w-[336px]">
+					<div className="rounded bg-white p-2 max-w-[448px]">
 						<h3>
 							{nameToDisplay.toString()}
 						</h3>
