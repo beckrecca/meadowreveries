@@ -180,7 +180,6 @@ export async function fetchExampleCustomPreview() {
 			FROM products
 			JOIN images ON images.productid = products.id
 			where products.producttype = 'customExample'
-			AND productid != 'sylvie-example'
 			ORDER BY RANDOM()
 			LIMIT 6;
 		`;

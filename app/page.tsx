@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Suspense } from 'react';
 import HomeBanner from '@/app/ui/home/homebanner';
 import Subscribeform from '@/app/ui/subscribeform';
 import HandmadePreview from '@/app/ui/home/handmadepreview';
