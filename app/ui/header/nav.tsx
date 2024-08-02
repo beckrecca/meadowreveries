@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import clsx from 'clsx';
 
 const links = [
@@ -17,7 +18,7 @@ export default function Nav() {
 			{links.map((link) => {
 				return (
 					<>
-						<a 
+						<Link 
 							key={link.name}
 							href={link.href}
 							className={clsx(
@@ -28,7 +29,7 @@ export default function Nav() {
 							)}
 						>
 						{link.name}
-						</a>
+						</Link>
 					</>
 				);
 			})}
