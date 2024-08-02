@@ -38,7 +38,7 @@ export default function Page() {
       In Short: Some information - such as your Internet Protocol (IP) address and/or browser and device characteristics - is collected automatically when you visit our Services.
       We automatically collect certain information when you visit, use, or navigate the Services. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Services, and
       other technical information. This information is primarily needed to maintain the security and operation of our Services, and for our internal analytics and reporting purposes.
-      Like many businesses, we also collect information through cookies and similar technologies.</p>
+      Like many businesses, we also collect shopping cart information through cookies.</p>
 
       <h2>HOW DO WE PROCESS YOUR INFORMATION?</h2>
       <p>In Short: We process your information to provide, improve, and administer our Services, communicate with you, to fulfill orders, for security and fraud prevention, and to comply with law.</p>
@@ -57,7 +57,7 @@ export default function Page() {
 
       <h2>IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?</h2>
       <p>In Short: We may transfer, store, and process your information in countries other than your own. <br/>
-      Our servers are located in the United States. Our cloud service provider Digital Ocean has <a href="https://docs.digitalocean.com/platform/regional-availability/" target="_blank">servers located globally</a>. If you are accessing our Services from outside the United States, please be aware that your information may be transferred to, stored, and processed by us in our facilities and by those third parties with whom we may share your personal information (see "WHEN AND WITH WHOM DO WE
+      Our servers are located in the United States. Our cloud service provider Vercel has <a href="https://vercel.com/docs/edge-network/regions" target="_blank">servers located globally</a>. If you are accessing our Services from outside the United States, please be aware that your information may be transferred to, stored, and processed by us in our facilities and by those third parties with whom we may share your personal information (see "WHEN AND WITH WHOM DO WE
       SHARE YOUR PERSONAL INFORMATION?" above), in and other countries.
       If you are a resident in the European Economic Area (EA), United Kingdom (UK), or Switzerland, then these countries may not necessarily have data protection laws or other similar laws as comprehensive as those in your country. However, we will take all necessary measures to protect your personal
       information in accordance with this privacy notice and applicable law.</p>

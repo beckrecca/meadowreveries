@@ -11,9 +11,14 @@ export default function HomeBanner() {
 		"Shop Select Handmade Pieces",
 		"/shop"
 		],
+		["/homepage_pet_portrait.png",
+		"Close up of a felted wool portrait of a blue eyed Australian shepherd’s face. The dog’s mouth is relaxed open in a smile. His ears are black, his face mostly white with mottled black, grey and tan. His neck is fluffy warm white. ",
+		"Custom Pet Portraits",
+		"/shop/handmade/pet-portrait"
+		],
 		["/homepage_pabu.png",
 		"A needle-felted red panda sits facing 3/4 towards the right on top of a plastic branch.",
-		"Custom Orders Accepted",
+		"Commissions Open",
 		"/shop/custom"
 		],
 		["/homepage_diy_coming_soon.png",
