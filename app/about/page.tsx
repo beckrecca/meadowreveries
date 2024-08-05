@@ -54,7 +54,7 @@ export default function Page() {
           <Image 
             className="rounded"
             src="/about/about_amro_meadows.png" 
-            alt="Rebecca Doris stands in the meadows with a sunset in the background, facing the camera and smiling laughing." 
+            alt="A mostly out of frame hand in the center holds a needle-felted American Robin aloft in front of a field of meadows in mid summer." 
             width="510"
             height="383"
             />
@@ -68,13 +68,6 @@ export default function Page() {
           </ul>
         </div>
       </div>
-      <Image 
-          className="m-auto"
-          src="/about/about_hero_bee.png" 
-          alt="A honey bee with thick pollen jackets collects pollen from goldenrod in full bloom." 
-          width="1020"
-          height="260"
-          />
     </Container>
     );
 }
