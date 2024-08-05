@@ -41,7 +41,7 @@ export default function ProductImage( {product, images} ) {
 							alt={image.alt} 
 							height="128"
 							width="128"
-							className="rounded hover:border-4 border-paper"
+							className="hover:opacity-50 pt-2 pr-2 rounded"
 							onClick={handleMouseClick("/shop/" + image.file, image.alt)}
 						/>
 					</>
