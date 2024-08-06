@@ -54,9 +54,11 @@ export default async function ProductPage({params: {productpage}}: { params: { p
             <p>
               {product.dimensions}
             </p>
-            <p className="text-sm"><strong>Note</strong>: This purchase does not include display props like bases, dried flowers, or scarves.</p>
           </div>
         </div>
+      </div>
+      <div className="clear-both">
+        <p className="text-sm pt-4"><strong>Note</strong>: This purchase does not include display props like bases, dried flowers, or scarves.</p>
       </div>
     </Container>
   )
