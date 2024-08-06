@@ -23,10 +23,10 @@ export default function ShopNav() {
                             key={link.name}
                             href={link.href}
                             className={clsx(
-                                'text-black border border-seed p-2 rounded-full mr-2 text-center inline-flex items-center hover:text-black hover:bg-milkweed',
+                                'underline py-2 pr-2 rounded-full mr-4 text-center inline-flex items-center',
                                 {
-                                    'bg-paper': pathname !== link.href,
-                                    'bg-ladycardinal': pathname === link.href,
+                                    'text-black': pathname !== link.href,
+                                    'text-fern': pathname === link.href,
                                 }
                             )}
                         >

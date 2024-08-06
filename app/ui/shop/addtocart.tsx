@@ -5,7 +5,7 @@ export default function Addtocart({ item }) {
       if (item.custom1name == "") { // if there's no custom metadata
         return (
           <button 
-            className="snipcart-add-item bg-milkweed text-black border border-seed hover:bg-goldenrod mx-auto my-2 p-4 rounded font-bold w-48"
+            className="snipcart-add-item rounded text-black bg-milkweed hover:text-black hover:bg-ladycardinal mx-auto my-2 p-3 font-bold w-48"
             data-item-id={item.id}
             data-item-url={itemURL}
             data-item-price={item.price}
@@ -21,7 +21,7 @@ export default function Addtocart({ item }) {
       else if (item.custom1type == "readonly") { // if there's readonly metadata
         return (
           <button 
-            className="snipcart-add-item bg-milkweed text-black border border-seed hover:bg-goldenrod mx-auto my-2 p-4 rounded font-bold w-48"
+            className="snipcart-add-item rounded text-black bg-milkweed hover:text-black hover:bg-ladycardinal mx-auto my-2 p-3 font-bold w-48"
             data-item-id={item.id}
             data-item-url={itemURL}
             data-item-price={item.price}
@@ -40,7 +40,7 @@ export default function Addtocart({ item }) {
       else if (item.custom1options != "" && item.custom1options != null && item.custom1options != "null") { // if there are custom metadata options
         return (
           <button 
-            className="snipcart-add-item bg-milkweed text-black border border-seed hover:bg-goldenrod mx-auto my-2 p-4 rounded font-bold w-48"
+            className="snipcart-add-item rounded text-black bg-milkweed hover:text-black hover:bg-ladycardinal mx-auto my-2 p-3 font-bold w-48"
             data-item-id={item.id}
             data-item-url={itemURL}
             data-item-price={item.price}
