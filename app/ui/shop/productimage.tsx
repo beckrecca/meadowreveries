@@ -4,8 +4,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 export default function ProductImage( {product, images} ) {
-	const gallery = images.slice(1);
-
 	const [src, setSrc] = useState(product.image);
 	const [alt, setAlt] = useState(product.alt);
 
@@ -33,7 +31,7 @@ export default function ProductImage( {product, images} ) {
 	          className="rounded" 
 	        />
 	        <div className="flex overflow-auto max-w-[448px] h-[128px]">
-        	{gallery.map((image) => {
+        	{images.map((image) => {
 				return (
 					<>
 						<Image 

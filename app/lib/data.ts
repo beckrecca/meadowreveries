@@ -135,7 +135,9 @@ export async function fetchImagesByProductID(id: string) {
 				images.file,
 				images.alt
 			FROM images
-			where images.productid = ${id};
+			where images.productid = ${id}
+			order by images.id DESC
+			;
 		`;
 		return images.rows;
 	}
