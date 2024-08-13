@@ -19,3 +19,33 @@ export type Image = {
 	file: string;
 	alt: string;
 }
+
+export type Tutorial = {
+	id: number,
+	alias: string,
+	name: string,
+	youtube: string,
+	base: string,
+	referraltext: string,
+	public: boolean
+}
+
+export type TutorialStep = {
+	id: number,
+	tutorialid: number,
+	stepenum: number,
+	stepheader: string,
+	steptext: string,
+	image: string,
+	alt: string,
+	startseconds: number,
+	endseconds: number
+}
+
+export type Fiber = {
+	id: number,
+	fiber: string,
+	image: string,
+	alt: string,
+	description: string
+}

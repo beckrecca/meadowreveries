@@ -15,7 +15,7 @@
 
 # seeding
 /app/seed/*
-/lib/placeholder-data.ts
+/app/lib/placeholder-data.ts
 
 # production
 /build

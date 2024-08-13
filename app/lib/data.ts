@@ -1,8 +1,15 @@
 import { sql } from '@vercel/postgres';
 import {
   Product,
-  Image
+  Image,
+  Tutorial,
+  TutorialStep,
+  Fiber
 } from './definitions';
+
+/*
+* Products for Sale
+*/
 
 export async function fetchProducts() {
 	try {
@@ -110,6 +117,10 @@ export async function fetchDiyProducts() {
 	}
 }
 
+/*
+* Gallery Images
+*/
+
 export async function fetchExampleImages() {
 	try {
 		const images = await sql<Image>`
@@ -186,6 +197,26 @@ export async function fetchExampleCustomPreview() {
 			LIMIT 6;
 		`;
 		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch products.');
+	}
+}
+
+/*
+* Tutorials
+*/
+
+export async function fetchTutorials() {
+	try {
+		const tutorials = await sql<Tutorial>`
+			SELECT
+				*
+			FROM tutorials
+			WHERE public = 'true';
+		`;
+		return tutorials.rows;
 	}
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
