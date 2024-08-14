@@ -220,6 +220,41 @@ export async function fetchTutorials() {
 	}
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch products.');
+		throw new Error('Failed to fetch tutorials.');
+	}
+}
+
+export async function fetchTutorialStepsByTutorialId(tutorialid: number) {
+	try {
+		const steps = await sql<TutorialStep>`
+			SELECT
+				*
+			FROM tutorialsteps
+			WHERE tutorialid = ${tutorialid}
+			ORDER BY stepenum ASC;
+		`;
+		return steps.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch tutorialsteps.');
+	}
+}
+
+export async function fetchKitFibersByProductId(productid: string) {
+	try {
+		const fibers = await sql<Fiber>`
+			SELECT
+				fibers.*
+			FROM fibers
+			JOIN fibersproducts ON fibersproducts.fiberid = fibers.id
+			WHERE productid = ${productid}
+			;
+		`;
+		return fibers.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch tutorialsteps.');
 	}
 }
