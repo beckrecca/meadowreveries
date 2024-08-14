@@ -26,6 +26,7 @@ export type Tutorial = {
 	name: string,
 	image: string,
 	type: string,
+	productid: string,
 	youtube: string,
 	base: string,
 	referraltext: string,
