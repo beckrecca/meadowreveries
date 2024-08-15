@@ -30,7 +30,8 @@ export type Tutorial = {
 	youtube: string,
 	base: string,
 	referraltext: string,
-	public: boolean
+	public: boolean,
+	description: string
 }
 
 export type TutorialStep = {
