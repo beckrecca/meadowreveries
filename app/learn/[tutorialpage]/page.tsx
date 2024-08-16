@@ -3,7 +3,10 @@ import KitContents from '@/app/ui/learn/kitcontents';
 import TutorialHeader from '@/app/ui/learn/tutorialheader';
 import TutorialSteps from '@/app/ui/learn/tutorialsteps';
 import {notFound} from 'next/navigation';
-import { fetchTutorials } from '@/app/lib/data';
+import { fetchTutorials,
+         fetchTutorialStepsByTutorialId,
+       } 
+       from '@/app/lib/data';
 
 export async function generateStaticParams() {
   const tutorials = await fetchTutorials();
@@ -18,6 +21,7 @@ export default async function TutorialPage({params: {tutorialpage}}: { params: {
   if (!tutorial) {
     notFound()
   }
+  const steps = await fetchTutorialStepsByTutorialId(tutorial.id);
 
   return (
     <Container>
@@ -25,7 +29,11 @@ export default async function TutorialPage({params: {tutorialpage}}: { params: {
         <TutorialHeader tutorial={tutorial} />
         <KitContents tutorial={tutorial} />
       </div>
-      <TutorialSteps tutorial={tutorial} />
+      <TutorialSteps 
+        steps={steps}
+        youtube={tutorial.youtube}
+        length={steps.length}
+      />
     </Container>
   )
 }
