@@ -16,7 +16,7 @@ export default async function KitContents({tutorial}) {
 			        <ul className="list-image-[url(/icons/checked.png)] list-inside leading-loose sm:leading-relaxed">
 			          <li key="base">Base: {tutorial.base} {(tutorial.type == "basic") ? "(Check your kit's instructions!)" : "" }</li>
 			          <li key="felting-needle">Felting needle <span className="bg-goldenrod text-xs sm:text-sm p-1 rounded">Warning: Sharp!</span></li>
-			          <li key="felting-mat">Felting mat</li>
+			          <li key="felting-pad">Felting pad</li>
 			          <li key="youtube">Optional: <ExternalLink url={tutorial.youtube} text="Demo Video" /> </li>
 			          {(tutorial.type == "product") ?
 			          	<>

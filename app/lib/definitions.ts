@@ -7,9 +7,9 @@ export type Product = {
 	image: string;
 	alt: string;
 	dimensions: string;
-	custom1Name: string;
-	custom1Type: string;
-	custom1Value: string;
+	custom1name: string;
+	custom1type: string;
+	custom1value: string;
 	available: boolean;
 	unlisted: boolean;
 	weight: number;

@@ -37,16 +37,17 @@ export default function TutorialHeader({tutorial}) {
 				 	</div>
 				 </div>
 				 <div className="col-span-1 m-auto text-center">
-				 	<button className="p-3 rounded text-black bg-milkweed hover:text-black hover:bg-ladycardinal font-bold"
+				 	<button
+				 		className="p-3 font-bold bg-milkweed/20 border border-milkweed rounded hover:bg-ladycardinal/20"
 				 		onClick={handleToggle}
 				 	>Just getting started?</button>
 				 	{ beginnerDisplay ?
-				 		<div className="border border-ladycardinal p-4 m-2 rounded">
+				 		<div className="border border-milkweed p-4 m-2 rounded">
  					 		<p>Check out these tutorials for beginners:</p>
  						 	<ul>
- 						 		<li><Link href="/needle">How to (safely) use a felting needle</Link></li>
- 						 		<li><Link href="/handling-wool">How to handle felting wool</Link></li>
- 						 		<li><Link href="/mat">How to use the felting mat</Link></li>
+ 						 		<li><Link href="needle">How to (safely) use a felting needle</Link></li>
+ 						 		<li><Link href="handling-wool">How to handle felting wool</Link></li>
+ 						 		<li><Link href="mat">How to use the felting mat</Link></li>
  						 	</ul>
  					 	</div>
  					 : ""}

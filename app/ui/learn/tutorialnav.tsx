@@ -6,10 +6,18 @@ export default function TutorialNav( {handlePrev, handleNext, stepenum, length} 
 			{(stepenum == 1) ? 
 				<button disabled></button>
 			: 
-				<StepButton onClickFunction={handlePrev} text="Previous Step" />
+				<button 
+					className="p-4 font-bold text-seed hover:text-fern"
+					onClick={handlePrev}
+				>
+					Previous Step
+				</button>
 			}
+			<div className="font-bold">
+				{stepenum}/{length}
+			</div>
 			{(stepenum == length) ?
-				<button disabled className="p-4 font-bold bg-milkweed rounded">
+				<button disabled className="p-3 font-bold bg-milkweed rounded">
 					You finished!
 				</button>
 			:

@@ -27,7 +27,7 @@ export default async function TutorialPage({params: {tutorialpage}}: { params: {
     <Container>
       <div>
         <TutorialHeader tutorial={tutorial} />
-        <KitContents tutorial={tutorial} />
+        {(tutorial.base != "") ? <KitContents tutorial={tutorial} /> : "" }
       </div>
       <TutorialSteps 
         steps={steps}
