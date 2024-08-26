@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Card from '@/app/ui/card';
 import ExternalLink from '@/app/ui/externallink';
 
 export default function Page() {
