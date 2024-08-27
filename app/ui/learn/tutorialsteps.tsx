@@ -6,7 +6,7 @@ import TutorialNav from '@/app/ui/learn/tutorialnav'
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
-export default function Steps({steps, youtube, length}) {
+export default function Steps({steps, youtube, length, base}) {
 	const [currentStep, setCurrentStep] = useState(1);
 	let nextStep, prevStep = 0;
 
@@ -53,7 +53,11 @@ export default function Steps({steps, youtube, length}) {
 				  	stepenum={step.stepenum}
 				  	length={length}
 				  />
-			      <h2 className="text-center p-4">Step {step.stepenum}: {step.stepheader}</h2>
+				  <h2 className="text-center p-4"> {(base != "" && base != null) ? 
+			          "Step "
+			          : "Number " }
+			          {step.stepenum}: {step.stepheader}
+			      </h2>
 			      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
 			        <div className="whitespace-pre-line max-w-prose">
 			          <ExternalLink url={youtube + "&t=" + step.startseconds} text="Youtube" />
