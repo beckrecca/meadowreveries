@@ -45,9 +45,9 @@ export default function TutorialHeader({tutorial}) {
 				 		<div className="border border-milkweed p-4 m-2 rounded">
  					 		<p>Check out these tutorials for beginners:</p>
  						 	<ul>
- 						 		<li><Link href="needle">How to (safely) use a felting needle</Link></li>
  						 		<li><Link href="handling-wool">How to handle felting wool</Link></li>
- 						 		<li><Link href="mat">How to use the felting mat</Link></li>
+ 						 		<li><Link href="needle">How to (safely) use a felting needle</Link></li>
+ 						 		<li><Link href="pad">How to use a felting surface</Link></li>
  						 	</ul>
  					 	</div>
  					 : ""}
