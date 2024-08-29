@@ -53,12 +53,12 @@ export default function Steps({steps, youtube, length, base}) {
 				  	stepenum={step.stepenum}
 				  	length={length}
 				  />
-				  <h2 className="text-center p-4"> {(base != "" && base != null) ? 
+				  <h2 className="text-center p-4 normal-case"> {(base != "" && base != null) ? 
 			          "Step "
-			          : "Number " }
+			          : "Tip " }
 			          {step.stepenum}: {step.stepheader}
 			      </h2>
-			      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+			      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-4 bg-paper rounded">
 			        <div className="whitespace-pre-line max-w-prose">
 			          <ExternalLink url={youtube + "&t=" + step.startseconds} text="Youtube" />
 			          <p>{step.steptext}</p>
