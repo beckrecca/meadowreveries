@@ -48,7 +48,6 @@ export default async function KitContents({tutorial}) {
 			        </div>
 		        </div>
 	        </div>
-	        <p className="text-center"><strong>Note</strong>: Tutorial videos are sped up and edited for easy watching. Take your time and enjoy!</p>
         </div>
 	);
 }

@@ -32,6 +32,8 @@ export default async function TutorialPage({params: {tutorialpage}}: { params: {
       <TutorialSteps
         steps={steps}
         youtube={tutorial.youtube}
+        video={tutorial.video_id}
+        name={tutorial.name}
         length={steps.length}
         base={tutorial.base}
       />
