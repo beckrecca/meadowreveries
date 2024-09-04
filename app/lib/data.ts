@@ -224,14 +224,53 @@ export async function fetchTutorials() {
 	}
 }
 
+export async function fetchBasicTutorials() {
+	try {
+		const tutorials = await sql<Tutorial>`
+			SELECT
+				*
+			FROM tutorials
+			WHERE public = 'true' AND type='basic';
+		`;
+		return tutorials.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch tutorials.');
+	}
+}
+
 export async function fetchTutorialStepsByTutorialId(tutorialid: number) {
 	try {
 		const steps = await sql<TutorialStep>`
 			SELECT
-				*
+				tutorialsteps.*,
+				tutorials.alias as referredalias,
+				tutorials.referraltext
 			FROM tutorialsteps
-			WHERE tutorialid = ${tutorialid}
+			LEFT JOIN tutorialstepstutorials ON tutorialstepstutorials.tutorialstepid = tutorialsteps.id
+			LEFT JOIN tutorials ON tutorials.id = tutorialstepstutorials.tutorialid
+			WHERE tutorialsteps.tutorialid = ${tutorialid}
 			ORDER BY stepenum ASC;
+		`;
+		return steps.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch tutorialsteps.');
+	}
+}
+
+export async function fetchReferredTutorialByTutorialStepId(tutorialstepid: number) {
+	try {
+		const steps = await sql<TutorialStep>`
+			SELECT
+				tutorials.alias,
+				tutorials.referraltext
+			FROM tutorialstepstutorials
+			JOIN tutorials
+			ON tutorials.id=tutorialstepstutorials.tutorialid
+			WHERE tutorialstepid = ${tutorialid};
 		`;
 		return steps.rows;
 	}

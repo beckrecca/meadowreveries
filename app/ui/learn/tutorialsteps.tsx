@@ -2,7 +2,9 @@
 
 import Image from 'next/image';
 import ExternalLink from '@/app/ui/externallink';
-import TutorialNav from '@/app/ui/learn/tutorialnav'
+import TutorialNav from '@/app/ui/learn/tutorialnav';
+import TutorialReference from '@/app/ui/learn/tutorialreference'
+import TutorialVideo from '@/app/ui/learn/tutorialvideo';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
@@ -60,8 +62,12 @@ export default function Steps({steps, youtube, length, base}) {
 			      </h2>
 			      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-4 bg-paper rounded">
 			        <div className="whitespace-pre-line max-w-prose">
+			          <TutorialVideo src={youtube + "&t=" + step.startseconds} />
 			          <ExternalLink url={youtube + "&t=" + step.startseconds} text="Youtube" />
-			          <p>{step.steptext}</p>
+			          <div>{step.steptext}</div>
+			          <TutorialReference 
+			          	alias={step.referredalias} 
+			          	referraltext={step.referraltext} />
 			        </div>
 			        <div className="m-auto">
 			          <Image

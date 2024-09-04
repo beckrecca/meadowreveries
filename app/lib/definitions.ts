@@ -43,7 +43,9 @@ export type TutorialStep = {
 	image: string,
 	alt: string,
 	startseconds: number,
-	endseconds: number
+	endseconds: number,
+	referredalias: string,
+	referraltext: string
 }
 
 export type Fiber = {
