@@ -261,25 +261,6 @@ export async function fetchTutorialStepsByTutorialId(tutorialid: number) {
 	}
 }
 
-export async function fetchReferredTutorialByTutorialStepId(tutorialstepid: number) {
-	try {
-		const steps = await sql<TutorialStep>`
-			SELECT
-				tutorials.alias,
-				tutorials.referraltext
-			FROM tutorialstepstutorials
-			JOIN tutorials
-			ON tutorials.id=tutorialstepstutorials.tutorialid
-			WHERE tutorialstepid = ${tutorialid};
-		`;
-		return steps.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch tutorialsteps.');
-	}
-}
-
 export async function fetchKitFibersByProductId(productid: string) {
 	try {
 		const fibers = await sql<Fiber>`
