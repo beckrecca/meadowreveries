@@ -31,7 +31,8 @@ export type Tutorial = {
 	base: string,
 	referraltext: string,
 	public: boolean,
-	description: string
+	description: string,
+	video_id: string
 }
 
 export type TutorialStep = {

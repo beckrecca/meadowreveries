@@ -8,7 +8,7 @@ import TutorialVideo from '@/app/ui/learn/tutorialvideo';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
-export default function Steps({steps, youtube, length, base}) {
+export default function Steps({steps, youtube, video, name, length, base}) {
 	const [currentStep, setCurrentStep] = useState(1);
 	let nextStep, prevStep = 0;
 
@@ -62,9 +62,17 @@ export default function Steps({steps, youtube, length, base}) {
 			      </h2>
 			      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-4 bg-paper rounded">
 			        <div className="whitespace-pre-line max-w-prose">
-			          <TutorialVideo src={youtube + "&t=" + step.startseconds} />
-			          <ExternalLink url={youtube + "&t=" + step.startseconds} text="Youtube" />
-			          <div>{step.steptext}</div>
+			          <TutorialVideo 
+			          	video={video}
+			          	name={name}
+			          	startseconds={step.startseconds}
+			          />
+			          <div className="text-right">
+			          	<ExternalLink url={youtube + "&t=" + step.startseconds} text="Watch video in a new tab ↗️"/>
+			          </div>
+			          <div>
+			          	<p>{step.steptext}</p>
+			          </div>
 			          <TutorialReference 
 			          	alias={step.referredalias} 
 			          	referraltext={step.referraltext} />

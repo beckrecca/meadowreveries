@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import ExternalLink from '@/app/ui/externallink';
 import { useState } from 'react';
 
 export default function TutorialHeader({tutorial}) {
@@ -39,7 +40,10 @@ export default function TutorialHeader({tutorial}) {
  						 	</ul>
  					 	</div>
  					 : ""}
- 					 <p className="text-center"><strong>Note</strong>: Tutorial videos are sped up and edited for easy watching. Take your time and enjoy!</p>
+ 					 <div className="text-center">
+ 					 	<p><ExternalLink url={tutorial.youtube} text="Watch demo video in a new tab ↗️" /></p>
+ 					 	<p><strong>Note</strong>: Tutorial videos are sped up and edited for easy watching. Take your time and enjoy!</p>
+ 					 </div>
 				 </div>
 			 </div>
 		</div>
