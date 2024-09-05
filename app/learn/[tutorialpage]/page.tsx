@@ -1,7 +1,7 @@
 import Container from '@/app/ui/container';
-import KitContents from '@/app/ui/learn/kitcontents';
-import TutorialHeader from '@/app/ui/learn/tutorialheader';
-import TutorialSteps from '@/app/ui/learn/tutorialsteps';
+import KitContents from '@/app/ui/learn/tutorialcomponent/kitcontents';
+import TutorialHeader from '@/app/ui/learn/tutorialcomponent/tutorialheader';
+import TutorialSteps from '@/app/ui/learn/tutorialcomponent/tutorialsteps';
 import {notFound} from 'next/navigation';
 import { fetchTutorials,
          fetchTutorialStepsByTutorialId,

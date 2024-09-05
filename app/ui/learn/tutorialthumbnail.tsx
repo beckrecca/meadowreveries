@@ -13,7 +13,7 @@ export default function TutorialThumbnail({tutorial}) {
 				  className="rounded float-left mr-4 my-auto"
 				  />
 				<div className="overflow-hidden">
-					<Link href={"/learn/" + tutorial.alias}><h3>{tutorial.name}</h3></Link>
+					<Link href={"/learn/" + tutorial.alias}><h4>{tutorial.name}</h4></Link>
 				 	<p>
 				 		{tutorial.description}
 				 	</p>

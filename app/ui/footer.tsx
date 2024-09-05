@@ -39,6 +39,22 @@ export default function Footer() {
 						height="20"
 					/>
 				</Link>
+				<Link className="mr-4" href="https://www.youtube.com/@MeadowReveries" target="_blank">
+					<Image
+						src="/icons/youtube.png"
+						alt="youtube"
+						width="20"
+						height="20"
+					/>
+				</Link>
+				<Link className="mr-4" href="https://www.tiktok.com/@meadow.reveries" target="_blank">
+					<Image
+						src="/icons/tiktok.png"
+						alt="tiktok"
+						width="20"
+						height="20"
+					/>
+				</Link>
 			</div>
 			<div className="flex justify-center items-center p-4"> 
 				<span className="mr-4">Copyright <Link href="https://www.beckrecca.me" target="_blank">Rebecca Doris</Link> 2024</span>
