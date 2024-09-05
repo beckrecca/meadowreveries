@@ -1,10 +1,8 @@
 export default function Addtocart({ item }) {
-  console.log('In Addtocart component');
 	const itemURL = "/shop/" + item.producttype + '/' + item.id;
-  console.log(item.available);
 
 	if (item.available == true) { // if this item is available
-      if (item.custom1name == "" || item.custom1Name == null) { // if there's no custom metadata
+      if (item.custom1name == "" || item.custom1name == null) { // if there's no custom metadata
         return (
           <button 
             className="snipcart-add-item rounded text-black bg-milkweed hover:text-black hover:bg-ladycardinal mx-auto my-2 p-3 font-bold w-48"
