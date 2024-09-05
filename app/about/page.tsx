@@ -28,7 +28,7 @@ export default function Page() {
             width="510"
             height="383"
             />
-            <p>The name <strong>Meadow Reveries</strong> comes from the Meadows of Pioneer Valley combined with local poet Emily Dickinson's poem <ExternalLink url="https://poets.org/poem/make-prairie-1755" text="To make a prairie" />. The Meadows are artist Rebecca's happy place for bird watching and day dreaming. 
+            <p>The name <strong>Meadow Reveries</strong> comes from the Meadows of Cold Springs combined with local poet Emily Dickinson's poem <ExternalLink url="https://poets.org/poem/make-prairie-1755" text="To make a prairie" />. The Meadows are artist Rebecca's happy place for bird watching and day dreaming. 
             </p>
         </div>
         <div className="rounded p-2 max-w-[504px]">
@@ -44,8 +44,10 @@ export default function Page() {
           follow us on social media: </p>
           <ul>
             <li><ExternalLink url="https://www.instagram.com/meadowreveries" text="Instagram" /></li> 
-            <li><ExternalLink url="https://www.tumblr.com/meadowreveries" text="Tumblr" /></li>
             <li><ExternalLink url="https://toot.io/@meadowreveries" text="Mastodon" /></li>
+            <li><ExternalLink url="https://www.tiktok.com/@meadow.reveries" text="TikTok" /></li>
+            <li><ExternalLink url="https://www.tumblr.com/meadowreveries" text="Tumblr" /></li>
+            <li><ExternalLink url="https://www.youtube.com/@MeadowReveries" text="Youtube" /></li>
           </ul>
         </div>
         

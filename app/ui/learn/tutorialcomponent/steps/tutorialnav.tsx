@@ -1,4 +1,4 @@
-import StepButton from '@/app/ui/learn/stepbutton';
+import StepButton from '@/app/ui/learn/tutorialcomponent/steps/stepbutton';
 
 export default function TutorialNav( {handlePrev, handleNext, stepenum, length} ) {
 	return (

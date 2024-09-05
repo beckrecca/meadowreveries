@@ -1,10 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import ExternalLink from '@/app/ui/externallink';
-import TutorialNav from '@/app/ui/learn/tutorialnav';
-import TutorialReference from '@/app/ui/learn/tutorialreference'
-import TutorialVideo from '@/app/ui/learn/tutorialvideo';
+import TutorialNav from '@/app/ui/learn/tutorialcomponent/steps/tutorialnav';
+import TutorialReference from '@/app/ui/learn/tutorialcomponent/steps/tutorialreference'
+import TutorialVideo from '@/app/ui/learn/tutorialcomponent/steps/tutorialvideo';
+import StepHeader from '@/app/ui/learn/tutorialcomponent/steps/stepheader';
+import TutorialText from '@/app/ui/learn/tutorialcomponent/steps/tutorialtext';
+import StepImage from '@/app/ui/learn/tutorialcomponent/steps/stepimage';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
@@ -55,36 +57,23 @@ export default function Steps({steps, youtube, video, name, length, base}) {
 				  	stepenum={step.stepenum}
 				  	length={length}
 				  />
-				  <h2 className="text-center p-4 normal-case"> {(base != "" && base != null) ? 
-			          "Step "
-			          : "Tip " }
-			          {step.stepenum}: {step.stepheader}
-			      </h2>
+				  <StepHeader step={step} base={base} />
 			      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-4 bg-paper rounded">
-			        <div className="whitespace-pre-line max-w-prose">
+			        <div className="whitespace-pre-line">
 			          <TutorialVideo 
 			          	video={video}
 			          	name={name}
 			          	startseconds={step.startseconds}
+			          	endseconds={step.endseconds}
+			          	youtube={youtube}
 			          />
-			          <div className="text-right">
-			          	<ExternalLink url={youtube + "&t=" + step.startseconds} text="Watch video in a new tab ↗️"/>
-			          </div>
-			          <div>
-			          	<p>{step.steptext}</p>
-			          </div>
+			          <TutorialText step={step}/>
 			          <TutorialReference 
 			          	alias={step.referredalias} 
 			          	referraltext={step.referraltext} />
 			        </div>
-			        <div className="m-auto">
-			          <Image
-			            src={"/tutorials/"+step.image}
-			            alt={step.alt}
-			            height={351}
-			            width={396}
-			            className="rounded"
-			            />
+			        <div className="mx-auto">
+			          <StepImage image={step.image} alt={step.alt} />
 			        </div>
 			      </div>
 			      <TutorialNav
