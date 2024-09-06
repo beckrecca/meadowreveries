@@ -12,8 +12,8 @@ export default function DiyComingSoon() {
 	          className="w-full lg:max-w-[1280px] md:max-h-screen lg:mx-auto rounded"
 	        />
 	        <div className="absolute inset-0">
-	          <h3 className="bg-paper/85 p-4 rounded text-center">
-	          Coming Soon
+	          <h3 className="bg-goldenrod/85 p-4 rounded text-center">
+	          Black-capped chickadee felting kit launching September 15, 2024
 	          </h3>
 	        </div>
 	        <div className="absolute inset-x-0 sm:bottom-0 w-full">
