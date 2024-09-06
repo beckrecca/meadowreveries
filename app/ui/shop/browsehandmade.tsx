@@ -6,7 +6,7 @@ export default async function BrowseHandmade() {
         return (
                 <div className="mb-[96px] sm:mb-6">
                         <h2>Handmade Pieces</h2>
-                        <p>Ready made, ready for you to take home.</p>
+                        <p>Ready for you to take home.</p>
                         <ProductList products={products}/>
                 </div>
         );
