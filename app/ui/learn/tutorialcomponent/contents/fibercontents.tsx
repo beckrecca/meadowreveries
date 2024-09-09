@@ -14,9 +14,9 @@ export default function FiberContents( { fibers }) {
                     className="rounded"
                     />
                     <div className="absolute inset-0 max-w-[212px]">
-			    		<h5 className="bg-white/75 p-2 text-black text-sm sm:text-base font-bold capitalize">
+			    		<div className="bg-white/75 p-2 text-black text-sm sm:text-base font-bold capitalize">
 			    			{fiber.fiber}
-			    		</h5>
+			    		</div>
 					</div>
                 </div>
               );
