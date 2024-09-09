@@ -1,3 +1,5 @@
+import ProductPageSubscribe from '@/app/ui/shop/productpage/productpagesubscribe.tsx';
+
 export default function Addtocart({ item }) {
 	const itemURL = "/shop/" + item.producttype + '/' + item.id;
 
@@ -58,7 +60,7 @@ export default function Addtocart({ item }) {
     }
     else {
       return (
-        <div className="text-aster font-bold p-4">This item is unavailable.</div>
+        <ProductPageSubscribe />
       );
     }
 }
