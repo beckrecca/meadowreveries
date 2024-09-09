@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import TutorialDescription from '@/app/ui/learn/tutorialcomponent/contents/tutorialdescription';
 import ExternalLink from '@/app/ui/externallink';
 import { useState } from 'react';
 
@@ -24,6 +25,10 @@ export default function TutorialHeader({tutorial}) {
 			  "Felting Kit Tutorial: " 
 			  : "Basic Tutorial: " }
 			  {tutorial.name}</h2>
+		    <div className="bg-paper p-4 rounded max-w-fit mx-auto mb-6">
+		        <TutorialDescription tutorial={tutorial} />
+		        <strong>Note</strong>: Tutorial videos are sped up and edited for easy watching. Take your time and enjoy!
+		    </div>
 			<div>
 				 <div className="m-auto text-center">
 				 	<button
@@ -40,10 +45,6 @@ export default function TutorialHeader({tutorial}) {
  						 	</ul>
  					 	</div>
  					 : ""}
- 					 <div className="text-center">
- 					 	<p><ExternalLink url={tutorial.youtube} text="Watch demo video in a new tab ↗️" /></p>
- 					 	<p><strong>Note</strong>: Tutorial videos are sped up and edited for easy watching. Take your time and enjoy!</p>
- 					 </div>
 				 </div>
 			 </div>
 		</div>

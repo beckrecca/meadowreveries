@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import FiberContents from '@/app/ui/learn/tutorialcomponent/contents/fibercontents';
-import TutorialDescription from '@/app/ui/learn/tutorialcomponent/contents/tutorialdescription';
 import KitList from '@/app/ui/learn/tutorialcomponent/contents/kitlist';
 import { fetchKitFibersByProductId } from '@/app/lib/data';
 
@@ -13,7 +12,6 @@ export default async function KitContents({tutorial}) {
 	          "Kit Contents"
 	          : "What's Needed" }
 	        </h3>
-	        <TutorialDescription tutorial={tutorial} />
 			<div className="grid grid-cols-1 sm:grid-cols-2 mb-[48px] pr-4">
 				<KitList tutorial={tutorial} />
 		        <div>

@@ -14,7 +14,7 @@ export default function TutorialThumbnail({tutorial}) {
 				  />
 				<div className="overflow-hidden">
 					<Link href={"/learn/" + tutorial.alias}><h4>{tutorial.name}</h4></Link>
-				 	<p>
+				 	<p className="max-w-prose">
 				 		{tutorial.description}
 				 	</p>
 			 	</div>
