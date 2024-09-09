@@ -1,4 +1,4 @@
-import ProductPageSubscribe from '@/app/ui/shop/productpage/productpagesubscribe.tsx';
+import ProductPageSubscribe from '@/app/ui/shop/productpage/productpagesubscribe';
 
 export default function Addtocart({ item }) {
 	const itemURL = "/shop/" + item.producttype + '/' + item.id;
