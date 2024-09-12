@@ -9,7 +9,7 @@ export default function HomeBanner() {
 		["/homepage_farmers.png",
 		"Needle felted borbs pose with their fall harvest. On the left is a summer squash plant. From top right clockwise, a cardinal pushes a wheel barrow laden with squash and pumpkin, a robin wears a straw hat, a chickadee holds a garden tool, a bluebird bears a trowel and watering can. Three needle felted pumpkins sit in the foreground. Text in the upper left corner reads It's Harvest Time. ",
 		"Check out what we've picked",
-		"/shop"
+		"/shop/new"
 		],
 		["/homepage_diyrelease.png",
 		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
@@ -18,7 +18,7 @@ export default function HomeBanner() {
 		],
 		["/homepage_mobile.png",
 		"Collage of several shots of a Halloween themed baby mobile. From the left clockwise: Close up of a Halloween baby mobile’s hanging items with a smiling ghost and pumpkins; Close up of a Halloween baby mobile’s hanging items with pumpkins, a black cat, a bat, a witch’s hat, a ghost, and a crescent moon; Full view of a Halloween baby mobile strung from an embroidery hoop. The mobile items include an orange star and yellow crescent moon, green and orange balls, pumpkins, a ghost, a witch hat, a black cat, and a bat; Close up of a Halloween baby mobile’s hanging items with  pumpkins, a bat, a witch’s hat, a crescent moon, and orange and green balls. Text in the top left reads Commissions Open.",
-		"Check out some examples",
+		"Browse example custom work",
 		"/shop/custom"
 		],
 	]
@@ -79,7 +79,7 @@ export default function HomeBanner() {
 	          width={720}
 	          className="w-full lg:max-w-[1280px] lg:mx-auto"
 	        />
-	        <div className="absolute bottom-16 left-8">
+	        <div className="absolute bottom-16 left-1/4">
 			    <Link href={link} className="bg-white/85 text-lg sm:text-2xl p-2 py-4 underline rounded leading-10 inflex-flex items-center text-black">{subtext}</Link>
 			</div>
 	    	<button className="absolute right-0 bg-fern p-2 rounded hover:bg-black" onClick={reverseCarousel}>

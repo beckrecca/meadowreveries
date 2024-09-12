@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import HomeBanner from '@/app/ui/home/homebanner';
 import Subscribeform from '@/app/ui/subscribeform';
-import HandmadePreview from '@/app/ui/home/handmadepreview';
-import DiyPreview from '@/app/ui/home/diypreview';
+import NewPreview from '@/app/ui/home/newpreview';
 import CustomPreview from '@/app/ui/home/custompreview';
 
 export default function Home() {
@@ -10,8 +9,7 @@ export default function Home() {
     <div>
       <main className="pb-4">
         <HomeBanner />
-        <HandmadePreview />
-        <DiyPreview />
+        <NewPreview />
         <CustomPreview />
         <Subscribeform />
       </main>
