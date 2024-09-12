@@ -6,15 +6,10 @@ import { useState, useEffect } from 'react';
 
 export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
-		["/homepage_fledge_noca.png",
-		"A needle felted female Northern Cardinal, mostly in shadow from the morning sunlight, flies mid-air across a blue sky.",
-		"Shop Select Handmade Pieces",
+		["/homepage_farmers.png",
+		"Needle felted borbs pose with their fall harvest. On the left is a summer squash plant. From top right clockwise, a cardinal pushes a wheel barrow laden with squash and pumpkin, a robin wears a straw hat, a chickadee holds a garden tool, a bluebird bears a trowel and watering can. Three needle felted pumpkins sit in the foreground. ",
+		"Check out what we've picked",
 		"/shop"
-		],
-		["/homepage_pet_portrait.png",
-		"Close up of a felted wool portrait of a blue eyed Australian shepherd’s face. The dog’s mouth is relaxed open in a smile. His ears are black, his face mostly white with mottled black, grey and tan. His neck is fluffy warm white. ",
-		"Custom Pet Portraits",
-		"/shop/handmade/pet-portrait"
 		],
 		["/homepage_pabu.png",
 		"A needle-felted red panda sits facing 3/4 towards the right on top of a plastic branch.",
@@ -84,8 +79,8 @@ export default function HomeBanner() {
 	          width={720}
 	          className="w-full lg:max-w-[1280px] lg:mx-auto"
 	        />
-	        <div className="absolute bottom-3 left-1.5 sm:top-[26px] sm:left-[86px]">
-			    <Link href={link} className="bg-white/85 text-lg sm:text-2xl p-2 py-4 underline rounded leading-10 inflex-flex items-center">{subtext}</Link>
+	        <div className="absolute bottom-16 left-8">
+			    <Link href={link} className="bg-white/85 text-lg sm:text-2xl p-2 py-4 underline rounded leading-10 inflex-flex items-center text-black">{subtext}</Link>
 			</div>
 	    	<button className="absolute right-0 bg-fern p-2 rounded hover:bg-black" onClick={reverseCarousel}>
 				<Image

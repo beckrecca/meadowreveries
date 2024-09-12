@@ -1,10 +1,12 @@
-import DiyComingSoon from '@/app/ui/shop/diy/diycomingsoon';
+import { fetchDiyProducts }  from '@/app/lib/data';
+import ProductList from '@/app/ui/shop/productlist';
 
-export default function BrowseDiy() {
+export default async function BrowseDiy() {
+        const products = await fetchDiyProducts();
         return (
-                <div>
+                <div className="my-4">
                   <h2>Felting Kits</h2>
-                  <DiyComingSoon />
+                  <ProductList products={products}/>
                 </div>
         );
 }

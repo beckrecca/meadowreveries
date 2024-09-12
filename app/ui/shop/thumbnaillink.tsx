@@ -8,6 +8,7 @@ export default function ThumbnailLink({product}) {
 	const [src, setSrc] = useState(product.image);
 
 	function handleMouseEnter(imagesrc) {
+		console.log(imagesrc);
 		return () => {
 			setSrc(imagesrc);
 		};
@@ -20,7 +21,7 @@ export default function ThumbnailLink({product}) {
 	}
 	return (
 		<div key={product.id} 
-			className="relative"
+			className="relative border border-paper rounded"
 			onMouseEnter={handleMouseEnter("/shop/"+product.image2)}
 			onMouseLeave={handleMouseLeave(product.image)}
 			>
@@ -34,6 +35,9 @@ export default function ThumbnailLink({product}) {
 				/>
 				<div className="absolute inset-0 text-center max-w-[224px]">
 				    <h3 className="bg-white/75 p-2 text-black font-bold normal-case">{product.name}</h3>
+				</div>
+				<div className="absolute inset-x-0 bottom-0 text-center text-black hover:text-black bg-white/75">
+					${product.price}
 				</div>
 			</Link>
 	    </div>

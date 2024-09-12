@@ -105,9 +105,15 @@ export async function fetchDiyProducts() {
 	try {
 		const products = await sql<Product>`
 			SELECT
-				*
-			FROM products
-			where producttype = 'diy';
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND products.producttype = 'diy'
+			GROUP BY products.name, products.id
+			ORDER BY name ASC;
 		`;
 		return products.rows;
 	}
