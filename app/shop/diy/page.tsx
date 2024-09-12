@@ -1,16 +1,16 @@
 import Container from '@/app/ui/container';
+import { fetchDiyProducts }  from '@/app/lib/data';
+import ProductList from '@/app/ui/shop/productlist';
 import ShopNav from '@/app/ui/shop/shopnav';
-import Subscribeform from '@/app/ui/subscribeform';
-import DiyComingSoon from '@/app/ui/shop/diy/diycomingsoon';
 
-export default function Page() {
+export default async function Page() {
+  const products = await fetchDiyProducts();
   return (
       <Container>
         <main>
           <ShopNav />
           <h2>Felting Kits</h2>
-          <DiyComingSoon />
-          <Subscribeform />
+          <ProductList products={products}/>
         </main>
       </Container>
     );

@@ -105,9 +105,15 @@ export async function fetchDiyProducts() {
 	try {
 		const products = await sql<Product>`
 			SELECT
-				*
-			FROM products
-			where producttype = 'diy';
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND products.producttype = 'diy'
+			GROUP BY products.name, products.id
+			ORDER BY name ASC;
 		`;
 		return products.rows;
 	}
@@ -193,6 +199,7 @@ export async function fetchExampleCustomPreview() {
 			FROM products
 			JOIN images ON images.productid = products.id
 			where products.producttype = 'customExample'
+			and products.id != 'sylvie-example'
 			ORDER BY RANDOM()
 			LIMIT 6;
 		`;
@@ -269,6 +276,36 @@ export async function fetchKitFibersByProductId(productid: string) {
 			FROM fibers
 			JOIN fibersproducts ON fibersproducts.fiberid = fibers.id
 			WHERE productid = ${productid}
+			;
+		`;
+		return fibers.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch tutorialsteps.');
+	}
+}
+
+export async function fetchNewProducts() {
+	try {
+		const fibers = await sql<Fiber>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND products.id IN (
+				'diy-bcch',
+				'mini-pumpkin-borb',
+				'pumpkin-borb',
+				'mini-wreath-fall',
+				'mini-wreath-bat',
+				'lil-harvest-basket'
+			)
+			GROUP BY products.name, products.id
+			order by products.id asc
 			;
 		`;
 		return fibers.rows;
