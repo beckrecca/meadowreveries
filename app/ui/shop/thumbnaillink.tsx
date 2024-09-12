@@ -8,7 +8,6 @@ export default function ThumbnailLink({product}) {
 	const [src, setSrc] = useState(product.image);
 
 	function handleMouseEnter(imagesrc) {
-		console.log(imagesrc);
 		return () => {
 			setSrc(imagesrc);
 		};

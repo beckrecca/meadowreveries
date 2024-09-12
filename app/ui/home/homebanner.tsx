@@ -7,19 +7,19 @@ import { useState, useEffect } from 'react';
 export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
 		["/homepage_farmers.png",
-		"Needle felted borbs pose with their fall harvest. On the left is a summer squash plant. From top right clockwise, a cardinal pushes a wheel barrow laden with squash and pumpkin, a robin wears a straw hat, a chickadee holds a garden tool, a bluebird bears a trowel and watering can. Three needle felted pumpkins sit in the foreground. ",
+		"Needle felted borbs pose with their fall harvest. On the left is a summer squash plant. From top right clockwise, a cardinal pushes a wheel barrow laden with squash and pumpkin, a robin wears a straw hat, a chickadee holds a garden tool, a bluebird bears a trowel and watering can. Three needle felted pumpkins sit in the foreground. Text in the upper left corner reads It's Harvest Time. ",
 		"Check out what we've picked",
 		"/shop"
 		],
-		["/homepage_pabu.png",
-		"A needle-felted red panda sits facing 3/4 towards the right on top of a plastic branch.",
-		"Commissions Open",
-		"/shop/custom"
+		["/homepage_diyrelease.png",
+		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
+		"Make your own chickadee",
+		"/shop/diy/diy-bcch"
 		],
-		["/homepage_diy_coming_soon.png",
-		"Assorted needle-felted critters, some wearing spectacles, gather around a notebook where HOW TO BORB is written, surrounded by various needle felting supplies including needles, felting wool, scissors, a wooden dowel, and partially obscured Meadow Reveries business cards. Clockwise from left, there's a bespectacled black-capped chickadee, Bouldy from the Hades game, an Eastern grey squirrel, a bespectacled American robin, and another blackc-capped chickadee.",
-		"Felting Kits Coming Fall 2024",
-		"#footer"
+		["/homepage_mobile.png",
+		"Collage of several shots of a Halloween themed baby mobile. From the left clockwise: Close up of a Halloween baby mobile’s hanging items with a smiling ghost and pumpkins; Close up of a Halloween baby mobile’s hanging items with pumpkins, a black cat, a bat, a witch’s hat, a ghost, and a crescent moon; Full view of a Halloween baby mobile strung from an embroidery hoop. The mobile items include an orange star and yellow crescent moon, green and orange balls, pumpkins, a ghost, a witch hat, a black cat, and a bat; Close up of a Halloween baby mobile’s hanging items with  pumpkins, a bat, a witch’s hat, a crescent moon, and orange and green balls. Text in the top left reads Commissions Open.",
+		"Check out some examples",
+		"/shop/custom"
 		],
 	]
 
