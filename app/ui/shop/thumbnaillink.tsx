@@ -20,7 +20,7 @@ export default function ThumbnailLink({product}) {
 	}
 	return (
 		<div key={product.id} 
-			className="relative border border-paper rounded"
+			className="relative border border-paper rounded shadow"
 			onMouseEnter={handleMouseEnter("/shop/"+product.image2)}
 			onMouseLeave={handleMouseLeave(product.image)}
 			>

@@ -9,7 +9,7 @@ export default function Page() {
         <div className="rounded p-2 max-w-[504px]">
             <h2>Artist</h2>
             <Image 
-            className="rounded"
+            className="rounded border border-paper shadow"
             src="/about/about_artist.png" 
             alt="Rebecca Doris stands in the meadows with a sunset in the background, facing the camera and smiling laughing." 
             width="504"
@@ -22,7 +22,7 @@ export default function Page() {
         <div className="rounded p-2 max-w-[504px]">
             <h2>Inspiration</h2>
             <Image 
-            className="rounded"
+            className="rounded border border-paper shadow"
             src="/about/about_autumn_sunset.png" 
             alt="The Meadows under sunset in mid-autumn." 
             width="510"
@@ -34,7 +34,7 @@ export default function Page() {
         <div className="rounded p-2 max-w-[504px]">
           <h2>Connect</h2>
           <Image 
-          className="rounded"
+          className="rounded border border-paper shadow"
           src="/about/about_tea_party.png" 
           alt="Assorted needle felting critters have a tea party on a picnic blanket. From left to right, a female Northern Cardinal borb, a mini black-capped chickadee sits in a teapot, a male Northern Cardinal, and a mini Eastern bluebird. Needle-felted heart-shaped raspberry jam cookes lie on the picnic plates." 
           width="510"
@@ -54,7 +54,7 @@ export default function Page() {
         <div className="rounded p-2 max-w-[504px]">
           <h2>Fiber Sources</h2>
           <Image 
-            className="rounded"
+            className="rounded border border-paper shadow"
             src="/about/about_amro_meadows.png" 
             alt="A mostly out of frame hand in the center holds a needle-felted American Robin aloft in front of a field of meadows in mid summer." 
             width="510"

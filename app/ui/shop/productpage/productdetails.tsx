@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import Addtocart from '@/app/ui/shop/productpage/addtocart';
 import KitDetails from '@/app/ui/shop/diy/kitdetails';
-import { fetchKitFibersByProductId } from '@/app/lib/data';
 
-export default function ProductDetails( {product} ) {
+export default function ProductDetails( {product, fibers} ) {
 	return (
 		<div className="overflow-hidden">
       <h2>{product.name}</h2>
@@ -22,7 +21,7 @@ export default function ProductDetails( {product} ) {
         </p>
         {
           (product.producttype == 'diy') ?
-          <KitDetails productid={product.id} />
+          <KitDetails fibers={fibers}/>
           : ""
         }
       </div>

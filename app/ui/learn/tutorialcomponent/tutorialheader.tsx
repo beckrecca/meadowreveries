@@ -10,7 +10,6 @@ export default function TutorialHeader({tutorial}) {
 	const [beginnerDisplay, setBeginnerDisplay] = useState(false);
 
 	function handleToggle() {
-		console.log(beginnerDisplay);
 		if (beginnerDisplay) {
 			setBeginnerDisplay(false);
 		}

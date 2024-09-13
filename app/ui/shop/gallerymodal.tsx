@@ -67,7 +67,7 @@ export default function GalleryModal({example, imageArray, altArray, nameArray, 
 
 	return (
 		<div>
-			<div key={example.portraitid} className="relative">
+			<div key={example.portraitid} className="relative border border-paper rounded shadow">
 	          <Image
 	            src={"/shop/" + example.file}
 	            alt={example.alt}
@@ -83,18 +83,19 @@ export default function GalleryModal({example, imageArray, altArray, nameArray, 
 					<Image
 					src="/icons/previous.png"
 					alt="Navigate to previous image"
-					height={48}
-					width={48}
+					height={24}
+					width={24}
 					/>
 				</button>
-				<div className="rounded">
+				<div className='border border-paper shadow rounded'>
 					<Image
 					src={"/shop/" + imageToShow}
 					alt={altToUse.toString()}
 					height={448}
 					width={448}
+					className="rounded-t"
 					/>
-					<div className="rounded bg-white p-2 max-w-[448px]">
+					<div className="rounded-b bg-white p-2 max-w-[448px]">
 						<h3>
 							{nameToDisplay.toString()}
 						</h3>
@@ -107,8 +108,8 @@ export default function GalleryModal({example, imageArray, altArray, nameArray, 
 					<Image
 					src="/icons/next.png"
 					alt="Navigate to next image"
-					height={48}
-					width={48}
+					height={24}
+					width={24}
 					/>
 				</button>
 			  </div>
