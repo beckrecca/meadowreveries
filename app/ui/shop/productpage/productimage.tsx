@@ -28,7 +28,7 @@ export default function ProductImage( {product, images} ) {
 	          alt={alt}
 	          height="448"
 	          width="448"
-	          className="rounded" 
+	          className="rounded border border-paper shadow" 
 	        />
 	        <div className="flex overflow-auto max-w-[448px] h-[128px]">
         	{images.map((image) => {

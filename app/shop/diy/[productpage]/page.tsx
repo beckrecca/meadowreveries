@@ -5,7 +5,9 @@ import {notFound} from 'next/navigation';
 import ProductImage from '@/app/ui/shop/productpage/productimage'
 import ProductDetails from '@/app/ui/shop/productpage/productdetails'
 import { fetchDiyProducts,
-        fetchImagesByProductID} 
+        fetchImagesByProductID,
+        fetchKitFibersByProductId
+      } 
         from '@/app/lib/data';
 
 export async function generateStaticParams() {
@@ -22,6 +24,7 @@ export default async function ProductPage({params: {productpage}}: { params: { p
     notFound()
   }
   const images = await fetchImagesByProductID(product.id);
+  const fibers = await fetchKitFibersByProductId(product.id);
 
   return (
     <Container>
@@ -38,7 +41,7 @@ export default async function ProductPage({params: {productpage}}: { params: { p
         <div className="md:float-left mr-6">
           <ProductImage product={product} images={images}/>
         </div>
-        <ProductDetails product={product} />
+        <ProductDetails product={product} fibers={fibers} />
       </div>
       <div className="clear-both">
         <p className="text-sm pt-4"><strong>Note</strong>: This purchase does not include display props like bases, dried flowers, or scarves.</p>

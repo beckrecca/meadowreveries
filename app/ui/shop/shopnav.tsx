@@ -24,7 +24,7 @@ export default function ShopNav() {
                             key={link.name}
                             href={link.href}
                             className={clsx(
-                                'underline py-2 pr-2 rounded-full mr-4 text-center inline-flex items-center',
+                                'underline py-2 pr-2 rounded-full mr-4 text-center inline-flex items-center text-sm sm:text-base',
                                 {
                                     'text-black': pathname !== link.href,
                                     'text-fern bg-white': pathname === link.href,
