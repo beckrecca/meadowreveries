@@ -39,14 +39,19 @@
 	box-shadow: none;
 }
 .snipcart-discount-box__button {
-	 background-color: hsla(8,58%,77%,.2);
-	 font-weight: 700;
-	 padding: .75rem;
-	 --tw-border-opacity: 1;
-  	 border-color: rgb(230 171 162/var(--tw-border-opacity));
-  	 border-width: 1px;
-  	 border-radius: .25rem;
+	background-color: hsla(8,58%,77%,.2);
+	font-weight: 700;
+	padding: .75rem;
+	--tw-border-opacity: 1;
+  	border-color: rgb(230 171 162/var(--tw-border-opacity));
+  	border-width: 1px;
+  	border-radius: .25rem;
 }
 .snipcart-discount-box__button:after {
 	content:'DISCOUNT CODE HERE';
+	background-color: #faeeec;
+    visibility: visible;
+    display: block;
+    position: absolute;
+    padding: .75rem;
 }
