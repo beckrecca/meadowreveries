@@ -47,11 +47,3 @@
   	border-width: 1px;
   	border-radius: .25rem;
 }
-.snipcart-discount-box__button:after {
-	content:'DISCOUNT CODE HERE';
-	background-color: #faeeec;
-    visibility: visible;
-    display: block;
-    position: absolute;
-    padding: .75rem;
-}
