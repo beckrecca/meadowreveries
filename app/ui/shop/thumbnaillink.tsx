@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import Price from '@/app/ui/shop/price';
 import { useState } from 'react';
 
 export default function ThumbnailLink({product}) {
@@ -36,7 +37,7 @@ export default function ThumbnailLink({product}) {
 				    <h3 className="bg-white/75 p-2 text-black font-bold normal-case">{product.name}</h3>
 				</div>
 				<div className="absolute inset-x-0 bottom-0 text-center text-black hover:text-black bg-white/75">
-					${product.price}
+					<Price product={product} />
 				</div>
 			</Link>
 	    </div>

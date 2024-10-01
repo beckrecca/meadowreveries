@@ -13,6 +13,9 @@ export type Product = {
 	available: boolean;
 	unlisted: boolean;
 	weight: number;
+	promoprice: number;
+	promoenabled: boolean;
+	promoname: string;
 };
 
 export type Image = {

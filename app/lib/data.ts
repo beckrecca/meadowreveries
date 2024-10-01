@@ -11,21 +11,6 @@ import {
 * Products for Sale
 */
 
-export async function fetchProducts() {
-	try {
-		const products = await sql<Product>`
-			SELECT
-				*
-			FROM products;
-		`;
-		return products.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch products.');
-	}
-}
-
 export async function fetchListedProducts() {
 	try {
 		const products = await sql<Product>`
@@ -38,7 +23,7 @@ export async function fetchListedProducts() {
 	}
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch products.');
+		throw new Error('Failed to fetch listed products.');
 	}
 }
 
@@ -46,15 +31,19 @@ export async function fetchHandmadeProducts() {
 	try {
 		const products = await sql<Product>`
 			SELECT
-				*
+				products.*,
+				productspromos.promoprice,
+				promos.enabled as promoenabled
 			FROM products
+			LEFT JOIN productspromos ON productspromos.productid = products.id
+		  LEFT JOIN promos ON promos.id = productspromos.promoid
 			where producttype = 'handmade';
 		`;
 		return products.rows;
 	}
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch products.');
+		throw new Error('Failed to fetch handmade products.');
 	}
 }
 
@@ -62,22 +51,26 @@ export async function fetchListedHandmadeProducts() {
 	try {
 		const products = await sql<Product>`
 			SELECT
-		    products.*,
-		    MIN(images.file) as image2
+				products.*,
+				MIN(images.file) as image2,
+				productspromos.promoprice,
+				promos.enabled as promoenabled
 			FROM 
 			products
 			JOIN images ON images.productid = products.id
+			LEFT JOIN productspromos ON productspromos.productid = products.id
+		  LEFT JOIN promos ON promos.id = productspromos.promoid
 			WHERE images.file NOT LIKE '%01.png'
 			AND products.producttype = 'handmade' AND products.unlisted = false
 			AND products.available = true
-			GROUP BY products.name, products.id
+			GROUP BY products.name, products.id, productspromos.promoprice, promos.enabled
 			ORDER BY name ASC;
 		`;
 		return products.rows;
 	}
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch products.');
+		throw new Error('Failed to fetch listed handmade products.');
 	}
 }
 
@@ -97,11 +90,40 @@ export async function fetchExampleProducts() {
 	}
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch products.');
+		throw new Error('Failed to fetch custom example products.');
 	}
 }
 
 export async function fetchDiyProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2,
+				productspromos.promoprice,
+				promos.enabled as promoenabled
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			LEFT JOIN productspromos ON productspromos.productid = products.id
+		  LEFT JOIN promos ON promos.id = productspromos.promoid
+			WHERE images.file NOT LIKE '%01.png'
+			AND products.producttype = 'diy'
+			GROUP BY products.name, products.id, productspromos.promoprice, promos.enabled
+			ORDER BY name ASC;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch diy products.');
+	}
+}
+
+/*
+* Product Previews for Homepage
+*/
+export async function fetchHandmadeProductsPreview() {
 	try {
 		const products = await sql<Product>`
 			SELECT
@@ -111,15 +133,99 @@ export async function fetchDiyProducts() {
 			products
 			JOIN images ON images.productid = products.id
 			WHERE images.file NOT LIKE '%01.png'
-			AND products.producttype = 'diy'
+			AND products.producttype = 'handmade' AND products.unlisted = false
+			AND products.available = true
 			GROUP BY products.name, products.id
-			ORDER BY name ASC;
+			ORDER BY RANDOM()
+			LIMIT 6;
 		`;
 		return products.rows;
 	}
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch products.');
+		throw new Error('Failed to fetch handmade products preview.');
+	}
+}
+
+export async function fetchExampleCustomPreview() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+				products.name,
+				products.price,
+				products.dimensions,
+				images.*
+			FROM products
+			JOIN images ON images.productid = products.id
+			where products.producttype = 'customExample'
+			and products.id != 'sylvie-example'
+			ORDER BY RANDOM()
+			LIMIT 6;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch example custom products preview.');
+	}
+}
+
+export async function fetchNewProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND products.id IN (
+				'diy-bcch',
+				'mini-pumpkin-borb',
+				'pumpkin-borb',
+				'mini-wreath-fall',
+				'mini-wreath-bat',
+				'lil-harvest-basket'
+			)
+			GROUP BY products.name, products.id
+			order by products.id asc
+			;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch new products.');
+	}
+}
+
+export async function fetchSaleProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2,
+				productspromos.promoprice,
+				promos.enabled as promoenabled,
+				promos.name as promoname    
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			LEFT JOIN productspromos ON productspromos.productid = products.id
+		  LEFT JOIN promos ON promos.id = productspromos.promoid
+			WHERE images.file NOT LIKE '%01.png'
+			AND promos.enabled = 'true'
+			GROUP BY products.name, products.id, productspromos.promoprice, promos.enabled, promos.name
+			ORDER BY RANDOM()
+			LIMIT 6
+			;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch new products.');
 	}
 }
 
@@ -161,53 +267,6 @@ export async function fetchImagesByProductID(id: string) {
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
 		throw new Error('Failed to fetch image data.');
-	}
-}
-
-export async function fetchHandmadeProductsPreview() {
-	try {
-		const products = await sql<Product>`
-			SELECT
-		    products.*,
-		    MIN(images.file) as image2
-			FROM 
-			products
-			JOIN images ON images.productid = products.id
-			WHERE images.file NOT LIKE '%01.png'
-			AND products.producttype = 'handmade' AND products.unlisted = false
-			AND products.available = true
-			GROUP BY products.name, products.id
-			ORDER BY RANDOM()
-			LIMIT 6;
-		`;
-		return products.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch products.');
-	}
-}
-
-export async function fetchExampleCustomPreview() {
-	try {
-		const products = await sql<Product>`
-			SELECT
-				products.name,
-				products.price,
-				products.dimensions,
-				images.*
-			FROM products
-			JOIN images ON images.productid = products.id
-			where products.producttype = 'customExample'
-			and products.id != 'sylvie-example'
-			ORDER BY RANDOM()
-			LIMIT 6;
-		`;
-		return products.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch products.');
 	}
 }
 
@@ -276,36 +335,6 @@ export async function fetchKitFibersByProductId(productid: string) {
 			FROM fibers
 			JOIN fibersproducts ON fibersproducts.fiberid = fibers.id
 			WHERE productid = ${productid}
-			;
-		`;
-		return fibers.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch tutorialsteps.');
-	}
-}
-
-export async function fetchNewProducts() {
-	try {
-		const fibers = await sql<Fiber>`
-			SELECT
-		    products.*,
-		    MIN(images.file) as image2
-			FROM 
-			products
-			JOIN images ON images.productid = products.id
-			WHERE images.file NOT LIKE '%01.png'
-			AND products.id IN (
-				'diy-bcch',
-				'mini-pumpkin-borb',
-				'pumpkin-borb',
-				'mini-wreath-fall',
-				'mini-wreath-bat',
-				'lil-harvest-basket'
-			)
-			GROUP BY products.name, products.id
-			order by products.id asc
 			;
 		`;
 		return fibers.rows;
