@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import Addtocart from '@/app/ui/shop/productpage/addtocart';
 import KitDetails from '@/app/ui/shop/diy/kitdetails';
+import Price from '@/app/ui/shop/price';
 
 export default function ProductDetails( {product, fibers} ) {
 	return (
 		<div className="overflow-hidden">
       <h2>{product.name}</h2>
       <ul className="text-lg">
-        <li>${product.price} (USD)</li>
+        <li><Price product={product} /> (USD)</li>
       </ul>
       <Addtocart item={product}/>
       <div className="max-w-[384px]">
