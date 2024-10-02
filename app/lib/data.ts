@@ -182,6 +182,8 @@ export async function fetchNewProducts() {
 			WHERE images.file NOT LIKE '%01.png'
 			AND products.id IN (
 				'diy-bcch',
+				'witch-borb',
+				'bat-borb',
 				'mini-pumpkin-borb',
 				'pumpkin-borb',
 				'mini-wreath-fall',
@@ -189,7 +191,38 @@ export async function fetchNewProducts() {
 				'lil-harvest-basket'
 			)
 			GROUP BY products.name, products.id
-			order by products.id asc
+			;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch new products.');
+	}
+}
+
+export async function fetchNewProductsPreview() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND products.id IN (
+				'diy-bcch',
+				'witch-borb',
+				'bat-borb',
+				'mini-pumpkin-borb',
+				'pumpkin-borb',
+				'mini-wreath-fall',
+				'mini-wreath-bat',
+				'lil-harvest-basket'
+			)
+			GROUP BY products.name, products.id
+			LIMIT 6
 			;
 		`;
 		return products.rows;
