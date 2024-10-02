@@ -9,7 +9,7 @@ export default async function SalePreview() {
     heading = products[0].promoname;
   }
   return (
-    <div className="pb-4 bg-goldenrod/50">
+    <div className="pb-4">
       <div className="mx-auto p-4">
         <h2 className="text-center normal-case m-2">{heading}</h2>
         <ProductList products={products}/>
