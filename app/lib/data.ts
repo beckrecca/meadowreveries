@@ -120,6 +120,33 @@ export async function fetchDiyProducts() {
 	}
 }
 
+export async function fetchSaleProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+				products.*,
+				MIN(images.file) as image2,
+				productspromos.promoprice,
+				promos.enabled as promoenabled,
+				promos.name as promoname
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			LEFT JOIN productspromos ON productspromos.productid = products.id
+		  LEFT JOIN promos ON promos.id = productspromos.promoid
+			WHERE images.file NOT LIKE '%01.png'
+			AND promos.enabled = 'TRUE'
+			GROUP BY products.name, products.id, productspromos.promoprice, promos.enabled, promos.name
+			ORDER BY name ASC;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch sale products.');
+	}
+}
+
 /*
 * Product Previews for Homepage
 */
@@ -233,7 +260,7 @@ export async function fetchNewProductsPreview() {
 	}
 }
 
-export async function fetchSaleProducts() {
+export async function fetchSaleProductsPreview() {
 	try {
 		const products = await sql<Product>`
 			SELECT

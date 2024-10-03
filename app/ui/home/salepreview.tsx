@@ -1,9 +1,9 @@
-import { fetchSaleProducts } from '@/app/lib/data';
+import { fetchSaleProductsPreview } from '@/app/lib/data';
 import ProductList from '@/app/ui/shop/productlist';
 import HomePreviewButton from '@/app/ui/home/homepreviewbutton';
 
 export default async function SalePreview() {
-  const products = await fetchSaleProducts();
+  const products = await fetchSaleProductsPreview();
   let heading = "What's on sale";
   if (products.length > 0) {
     heading = products[0].promoname;
@@ -15,7 +15,7 @@ export default async function SalePreview() {
         <ProductList products={products}/>
       </div>
       <div className="text-center m-2">
-        <HomePreviewButton url="/shop/" text="Show me more" /> 
+        <HomePreviewButton url="/shop/sale" text="Show me more" /> 
       </div>
     </div>
     );
