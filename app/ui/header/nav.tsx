@@ -16,9 +16,9 @@ export default function Nav() {
 	return (
 		<div className="lg:inline-block">
 			<ShopDropdown pathname = {pathname} />
+			<div className="lg:inline-block ml-4">
 			{links.map((link) => {
 				return (
-					<div className="lg:inline-block ml-4">
 						<Link 
 							key={link.name}
 							href={link.href}
@@ -31,9 +31,9 @@ export default function Nav() {
 						>
 						{link.name}
 						</Link>
-					</div>
 				);
 			})}
+			</div>
 		</div>
 	);
 }
