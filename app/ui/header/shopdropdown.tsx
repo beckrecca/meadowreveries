@@ -9,6 +9,7 @@ const links = [
     {name: 'Felting Kits', href:'/shop/diy'},
     {name: 'Custom Orders', href:'/shop/custom'},
     {name: 'Seasonal', href:'/shop/new'},
+    {name: 'Sale', href: '/shop/sale'},
     {name: 'Shop All', href:'/shop'}
 ];
 
@@ -47,7 +48,12 @@ export default function ShopDropdown( {pathname} ) {
 	                        <Link 
 	                            key={link.name}
 	                            href={link.href}
-	                            className="block text-black hover:text-black hover:bg-paper"
+	                            className={clsx(
+									'block text-black hover:text-black hover:bg-paper',
+									{
+										'bg-goldenrod': link.name === "Sale",
+									}
+								)}
 	                        >
 	                        {link.name}
 	                        </Link>
