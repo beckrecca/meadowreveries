@@ -11,7 +11,7 @@ export default async function NewPreview() {
         <ProductList products={products}/>
       </div>
       <div className="text-center m-2">
-        <HomePreviewButton url="/shop/sale" text="Show me more" /> 
+        <HomePreviewButton url="/shop/seasonal" text="Show me more" /> 
       </div>
     </div>
     );
