@@ -6,6 +6,11 @@ import { useState, useEffect } from 'react';
 
 export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
+		["/homepage_spooky.png",
+		"A spooky scene with a glowing crystal ball, a purple candelabra, a floor purple with cobwebs and a dingy grey felt background. On the right a borb witch faces 3/4 to the left, on the left a round black bat with green eyes faces 1/4 to the right, and in the middle back a pumpkin borb faces towards the camera. In the upper left overlay text reads Spooky Scary Sale.",
+		"Prices slashed",
+		"/shop/sale"
+		],
 		["/homepage_farmers.png",
 		"Needle felted borbs pose with their fall harvest. On the left is a summer squash plant. From top right clockwise, a cardinal pushes a wheel barrow laden with squash and pumpkin, a robin wears a straw hat, a chickadee holds a garden tool, a bluebird bears a trowel and watering can. Three needle felted pumpkins sit in the foreground. Text in the upper left corner reads It's Harvest Time. ",
 		"Check out what we've grown",
