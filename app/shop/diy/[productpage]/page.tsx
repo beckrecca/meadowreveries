@@ -31,7 +31,7 @@ export default async function ProductPage({params: {productpage}}: { params: { p
       <Link href="/shop/diy" className="text-sm text-right flex flex-row mb-1">
         <Image
           src="/icons/previous.png"
-          alt="Navigate to previous image"
+          alt="Navigate to previous page"
           height={24}
           width={24}
           />
