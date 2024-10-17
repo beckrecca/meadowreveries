@@ -15,7 +15,7 @@ export default async function SalePreview() {
         <ProductList products={products}/>
       </div>
       <div className="text-center m-2">
-        <HomePreviewButton url="/shop/sale" text="Show me more" /> 
+        <HomePreviewButton url="/shop/sale" text="Aaaaaaahhh!!" /> 
       </div>
     </div>
     );

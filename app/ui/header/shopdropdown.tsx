@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 import clsx from 'clsx';
 
-const links = [
+const links = [	
+    {name: 'Shop All', href:'/shop'},
     {name: 'Handmade', href:'/shop/handmade'},
     {name: 'Felting Kits', href:'/shop/diy'},
-    {name: 'Custom Orders', href:'/shop/custom'},
-    {name: 'Seasonal', href:'/shop/new'},
-    {name: 'Sale', href: '/shop/sale'},
-    {name: 'Shop All', href:'/shop'}
+    {name: 'New & Seasonal', href:'/shop/new'},
+    {name: 'SALE', href: '/shop/sale'},
+    {name: 'Commissions', href:'/commissions'},
 ];
 
 export default function ShopDropdown( {pathname} ) {
@@ -51,7 +51,7 @@ export default function ShopDropdown( {pathname} ) {
 	                            className={clsx(
 									'block text-black hover:text-black hover:bg-paper',
 									{
-										'bg-goldenrod': link.name === "Sale",
+										'bg-goldenrod': link.name === "SALE",
 									}
 								)}
 	                        >
