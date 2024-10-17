@@ -5,12 +5,13 @@ import Link from 'next/link';
 import clsx from 'clsx';
 
 const links = [
+    {name: 'View All', href:'/shop'},
     {name: 'Handmade', href:'/shop/handmade'},
     {name: 'Felting Kits', href:'/shop/diy'},
-    {name: 'Custom Orders', href:'/shop/custom'},
-    {name: 'Seasonal', href:'/shop/new'},
+    {name: 'New & Seasonal', href:'/shop/new'},
     {name: 'Sale', href:'/shop/sale'},
-    {name: 'View All', href:'/shop'}
+    {name: 'Commissions', href:'/commissions'},
+    {name: 'Browse Custom Work', href:'/shop/custom'},
 ];
 
 export default function ShopNav() {

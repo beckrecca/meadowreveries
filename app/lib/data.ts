@@ -208,6 +208,7 @@ export async function fetchNewProducts() {
 			JOIN images ON images.productid = products.id
 			WHERE images.file NOT LIKE '%01.png'
 			AND products.id IN (
+				'diy-amro',
 				'diy-bcch',
 				'witch-borb',
 				'bat-borb',
@@ -218,6 +219,7 @@ export async function fetchNewProducts() {
 				'lil-harvest-basket'
 			)
 			GROUP BY products.name, products.id
+			order by products.producttype
 			;
 		`;
 		return products.rows;
@@ -276,6 +278,7 @@ export async function fetchSaleProductsPreview() {
 		  LEFT JOIN promos ON promos.id = productspromos.promoid
 			WHERE images.file NOT LIKE '%01.png'
 			AND promos.enabled = 'true'
+			AND products.available = 'true'
 			GROUP BY products.name, products.id, productspromos.promoprice, promos.enabled, promos.name
 			ORDER BY RANDOM()
 			LIMIT 6
