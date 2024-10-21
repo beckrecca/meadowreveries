@@ -18,13 +18,13 @@ export default function HomeBanner() {
 		],
 		["/homepage_diyrelease.png",
 		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
-		"Make your own chickadee borb",
+		"Make your own chickadee or robin borb",
 		"/shop/diy/diy-bcch"
 		],
 		["/homepage_mobile.png",
 		"Collage of several shots of a Halloween themed baby mobile. From the left clockwise: Close up of a Halloween baby mobile’s hanging items with a smiling ghost and pumpkins; Close up of a Halloween baby mobile’s hanging items with pumpkins, a black cat, a bat, a witch’s hat, a ghost, and a crescent moon; Full view of a Halloween baby mobile strung from an embroidery hoop. The mobile items include an orange star and yellow crescent moon, green and orange balls, pumpkins, a ghost, a witch hat, a black cat, and a bat; Close up of a Halloween baby mobile’s hanging items with  pumpkins, a bat, a witch’s hat, a crescent moon, and orange and green balls. Text in the top left reads Commissions Open.",
-		"Browse example custom work",
-		"/shop/custom"
+		"Request a Commission",
+		"/commissions"
 		],
 	]
 
