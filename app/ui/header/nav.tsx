@@ -17,6 +17,17 @@ export default function Nav() {
 		<div className="lg:inline-block">
 			<ShopDropdown pathname = {pathname} />
 			<div className="lg:inline-block ml-4">
+			<Link key="Shop"
+				  href="/shop"
+				  className={clsx(
+							'block mt-4 lg:hidden lg:mt-0 text-black mr-4',
+							{
+								'underline': pathname.startsWith("/shop"),
+							}
+						)}
+					>
+				Shop
+			</Link>
 			{links.map((link) => {
 				return (
 						<Link 

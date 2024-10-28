@@ -10,8 +10,8 @@ export default function Page() {
     <Container>
       <main>
         <ShopNav/>
-        <BrowseHandmade />
         <BrowseDiy />
+        <BrowseHandmade />
         <BrowseCustom />
       </main>
     </Container>

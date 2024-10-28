@@ -6,8 +6,8 @@ import clsx from 'clsx';
 
 const links = [	
     {name: 'Shop All', href:'/shop'},
-    {name: 'Handmade', href:'/shop/handmade'},
     {name: 'Felting Kits', href:'/shop/diy'},
+    {name: 'Handmade', href:'/shop/handmade'},
     {name: 'New & Seasonal', href:'/shop/new'},
     {name: 'SALE', href: '/shop/sale'},
     {name: 'Commissions', href:'/commissions'},
@@ -26,7 +26,7 @@ export default function ShopDropdown( {pathname} ) {
 	}
 
 	return (
-		<div className="lg:inline-block relative m-2">
+		<div className="sm:hidden lg:inline-block relative m-2">
 			<button 
 				className={clsx(
 					'p-2 font-bold bg-white border border-milkweed rounded hover:bg-ladycardinal',
