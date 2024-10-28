@@ -8,7 +8,6 @@ const links = [
     {name: 'View All', href:'/shop'},
     {name: 'Handmade', href:'/shop/handmade'},
     {name: 'Felting Kits', href:'/shop/diy'},
-    {name: 'New & Seasonal', href:'/shop/new'},
     {name: 'Sale', href:'/shop/sale'},
     {name: 'Commissions', href:'/commissions'},
     {name: 'Browse Custom Work', href:'/shop/custom'},
@@ -18,7 +17,7 @@ export default function ShopNav() {
     const pathname = usePathname();
 
     return (
-        <div className="flex flex-row mb-4">
+        <div className="flex flex-row mb-4 overflow-x-scroll">
             {links.map((link) => {
                 return (
                     <>
