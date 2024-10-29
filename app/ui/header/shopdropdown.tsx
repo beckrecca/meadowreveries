@@ -26,7 +26,7 @@ export default function ShopDropdown( {pathname} ) {
 	}
 
 	return (
-		<div className="sm:hidden lg:inline-block relative m-2">
+		<div className="hidden lg:inline-block relative m-2">
 			<button 
 				className={clsx(
 					'p-2 font-bold bg-white border border-milkweed rounded hover:bg-ladycardinal',
