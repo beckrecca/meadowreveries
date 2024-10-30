@@ -14,7 +14,7 @@ export default function Subscribeform() {
 	          width={336}
 	          className="rounded-b"
 	        	/>
-			<p><strong>Subscribe to our mailing list below</strong> and we'll email you once our borb crafting kits and tutorials take flight.</p>
+			<p><strong>Subscribe to our mailing list below</strong> for updates on new products, promotions and more.</p>
             <div className="ml-embedded" data-form="5XFz0D"></div>
       <div className="text-xs text-center"><ExternalLink url="https://subscribepage.io/meadowreveries" text="Subscribe at this link"/> if the form doesn't load.</div>
 		</div>
