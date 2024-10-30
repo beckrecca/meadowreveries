@@ -8,17 +8,17 @@ export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
 		["/homepage_spooky.png",
 		"A spooky scene with a glowing crystal ball, a purple candelabra, a floor purple with cobwebs and a dingy grey felt background. On the right a borb witch faces 3/4 to the left, on the left a round black bat with green eyes faces 1/4 to the right, and in the middle back a pumpkin borb faces towards the camera. In the upper left overlay text reads Spooky Scary Sale.",
-		"Prices slashed",
+		"Sale ends Friday November 1",
 		"/shop/sale"
 		],
-		["/homepage_farmers.png",
-		"Needle felted borbs pose with their fall harvest. On the left is a summer squash plant. From top right clockwise, a cardinal pushes a wheel barrow laden with squash and pumpkin, a robin wears a straw hat, a chickadee holds a garden tool, a bluebird bears a trowel and watering can. Three needle felted pumpkins sit in the foreground. Text in the upper left corner reads It's Harvest Time. ",
-		"Check out what we've grown",
-		"/shop/new"
+		["/homepage_sylvie.png",
+		"A grey colored poodle mix with a pink belly rubs her back into the grass, looking relaxed and satisfied. A heart-shaped image insert shows a needle-felted portrait of the same dog's face.",
+		"Remembering Sylvie",
+		"/sylvie"
 		],
 		["/homepage_diyrelease.png",
 		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
-		"Make your own chickadee or robin borb",
+		"Make your own borb",
 		"/shop/diy/diy-bcch"
 		],
 		["/homepage_mobile.png",
@@ -84,8 +84,8 @@ export default function HomeBanner() {
 	          width={720}
 	          className="w-full lg:max-w-[1280px] lg:mx-auto border border-paper rounded-b shadow"
 	        />
-	        <div className="absolute inset-x-0 bottom-0 text-center max-w-full bg-white/70 p-1 sm:p-4">
-			    <Link href={link} className="text-base sm:text-xl md:text-2xl underline rounded leading-10 text-black no-underline">{subtext}</Link>
+	        <div className="absolute inset-x-0 bottom-0 text-center max-w-full bg-ladycardinal/70 p-1 sm:p-4">
+			    <Link href={link} className="text-base sm:text-xl md:text-2xl underline rounded leading-10 text-black hover:text-black hover:underline no-underline">{subtext}</Link>
 			</div>
 	    	<button className="absolute right-0 bg-black/25 p-2 rounded hover:bg-black" onClick={reverseCarousel}>
 				<Image

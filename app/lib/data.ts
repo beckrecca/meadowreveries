@@ -74,26 +74,6 @@ export async function fetchListedHandmadeProducts() {
 	}
 }
 
-export async function fetchExampleProducts() {
-	try {
-		const products = await sql<Product>`
-			SELECT
-				products.name,
-				products.price,
-				products.dimensions,
-				images.*
-			FROM products
-			JOIN images ON images.productid = products.id
-			where products.producttype = 'customExample';
-		`;
-		return products.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch custom example products.');
-	}
-}
-
 export async function fetchDiyProducts() {
 	try {
 		const products = await sql<Product>`
@@ -147,6 +127,85 @@ export async function fetchSaleProducts() {
 	}
 }
 
+export async function fetchNewProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND products.id IN (
+				'diy-amro',
+				'diy-bcch',
+				'diy-eablm',
+				'witch-borb',
+				'bat-borb',
+				'mini-pumpkin-borb',
+				'pumpkin-borb',
+				'mini-wreath-fall',
+				'mini-wreath-bat',
+				'lil-harvest-basket'
+			)
+			GROUP BY products.name, products.id
+			order by products.producttype
+			;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch new products.');
+	}
+}
+
+/*
+* Example Gallery for Commissions
+*/
+
+export async function fetchExampleProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+				products.name,
+				products.price,
+				products.dimensions,
+				images.*
+			FROM products
+			JOIN images ON images.productid = products.id
+			where products.producttype = 'customExample'
+			and products.id != 'sylvie-example';
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch custom example products.');
+	}
+}
+
+export async function fetchSylviePortraits() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+				products.name,
+				products.price,
+				products.dimensions,
+				images.*
+			FROM products
+			JOIN images ON images.productid = products.id
+			where products.id = 'sylvie-example';
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch Sylvie portraits.');
+	}
+}
+
 /*
 * Product Previews for Homepage
 */
@@ -186,6 +245,7 @@ export async function fetchExampleCustomPreview() {
 			JOIN images ON images.productid = products.id
 			where products.producttype = 'customExample'
 			and products.id != 'sylvie-example'
+			GROUP BY products.id, images.id
 			ORDER BY RANDOM()
 			LIMIT 6;
 		`;
@@ -194,39 +254,6 @@ export async function fetchExampleCustomPreview() {
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
 		throw new Error('Failed to fetch example custom products preview.');
-	}
-}
-
-export async function fetchNewProducts() {
-	try {
-		const products = await sql<Product>`
-			SELECT
-		    products.*,
-		    MIN(images.file) as image2
-			FROM 
-			products
-			JOIN images ON images.productid = products.id
-			WHERE images.file NOT LIKE '%01.png'
-			AND products.id IN (
-				'diy-amro',
-				'diy-bcch',
-				'witch-borb',
-				'bat-borb',
-				'mini-pumpkin-borb',
-				'pumpkin-borb',
-				'mini-wreath-fall',
-				'mini-wreath-bat',
-				'lil-harvest-basket'
-			)
-			GROUP BY products.name, products.id
-			order by products.producttype
-			;
-		`;
-		return products.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch new products.');
 	}
 }
 
@@ -242,6 +269,8 @@ export async function fetchNewProductsPreview() {
 			WHERE images.file NOT LIKE '%01.png'
 			AND products.id IN (
 				'diy-bcch',
+				'diy-amro',
+				'diy-eablm',
 				'witch-borb',
 				'bat-borb',
 				'mini-pumpkin-borb',
@@ -304,7 +333,8 @@ export async function fetchExampleImages() {
 				images.alt
 			FROM images
 			JOIN products on product.id = image.productid
-			where producttype = 'customExample';
+			where producttype = 'customExample'
+			and products.id != 'sylvie-example'
 		`;
 		return images.rows;
 	}
