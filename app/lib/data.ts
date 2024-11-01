@@ -308,6 +308,7 @@ export async function fetchSaleProductsPreview() {
 			WHERE images.file NOT LIKE '%01.png'
 			AND promos.enabled = 'true'
 			AND products.available = 'true'
+			AND products.unlisted = 'false'
 			GROUP BY products.name, products.id, productspromos.promoprice, promos.enabled, promos.name
 			ORDER BY RANDOM()
 			LIMIT 6

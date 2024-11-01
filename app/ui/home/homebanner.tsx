@@ -6,9 +6,9 @@ import { useState, useEffect } from 'react';
 
 export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
-		["/homepage_spooky.png",
-		"A spooky scene with a glowing crystal ball, a purple candelabra, a floor purple with cobwebs and a dingy grey felt background. On the right a borb witch faces 3/4 to the left, on the left a round black bat with green eyes faces 1/4 to the right, and in the middle back a pumpkin borb faces towards the camera. In the upper left overlay text reads Spooky Scary Sale.",
-		"Sale ends Friday November 1",
+		["/homepage_halloween_sale.png",
+		"A dark scene shows needle-felted witch and pumpkin borbs sitting in the grass in front of a needle-felted jack o lantern illuminated from within. A jar full of fairy lights shines in the background. Text in the upper left reads Nope It's Still Halloween Sale.",
+		"Fall items on sale",
 		"/shop/sale"
 		],
 		["/homepage_sylvie.png",
