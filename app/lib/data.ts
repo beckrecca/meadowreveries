@@ -137,18 +137,7 @@ export async function fetchNewProducts() {
 			products
 			JOIN images ON images.productid = products.id
 			WHERE images.file NOT LIKE '%01.png'
-			AND products.id IN (
-				'diy-amro',
-				'diy-bcch',
-				'diy-eablm',
-				'witch-borb',
-				'bat-borb',
-				'mini-pumpkin-borb',
-				'pumpkin-borb',
-				'mini-wreath-fall',
-				'mini-wreath-bat',
-				'lil-harvest-basket'
-			)
+			AND products.id LIKE 'borbament%'
 			GROUP BY products.name, products.id
 			order by products.producttype
 			;
@@ -267,18 +256,7 @@ export async function fetchNewProductsPreview() {
 			products
 			JOIN images ON images.productid = products.id
 			WHERE images.file NOT LIKE '%01.png'
-			AND products.id IN (
-				'diy-bcch',
-				'diy-amro',
-				'diy-eablm',
-				'witch-borb',
-				'bat-borb',
-				'mini-pumpkin-borb',
-				'pumpkin-borb',
-				'mini-wreath-fall',
-				'mini-wreath-bat',
-				'lil-harvest-basket'
-			)
+			AND products.id LIKE 'borbament%'
 			GROUP BY products.name, products.id
 			LIMIT 6
 			;
@@ -353,7 +331,7 @@ export async function fetchImagesByProductID(id: string) {
 				images.alt
 			FROM images
 			where images.productid = ${id}
-			order by images.id DESC
+			order by images.id
 			;
 		`;
 		return images.rows;
