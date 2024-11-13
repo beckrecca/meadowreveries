@@ -9,10 +9,14 @@ export default function Page() {
   return (
     <Container>
       <main>
+      <div>
         <ShopNav/>
-        <BrowseDiy />
-        <BrowseHandmade />
-        <BrowseCustom />
+        <div className="sm:ml-[224px]">
+          <BrowseDiy />
+          <BrowseHandmade />
+          <BrowseCustom />
+        </div>
+      </div>
       </main>
     </Container>
   );

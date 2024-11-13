@@ -17,27 +17,28 @@ export default function ShopNav() {
     const pathname = usePathname();
 
     return (
-        <div className="flex flex-row mb-4 overflow-x-scroll">
-            {links.map((link) => {
-                return (
-                    <>
-                        <Link 
-                            key={link.name}
-                            href={link.href}
-                            className={clsx(
-                                'underline py-2 pr-2 rounded mr-4 text-center inline-flex items-center text-sm sm:text-base',
-                                {
-                                    'text-black': pathname !== link.href,
-                                    'text-fern bg-white': pathname === link.href,
-                                    'bg-goldenrod pl-2': link.name === "Sale",
-                                }
-                            )}
-                        >
-                        {link.name}
-                        </Link>
-                    </>
-                );
-            })}
+        <div className="float-left h-full">
+            <div className="flex flex-row mb-4 w-fit overflow-x-scroll sm:flex-col sm:w-[224px]">
+                {links.map((link) => {
+                    return (
+                        <>
+                            <Link 
+                                key={link.name}
+                                href={link.href}
+                                className={clsx(
+                                    'underline py-2 pr-2 rounded mr-4 text-center inline-flex items-center text-sm sm:text-base',
+                                    {
+                                        'text-black': pathname !== link.href,
+                                        'text-fern bg-white': pathname === link.href,
+                                    }
+                                )}
+                            >
+                            {link.name}
+                            </Link>
+                        </>
+                    );
+                })}
+            </div>
         </div>
     );
 }

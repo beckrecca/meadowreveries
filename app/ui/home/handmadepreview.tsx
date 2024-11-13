@@ -1,5 +1,5 @@
 import { fetchHandmadeProductsPreview }  from '@/app/lib/data';
-import ProductList from '@/app/ui/shop/productlist';
+import HomeList from '@/app/ui/home/homelist';
 import HomePreviewButton from '@/app/ui/home/homepreviewbutton';
 
 export default async function HandmadePreview() {
@@ -8,7 +8,7 @@ export default async function HandmadePreview() {
     <div className="my-8">
       <div className="mx-auto p-4">
         <h2 className="text-center normal-case m-2">Browse Handmade Pieces</h2>
-        <ProductList products={products}/>
+        <HomeList products={products}/>
       </div>
       <div className="text-center m-2">
         <HomePreviewButton url="/shop/handmade" text="Show me more" /> 

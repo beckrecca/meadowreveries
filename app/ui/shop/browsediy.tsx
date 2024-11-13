@@ -7,6 +7,7 @@ export default async function BrowseDiy() {
         return (
                 <div className="my-4">
                   <h2>Felting Kits</h2>
+                  <p>Make your own borbs.</p>
                   <ProductList products={products}/>
                 </div>
         );

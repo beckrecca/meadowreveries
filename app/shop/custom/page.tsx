@@ -9,11 +9,13 @@ export default async function Page() {
   return (
     <Container>
       <main>
-        <ShopNav />
-        <h2>Custom Piece Gallery</h2>
-        <p>These pieces are spoken for, but you can check out some other work we've done below.</p>
-        <p>To place an order for a custom piece, complete our <Link href="/commissions">commissions form</Link>.</p>
-        <CustomList examples={examples} />
+        <ShopNav/>
+        <div className="sm:ml-[224px]">
+          <h2>Custom Piece Gallery</h2>
+          <p>These pieces are spoken for, but you can check out some other work we've done below.</p>
+          <p>To place an order for a custom piece, complete our <Link href="/commissions">commissions form</Link>.</p>
+          <CustomList examples={examples} />
+        </div>
       </main>
     </Container>
     );
