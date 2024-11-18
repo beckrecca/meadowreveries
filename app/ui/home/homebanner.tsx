@@ -6,6 +6,11 @@ import { useState, useEffect } from 'react';
 
 export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
+		["/holiday_homepage.png",
+		"A close up of needle-felted ornaments in various North American bird species hanging from an artificial tree. The birds are small and round in borb style. Species include black-capped chickadee, snow bunting, snowy owl, Northern cardinal, and dark-eyed junco. Text in the upper right reads Winter Holiday Goodies.",
+		"Get ready for Borbmas",
+		"/shop/holiday"
+		],
 		["/homepage_halloween_sale.png",
 		"A dark scene shows needle-felted witch and pumpkin borbs sitting in the grass in front of a needle-felted jack o lantern illuminated from within. A jar full of fairy lights shines in the background. Text in the upper left reads Nope It's Still Halloween Sale.",
 		"Fall items on sale",
@@ -18,7 +23,7 @@ export default function HomeBanner() {
 		],
 		["/homepage_diyrelease.png",
 		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
-		"Make your own borb",
+		"3 Species Available",
 		"/shop/diy/diy-bcch"
 		],
 		["/homepage_mobile.png",
