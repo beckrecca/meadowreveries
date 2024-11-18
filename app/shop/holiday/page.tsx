@@ -2,6 +2,12 @@ import Container from '@/app/ui/container';
 import { fetchNewProducts } from '@/app/lib/data';
 import ProductList from '@/app/ui/shop/productlist';
 import ShopNav from '@/app/ui/shop/shopnav';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'New Seasonal Products | Meadow Reveries',
+  description: 'Handmade winter holiday goodies',
+}
 
 export default async function Page() {
   const products = await fetchNewProducts();
