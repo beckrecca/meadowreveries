@@ -13,7 +13,7 @@ export async function generateMetadata({params: {tutorialpage}}: { params: { tut
   const tutorials = await fetchTutorials();
   const tutorial = tutorials.find(t => t.alias.toString() === tutorialpage)
   let tutorialTitle = "Tutorial | Meadow Reveries";
-  if (tutorial.name !== undefined && tutorial.name !== null) {
+  if (tutorial !== undefined && tutorial !== null) {
     tutorialTitle = "Tutorial: " + tutorial.name + " | Meadow Reveries";
   }
   return {

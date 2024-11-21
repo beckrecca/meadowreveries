@@ -15,7 +15,7 @@ export async function generateMetadata({params: {productpage}}: { params: { prod
   const products = await fetchDiyProducts();
   const product = products.find(p => p.id.toString() === productpage)
   let productTitle = "Shop | Meadow Reveries";
-  if (product.name !== undefined && product.name !== null) {
+  if (product !== undefined && product !== null) {
     productTitle = "Shop " + product.name + " | Meadow Reveries";
   }
   return {
