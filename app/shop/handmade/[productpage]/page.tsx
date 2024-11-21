@@ -7,6 +7,19 @@ import ProductDetails from '@/app/ui/shop/productpage/productdetails'
 import { fetchHandmadeProducts,
         fetchImagesByProductID} 
         from '@/app/lib/data';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({params: {productpage}}: { params: { productpage: string } }) {
+  const products = await fetchHandmadeProducts();
+  const product = products.find(p => p.id.toString() === productpage)
+  let productTitle = "Shop | Meadow Reveries";
+  if (product !== undefined && product !== null) {
+    productTitle = "Shop " + product.name + " | Meadow Reveries";
+  }
+  return {
+    title: productTitle,
+  }
+}
 
 export async function generateStaticParams() {
   const products = await fetchHandmadeProducts();

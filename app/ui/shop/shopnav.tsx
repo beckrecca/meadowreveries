@@ -6,8 +6,9 @@ import clsx from 'clsx';
 
 const links = [
     {name: 'View All', href:'/shop'},
-    {name: 'Handmade', href:'/shop/handmade'},
     {name: 'Felting Kits', href:'/shop/diy'},
+    {name: 'Handmade', href:'/shop/handmade'},
+    {name: 'Winter Holiday', href:'/shop/holiday'},
     {name: 'Sale', href:'/shop/sale'},
     {name: 'Commissions', href:'/commissions'},
     {name: 'Browse Custom Work', href:'/shop/custom'},
@@ -18,7 +19,7 @@ export default function ShopNav() {
 
     return (
         <div className="float-left h-full">
-            <div className="flex flex-row mb-4 w-fit overflow-x-scroll sm:flex-col sm:w-[224px]">
+            <div className="flex flex-row mb-4 overflow-x-scroll sm:flex-col w-screen sm:w-[224px] pr-2">
                 {links.map((link) => {
                     return (
                         <>
@@ -26,10 +27,11 @@ export default function ShopNav() {
                                 key={link.name}
                                 href={link.href}
                                 className={clsx(
-                                    'underline py-2 pr-2 rounded mr-4 text-center inline-flex items-center text-sm sm:text-base',
+                                    'py-2 px-4 sm:p-2 rounded inline-flex items-center text-sm sm:text-base hover:text-black',
                                     {
                                         'text-black': pathname !== link.href,
-                                        'text-fern bg-white': pathname === link.href,
+                                        'text-black underline': pathname === link.href,
+                                        'bg-aster text-white': link.name === "Winter Holiday",
                                     }
                                 )}
                             >

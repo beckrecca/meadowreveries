@@ -1,6 +1,12 @@
 import Container from '@/app/ui/container';
 import Commission from '@/app/ui/shop/custom/commission';
 import ShopNav from '@/app/ui/shop/shopnav';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Commissions | Meadow Reveries',
+  description: 'Complete this form to request a custom commission',
+}
 
 export default async function Page() {
   return (

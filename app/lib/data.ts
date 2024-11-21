@@ -116,6 +116,7 @@ export async function fetchSaleProducts() {
 		  LEFT JOIN promos ON promos.id = productspromos.promoid
 			WHERE images.file NOT LIKE '%01.png'
 			AND promos.enabled = 'TRUE'
+			AND products.unlisted = 'FALSE'
 			GROUP BY products.name, products.id, productspromos.promoprice, promos.enabled, promos.name
 			ORDER BY name ASC;
 		`;
@@ -284,9 +285,9 @@ export async function fetchSaleProductsPreview() {
 			LEFT JOIN productspromos ON productspromos.productid = products.id
 		  LEFT JOIN promos ON promos.id = productspromos.promoid
 			WHERE images.file NOT LIKE '%01.png'
-			AND promos.enabled = 'true'
-			AND products.available = 'true'
-			AND products.unlisted = 'false'
+			AND promos.enabled = 'TRUE'
+			AND products.available = 'TRUE'
+			AND products.unlisted = 'FALSE'
 			GROUP BY products.name, products.id, productspromos.promoprice, promos.enabled, promos.name
 			ORDER BY RANDOM()
 			LIMIT 6

@@ -5,7 +5,7 @@ import ShopNav from '@/app/ui/shop/shopnav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'New Seasonal Products | Meadow Reveries',
+  title: 'Shop Winter Holiday | Meadow Reveries',
   description: 'Handmade winter holiday goodies',
 }
 
