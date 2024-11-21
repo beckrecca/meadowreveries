@@ -7,6 +7,15 @@ import { fetchTutorials,
          fetchTutorialStepsByTutorialId,
        } 
        from '@/app/lib/data';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({params: {tutorialpage}}: { params: { tutorialpage: string } }) {
+  const tutorials = await fetchTutorials();
+  const tutorial = tutorials.find(t => t.alias.toString() === tutorialpage)
+  return {
+    title: "Tutorial: " + tutorial.name + " | Meadow Reveries",
+  }
+}
 
 export async function generateStaticParams() {
   const tutorials = await fetchTutorials();

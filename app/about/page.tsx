@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import Container from '@/app/ui/container';
 import ExternalLink from '@/app/ui/externallink';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Meadow Reveries',
+  description: 'Behind the business and contact information',
+}
 
 export default function Page() {
   return (

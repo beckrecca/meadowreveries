@@ -3,6 +3,12 @@ import TutorialList from '@/app/ui/learn/tutoriallist';
 import LearnText from '@/app/ui/learn/learntext';
 import LearnCTA from '@/app/ui/learn/learncta';
 import { fetchBasicTutorials} from '@/app/lib/data';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Learn | Meadow Reveries',
+  description: 'Learn about needle felting',
+}
 
 export default async function Page() {
   const tutorials = await fetchBasicTutorials();

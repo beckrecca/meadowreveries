@@ -16,14 +16,9 @@ export default function HomeBanner() {
 		"Fall items on sale",
 		"/shop/sale"
 		],
-		["/homepage_sylvie.png",
-		"A grey colored poodle mix with a pink belly rubs her back into the grass, looking relaxed and satisfied. A heart-shaped image insert shows a needle-felted portrait of the same dog's face.",
-		"Remembering Sylvie",
-		"/sylvie"
-		],
 		["/homepage_diyrelease.png",
 		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
-		"3 Species Available",
+		"3 Borb Species Available",
 		"/shop/diy/diy-bcch"
 		],
 		["/homepage_mobile.png",
