@@ -12,8 +12,12 @@ import type { Metadata } from 'next';
 export async function generateMetadata({params: {productpage}}: { params: { productpage: string } }) {
   const products = await fetchHandmadeProducts();
   const product = products.find(p => p.id.toString() === productpage)
+  let productTitle = "Shop | Meadow Reveries";
+  if (product.name !== undefined && product.name !== null) {
+    productTitle = "Shop " + product.name + " | Meadow Reveries";
+  }
   return {
-    title: "Shop " + product.name + " | Meadow Reveries",
+    title: productTitle,
   }
 }
 

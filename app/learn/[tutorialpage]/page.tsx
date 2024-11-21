@@ -12,8 +12,12 @@ import type { Metadata } from 'next';
 export async function generateMetadata({params: {tutorialpage}}: { params: { tutorialpage: string } }) {
   const tutorials = await fetchTutorials();
   const tutorial = tutorials.find(t => t.alias.toString() === tutorialpage)
+  let tutorialTitle = "Tutorial | Meadow Reveries";
+  if (tutorial.name !== undefined && tutorial.name !== null) {
+    tutorialTitle = "Tutorial: " + tutorial.name + " | Meadow Reveries";
+  }
   return {
-    title: "Tutorial: " + tutorial.name + " | Meadow Reveries",
+    title: tutorialTitle,
   }
 }
 
