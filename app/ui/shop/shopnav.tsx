@@ -19,7 +19,7 @@ export default function ShopNav() {
 
     return (
         <div className="float-left h-full">
-            <div className="flex flex-row mb-4 overflow-x-scroll sm:flex-col w-screen sm:w-[224px] pr-2">
+            <div className="flex flex-row mb-4 overflow-x-scroll sm:flex-col w-screen sm:w-[224px] pr-2 bg-white">
                 {links.map((link) => {
                     return (
                         <>
