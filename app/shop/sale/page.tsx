@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 export default async function Page() {
   const products = await fetchSaleProducts();
   let heading = "What's on sale";
+  let sale = false;
   if (products.length > 0) {
+    sale = true;
     heading = products[0].promoname;
   }
   return (
@@ -20,6 +22,11 @@ export default async function Page() {
       <main>
         <ShopNav />
         <h2>{heading}</h2>
+        {sale ? "" : 
+          <div>
+          <p><a href="https://subscribepage.io/meadowreveries" target="_blank">Subscribe to our mailing list</a> to be updated as soon as the next sale starts!</p>
+          </div>
+         }
         <ProductList products={products}/>
       </main>
     </Container>

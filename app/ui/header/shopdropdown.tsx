@@ -9,8 +9,8 @@ const links = [
     {name: 'Winter Holiday', href:'/shop/holiday'},
     {name: 'Felting Kits', href:'/shop/diy'},
     {name: 'Handmade', href:'/shop/handmade'},
-    {name: 'SALE', href: '/shop/sale'},
     {name: 'Commissions', href:'/commissions'},
+    {name: 'Sale', href: '/shop/sale'},
 ];
 
 export default function ShopDropdown( {pathname} ) {
