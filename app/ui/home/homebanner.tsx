@@ -11,14 +11,9 @@ export default function HomeBanner() {
 		"Get ready for Borbmas",
 		"/shop/holiday"
 		],
-		["/homepage_halloween_sale.png",
-		"A dark scene shows needle-felted witch and pumpkin borbs sitting in the grass in front of a needle-felted jack o lantern illuminated from within. A jar full of fairy lights shines in the background. Text in the upper left reads Nope It's Still Halloween Sale.",
-		"Fall items on sale",
-		"/shop/sale"
-		],
 		["/homepage_diyrelease.png",
 		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
-		"3 Borb Species Available",
+		"Shop needle felting kits",
 		"/shop/diy/diy-bcch"
 		],
 		["/homepage_mobile.png",
