@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import HomeBanner from '@/app/ui/home/homebanner';
 import Subscribeform from '@/app/ui/subscribeform';
-import SalePreview from '@/app/ui/home/salepreview';
+import WinterPreview from '@/app/ui/home/winterpreview';
 import CustomPreview from '@/app/ui/home/custompreview';
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <main className="pb-4">
         <HomeBanner />
-        <SalePreview />
+        <WinterPreview />
         <CustomPreview />
         <Subscribeform />
       </main>
