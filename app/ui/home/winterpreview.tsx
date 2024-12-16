@@ -12,7 +12,7 @@ export default async function WinterPreview() {
         <HomeList products={products}/>
       </div>
       <div className="text-center m-2">
-        <HomePreviewButton url="/shop/sale" text="Shop All" /> 
+        <HomePreviewButton url="/shop/holiday" text="Shop All" /> 
       </div>
     </div>
     );
