@@ -140,7 +140,7 @@ export async function fetchNewProducts() {
 			WHERE images.file NOT LIKE '%01.png'
 			AND (
 				products.id LIKE 'borbament%' OR 
-				products.id in ('mini-noca-wreath')
+				products.id in ('mini-noca-wreath', 'winter-meese')
 			)
 			GROUP BY products.name, products.id
 			order by products.producttype
@@ -262,7 +262,7 @@ export async function fetchNewProductsPreview() {
 			WHERE images.file NOT LIKE '%01.png'
 			AND (
 				products.id LIKE 'borbament%' OR 
-				products.id in ('mini-noca-wreath')
+				products.id in ('mini-noca-wreath', 'winter-meese')
 			)
 			GROUP BY products.name, products.id
 			LIMIT 6
