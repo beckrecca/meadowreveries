@@ -6,15 +6,20 @@ import { useState, useEffect } from 'react';
 
 export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
-		["/holiday_homepage.png",
-		"A close up of needle-felted ornaments in various North American bird species hanging from an artificial tree. The birds are small and round in borb style. Species include black-capped chickadee, snow bunting, snowy owl, Northern cardinal, and dark-eyed junco. Text in the upper right reads Winter Holiday Goodies.",
-		"Get ready for Borbmas",
-		"/shop/holiday"
+		["/thankyou_brattleboro.png",
+		"The Brattleboro Flea Market on Main, a holiday pop up, at the location that was formerly Sam's Outdoor Outfitters in Brattleboro VT. Patrons gather around vendor's tables. Text in the upper left reads Thank you Brattleboro.",
+		"Check out future events",
+		"/events"
 		],
-		["/homepage_diyrelease.png",
+		["/homepage_meese_banner.png",
+		 "Three needle-felted mice gather around a table laden with cookies. There is a white present with red ribbon in the upper right. The meese are wearing scarves or hats to stay warm for winter.",
+		 "Keep warm with these meese",
+		 "/shop/handmade/winter-meese"
+		],
+		["/homepage_diy.png",
 		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
-		"Shop needle felting kits",
-		"/shop/diy/diy-bcch"
+		"Make your own borb",
+		"/shop/diy"
 		],
 		["/homepage_mobile.png",
 		"Collage of several shots of a Halloween themed baby mobile. From the left clockwise: Close up of a Halloween baby mobile’s hanging items with a smiling ghost and pumpkins; Close up of a Halloween baby mobile’s hanging items with pumpkins, a black cat, a bat, a witch’s hat, a ghost, and a crescent moon; Full view of a Halloween baby mobile strung from an embroidery hoop. The mobile items include an orange star and yellow crescent moon, green and orange balls, pumpkins, a ghost, a witch hat, a black cat, and a bat; Close up of a Halloween baby mobile’s hanging items with  pumpkins, a bat, a witch’s hat, a crescent moon, and orange and green balls. Text in the top left reads Commissions Open.",
