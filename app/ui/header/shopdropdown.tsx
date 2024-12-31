@@ -51,7 +51,7 @@ export default function ShopDropdown( {pathname} ) {
 	                            className={clsx(
 									'block text-black hover:text-black hover:bg-paper',
 									{
-										'bg-aster text-white': link.name === "Winter Holiday",
+										//'bg-aster text-white': link.name === "Winter Holiday",
 									}
 								)}
 	                        >

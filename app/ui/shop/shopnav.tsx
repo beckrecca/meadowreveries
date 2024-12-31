@@ -31,7 +31,6 @@ export default function ShopNav() {
                                     {
                                         'text-black': pathname !== link.href,
                                         'text-black underline': pathname === link.href,
-                                        'bg-aster text-white': link.name === "Winter Holiday",
                                     }
                                 )}
                             >
