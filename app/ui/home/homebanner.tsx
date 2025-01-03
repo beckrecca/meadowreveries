@@ -6,15 +6,15 @@ import { useState, useEffect } from 'react';
 
 export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
+		["/homepage_pet_portraits_vday.png",
+		"Banner image with framed examples of pet portraits: A heart-shaped frame featuring a needle-felted portrait of the face of a white goldendoodle with its name Mamps written, a circular frame showing a needle-felted portrait of the faces of two dobermans with pink hearts on either sides of them, and finally a heart-shaped frame featuring a close up of the needle-felted face of Sylvie the greatest dog who's ever lived, a grey yorkie poodle mix. The text reads Portraits of your greatest love, and a purple and pink heart embellishment rests at the top of the image. ",
+		"Portraits you can pet",
+		"/shop/handmade/pet-portrait"
+		],
 		["/thankyou_brattleboro.png",
 		"The Brattleboro Flea Market on Main, a holiday pop up, at the location that was formerly Sam's Outdoor Outfitters in Brattleboro VT. Patrons gather around vendor's tables. Text in the upper left reads Thank you Brattleboro.",
 		"Check out future events",
 		"/events"
-		],
-		["/homepage_meese_banner.png",
-		 "Three needle-felted mice gather around a table laden with cookies. There is a white present with red ribbon in the upper right. The meese are wearing scarves or hats to stay warm for winter.",
-		 "Keep warm with these meese",
-		 "/shop/handmade/winter-meese"
 		],
 		["/homepage_diy.png",
 		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
