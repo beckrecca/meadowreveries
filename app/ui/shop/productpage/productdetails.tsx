@@ -16,6 +16,13 @@ export default function ProductDetails( {product, fibers} ) {
         <p className="whitespace-pre-line">
           {product.description}
         </p>
+        {
+          (product.id == 'pet-portrait') ?
+          <p>
+            <a href='https://tally.so/r/3NJkGO' target='_blank'>Upload your pet's photo with this form</a>.
+          </p>
+          : ""
+        }
         <h3>Dimensions</h3>
         <p>
           {product.dimensions}
