@@ -55,6 +55,7 @@ export default function Page() {
             <li><ExternalLink url="https://www.tumblr.com/meadowreveries" text="Tumblr" /></li>
             <li><ExternalLink url="https://www.youtube.com/@MeadowReveries" text="Youtube" /></li>
           </ul>
+          <p>Find us in person at any <a href="/events">upcoming events</a>.</p>
         </div>
         
         <div className="rounded p-2 max-w-[504px]">
