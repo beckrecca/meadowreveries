@@ -6,6 +6,11 @@ import { useState, useEffect } from 'react';
 
 export default function HomeBanner() {
 	const arrayOfBanners: string[][] = [
+		["/homepage_year_of_the_snek.png",
+		"Five needle-felted snakes sit on a red cloth in front of two orange. The snakes are light green with pink cheeks and wearing mandarin oranges on their heads.",
+		"Celebrate Lunar New Year",
+		"/shop/handmade/lunar-snek"
+		],
 		["/homepage_pet_portraits_vday.png",
 		"Banner image with framed examples of pet portraits: A heart-shaped frame featuring a needle-felted portrait of the face of a white goldendoodle with its name Mamps written, a circular frame showing a needle-felted portrait of the faces of two dobermans with pink hearts on either sides of them, and finally a heart-shaped frame featuring a close up of the needle-felted face of Sylvie the greatest dog who's ever lived, a grey yorkie poodle mix. The text reads Portraits of your greatest love, and a purple and pink heart embellishment rests at the top of the image. ",
 		"Portraits you can pet",
