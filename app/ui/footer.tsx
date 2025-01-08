@@ -60,7 +60,8 @@ export default function Footer() {
 				<span className="mr-4">Copyright <Link href="https://www.beckrecca.me" target="_blank">Rebecca Doris</Link> 2024</span>
 				<Link className="mr-4" href="/tos">Terms of Service</Link>
 				<Link className="mr-4" href="/tos/privacy">Privacy Policy</Link>
-				<Link href="/tos/cookies">Cookie Policy</Link>
+				<Link className="mr-4" href="/tos/cookies">Cookie Policy</Link>
+				<Link href="/events">Events</Link>
 			</div>
 		</footer>
 		</>
