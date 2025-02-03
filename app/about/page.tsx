@@ -51,7 +51,6 @@ export default function Page() {
           <ul>
             <li><ExternalLink url="https://www.instagram.com/meadowreveries" text="Instagram" /></li> 
             <li><ExternalLink url="https://toot.io/@meadowreveries" text="Mastodon" /></li>
-            <li><ExternalLink url="https://www.tiktok.com/@meadow.reveries" text="TikTok" /></li>
             <li><ExternalLink url="https://www.tumblr.com/meadowreveries" text="Tumblr" /></li>
             <li><ExternalLink url="https://www.youtube.com/@MeadowReveries" text="Youtube" /></li>
           </ul>
