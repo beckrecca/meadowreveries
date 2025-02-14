@@ -16,20 +16,10 @@ export default function HomeBanner() {
 		"Portraits you can pet",
 		"/shop/handmade/pet-portrait"
 		],
-		["/thankyou_brattleboro.png",
-		"The Brattleboro Flea Market on Main, a holiday pop up, at the location that was formerly Sam's Outdoor Outfitters in Brattleboro VT. Patrons gather around vendor's tables. Text in the upper left reads Thank you Brattleboro.",
-		"Check out future events",
-		"/events"
-		],
 		["/homepage_diy.png",
 		"Two needle felted black capped chickadees sit inside a mailer box facing the camera. Protruding from the box is a felting needle in a tube, an upright foam block felting pad, and grey felting wool strewn over the box side. Text in the upper left reads Fetling kits ready!",
 		"Make your own borb",
 		"/shop/diy"
-		],
-		["/homepage_mobile.png",
-		"Collage of several shots of a Halloween themed baby mobile. From the left clockwise: Close up of a Halloween baby mobile’s hanging items with a smiling ghost and pumpkins; Close up of a Halloween baby mobile’s hanging items with pumpkins, a black cat, a bat, a witch’s hat, a ghost, and a crescent moon; Full view of a Halloween baby mobile strung from an embroidery hoop. The mobile items include an orange star and yellow crescent moon, green and orange balls, pumpkins, a ghost, a witch hat, a black cat, and a bat; Close up of a Halloween baby mobile’s hanging items with  pumpkins, a bat, a witch’s hat, a crescent moon, and orange and green balls. Text in the top left reads Commissions Open.",
-		"Request a Commission",
-		"/commissions"
 		],
 	]
 
