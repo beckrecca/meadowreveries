@@ -23,6 +23,13 @@ export default function ProductDetails( {product, fibers} ) {
           </p>
           : ""
         }
+        {
+          (product.id == 'pet-figurine') ?
+          <p>
+            <a href='https://tally.so/r/3xlMMJ' target='_blank'>Upload your pet's photo with this form</a>.
+          </p>
+          : ""
+        }
         <h3>Dimensions</h3>
         <p>
           {product.dimensions}

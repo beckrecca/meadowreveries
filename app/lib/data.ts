@@ -154,6 +154,31 @@ export async function fetchNewProducts() {
 	}
 }
 
+export async function fetchPetProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND (
+				products.id in ('pet-portrait', 'pet-figurine')
+			)
+			GROUP BY products.name, products.id
+			order by products.producttype
+			;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch new products.');
+	}
+}
+
 /*
 * Example Gallery for Commissions
 */
@@ -236,11 +261,15 @@ export async function fetchExampleCustomPreview() {
 				images.*
 			FROM products
 			JOIN images ON images.productid = products.id
-			where products.producttype = 'customExample'
-			and products.id != 'sylvie-example'
+			where images.file in (
+				'great-horned-owl01-min.png',
+				'hades-dryer-balls01.png',
+				'halloween-baby-mobile03.png',
+				'elk03-min.png',
+				'red-panda01.png',
+				'handmade-amgo06.png'
+			)
 			GROUP BY products.id, images.id
-			ORDER BY RANDOM()
-			LIMIT 6;
 		`;
 		return products.rows;
 	}
