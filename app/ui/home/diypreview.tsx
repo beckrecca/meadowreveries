@@ -6,7 +6,7 @@ import HomeList from '@/app/ui/home/homelist';
 export default async function DiyPreview() {
 	const products = await fetchDiyProducts();
 	return (
-		<div className="my-8">
+		<div className="my-2">
 	      <div className="mx-auto p-4">
 	        <h2 className="text-center normal-case m-2">Learn to Needle Felt</h2>
 	        <HomeList products={products}/>

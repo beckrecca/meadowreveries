@@ -9,7 +9,7 @@ export default async function Page() {
     <Container>
       <main>
         <ShopNav />
-        <h2>Winter Holiday Goodies</h2>
+        <h2>What's New</h2>
         <ProductList products={products}/>
       </main>
     </Container>
