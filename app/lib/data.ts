@@ -175,7 +175,38 @@ export async function fetchPetProducts() {
 	}
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch new products.');
+		throw new Error('Failed to fetch pet products.');
+	}
+}
+
+export async function fetchSpringProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			WHERE images.file NOT LIKE '%01.png'
+			AND (
+				products.id in (
+					'baby-chick',
+					'painted-eggs',
+					'bunny-portrait',
+					'spring-flower-wreath',
+					'solid-color-eggs',
+					'easter-basket'
+				)
+			)
+			GROUP BY products.name, products.id
+			;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch spring products.');
 	}
 }
 

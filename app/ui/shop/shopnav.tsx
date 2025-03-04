@@ -8,7 +8,6 @@ const links = [
     {name: 'View All', href:'/shop'},
     {name: 'Felting Kits', href:'/shop/diy'},
     {name: 'Handmade', href:'/shop/handmade'},
-    {name: 'Winter Holiday', href:'/shop/holiday'},
     {name: 'Sale', href:'/shop/sale'},
     {name: 'Commissions', href:'/commissions'},
     {name: 'Browse Custom Work', href:'/shop/custom'},

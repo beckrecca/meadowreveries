@@ -6,7 +6,6 @@ import clsx from 'clsx';
 
 const links = [	
     {name: 'Shop All', href:'/shop'},
-    {name: 'Winter Holiday', href:'/shop/holiday'},
     {name: 'Felting Kits', href:'/shop/diy'},
     {name: 'Handmade', href:'/shop/handmade'},
     {name: 'Commissions', href:'/commissions'},
