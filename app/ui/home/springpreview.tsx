@@ -12,7 +12,7 @@ export default async function SpringPreview() {
 	        <HomeList products={products}/>
 	      </div>
 	      <div className="text-center m-2">
-	        <HomePreviewButton url="/shop/handmade" text="Shop Spring" /> 
+	        <HomePreviewButton url="/shop/spring" text="Shop Spring" /> 
 	      </div>
 	    </div>
 	);

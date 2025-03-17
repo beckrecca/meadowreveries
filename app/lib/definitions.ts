@@ -59,3 +59,8 @@ export type Fiber = {
 	alt: string,
 	description: string
 }
+
+export type Category = {
+	id: number,
+	name: string
+}

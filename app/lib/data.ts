@@ -4,28 +4,13 @@ import {
   Image,
   Tutorial,
   TutorialStep,
-  Fiber
+  Fiber,
+  Category
 } from './definitions';
 
 /*
 * Products for Sale
 */
-
-export async function fetchListedProducts() {
-	try {
-		const products = await sql<Product>`
-			SELECT
-				*
-			FROM products
-			where unlisted = FALSE;
-		`;
-		return products.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch listed products.');
-	}
-}
 
 export async function fetchHandmadeProducts() {
 	try {
@@ -128,57 +113,6 @@ export async function fetchSaleProducts() {
 	}
 }
 
-export async function fetchNewProducts() {
-	try {
-		const products = await sql<Product>`
-			SELECT
-		    products.*,
-		    MIN(images.file) as image2
-			FROM 
-			products
-			JOIN images ON images.productid = products.id
-			WHERE images.file NOT LIKE '%01.png'
-			AND (
-				products.id LIKE 'borbament%' OR 
-				products.id in ('mini-noca-wreath', 'winter-meese')
-			)
-			GROUP BY products.name, products.id
-			order by products.producttype
-			;
-		`;
-		return products.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch new products.');
-	}
-}
-
-export async function fetchPetProducts() {
-	try {
-		const products = await sql<Product>`
-			SELECT
-		    products.*,
-		    MIN(images.file) as image2
-			FROM 
-			products
-			JOIN images ON images.productid = products.id
-			WHERE images.file NOT LIKE '%01.png'
-			AND (
-				products.id in ('pet-portrait', 'pet-figurine')
-			)
-			GROUP BY products.name, products.id
-			order by products.producttype
-			;
-		`;
-		return products.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch pet products.');
-	}
-}
-
 export async function fetchSpringProducts() {
 	try {
 		const products = await sql<Product>`
@@ -207,6 +141,53 @@ export async function fetchSpringProducts() {
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
 		throw new Error('Failed to fetch spring products.');
+	}
+}
+
+export async function fetchCategories() {
+	try {
+		const categories = await sql<Category>`
+			SELECT
+		    *
+			FROM 
+			categories
+			;
+		`;
+		return categories.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch categories.');
+	}
+}
+
+export async function fetchProductsByCategoryName(name: string) {
+	try {
+		const images = await sql<Image>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2,
+		    categories.name as category,
+				productspromos.promoprice,
+				promos.enabled as promoenabled
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			JOIN productscategories ON products.id = productscategories.productid
+			JOIN categories ON productscategories.categoryid = categories.id
+			LEFT JOIN productspromos ON productspromos.productid = products.id
+		  LEFT JOIN promos ON promos.id = productspromos.promoid
+			WHERE images.file NOT LIKE '%01.png'
+			and categories.name=${name}
+			GROUP BY products.name, products.id, categories.name, productspromos.promoprice, promos.enabled
+			order by products.producttype
+			;
+		`;
+		return images.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch products by category.');
 	}
 }
 
@@ -307,32 +288,6 @@ export async function fetchExampleCustomPreview() {
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
 		throw new Error('Failed to fetch example custom products preview.');
-	}
-}
-
-export async function fetchNewProductsPreview() {
-	try {
-		const products = await sql<Product>`
-			SELECT
-		    products.*,
-		    MIN(images.file) as image2
-			FROM 
-			products
-			JOIN images ON images.productid = products.id
-			WHERE images.file NOT LIKE '%01.png'
-			AND (
-				products.id LIKE 'borbament%' OR 
-				products.id in ('mini-noca-wreath', 'winter-meese')
-			)
-			GROUP BY products.name, products.id
-			LIMIT 6
-			;
-		`;
-		return products.rows;
-	}
-	catch (error) {
-		console.log("Whoopsies database error: ", error);
-		throw new Error('Failed to fetch new products.');
 	}
 }
 
