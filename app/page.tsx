@@ -3,6 +3,7 @@ import Subscribeform from '@/app/ui/subscribeform';
 import DiyPreview from '@/app/ui/home/diypreview';
 import CustomPreview from '@/app/ui/home/custompreview';
 import SpringPreview from '@/app/ui/home/springpreview';
+import PetPreview from '@/app/ui/home/petpreview';
 import EventPreview from '@/app/ui/home/eventpreview';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
           alt='Banner image displaying a needle-felted Eastern cottontail rabbit nestled in the grass, clovers and azure bluet flowers. Text reads Dreaming of Spring.' 
           />
         <SpringPreview />
+        <PetPreview />
         <DiyPreview />
         <CustomPreview />
         <StaticHomeBanner 
