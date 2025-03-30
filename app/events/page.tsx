@@ -27,12 +27,21 @@ export default async function Page() {
               <br/>Greenfield Public Library 10am-1pm
             </li>
             <li className='p-4'>
+              Saturday, April 5, 2025 <ExternalLink url="https://www.barcfriends.com/" text="9th Annual Belchertown Animal Relief Committee Craft Fair" />&nbsp;
+              <br/>Jabish Brook Middle School
+                  62 N. Washington St., Belchertown 10am-3pm
+            </li>
+            <li className='p-4'>
              Friday, April 25 - Sunday, April 27, 2025 <ExternalLink url="https://www.neffa.org/festival-marketplace/" text="New England Folk Festival Marketplace" />&nbsp;
              <br/>Best Western Royal Plaza Hotel & Trade Center
             </li>
             <li className='p-4'>
              Saturday, May 17 2025 <ExternalLink url="https://www.instagram.com/turners_falls_high_school/p/DGn0uiRu9OL/" text="Turners Falls High School Vendor Market" />&nbsp;
              <br/>222 Turnpike Rd, Turners Falls MA
+            </li>
+            <li className='p-4'>
+             Sunday, June 8, 2025 <ExternalLink url="https://belchertownfarmersmarket.weebly.com/" text="Belchertown Farmers Market" />&nbsp;
+             <br/>Belchertown Town Common, 10am-2pm
             </li>
           </ul>
         </div>

@@ -19,6 +19,7 @@ export default function Addtocart({ item }) {
             data-item-image={item.image}
             data-item-name={item.name}
             data-item-weight={item.weightingrams}
+            data-item-has-taxes-included="true"
             >
             Add to cart
           </button>
@@ -38,6 +39,7 @@ export default function Addtocart({ item }) {
             data-item-custom1-type={item.custom1type}
             data-item-custom1-value={item.custom1value}
             data-item-weight={item.weightingrams}
+            data-item-has-taxes-included="true"
             >
             Add to cart
           </button>
@@ -56,6 +58,7 @@ export default function Addtocart({ item }) {
             data-item-custom1-name={item.custom1name}
             data-item-custom1-options={item.custom1options}
             data-item-weight={item.weightingrams}
+            data-item-has-taxes-included="true"
             >
             Add to cart
           </button>
