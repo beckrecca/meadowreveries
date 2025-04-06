@@ -36,6 +36,7 @@ export async function fetchListedHandmadeProducts() {
 	try {
 		const products = await sql<Product>`
 			SELECT
+			  distinct
 				products.*,
 				MIN(images.file) as image2,
 				productspromos.promoprice,
@@ -118,22 +119,23 @@ export async function fetchSpringProducts() {
 		const products = await sql<Product>`
 			SELECT
 		    products.*,
-		    MIN(images.file) as image2
+		    MIN(images.file) as image2,
+		    categories.name as category,
+				productspromos.promoprice,
+				promos.enabled as promoenabled
 			FROM 
 			products
 			JOIN images ON images.productid = products.id
+			JOIN productscategories ON products.id = productscategories.productid
+			JOIN categories ON productscategories.categoryid = categories.id
+			LEFT JOIN productspromos ON productspromos.productid = products.id
+		  LEFT JOIN promos ON promos.id = productspromos.promoid
 			WHERE images.file NOT LIKE '%01.png'
-			AND (
-				products.id in (
-					'baby-chick',
-					'painted-eggs',
-					'bunny-portrait',
-					'spring-flower-wreath',
-					'solid-color-eggs',
-					'easter-basket'
-				)
-			)
-			GROUP BY products.name, products.id
+			and categories.name='spring'
+			and available='true'
+			GROUP BY products.name, products.id, categories.name, productspromos.promoprice, promos.enabled
+			order by products.producttype
+			LIMIT 6
 			;
 		`;
 		return products.rows;
