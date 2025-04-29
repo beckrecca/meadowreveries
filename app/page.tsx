@@ -18,11 +18,6 @@ export default function Home() {
         <PetPreview />
         <DiyPreview />
         <CustomPreview />
-        <StaticHomeBanner 
-          image='/homepage_events_banner.png' 
-          alt="The Brattleboro Holiday Market on Main in December 2024. Shoppers browse various vendors in the Sam's Outdoor Outfitters space. Text reads Upcoming Events." 
-          />
-        <EventPreview />
         <Subscribeform />
       </main>
     </div>
