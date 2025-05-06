@@ -36,10 +36,6 @@ export default async function Page() {
              <br/>Best Western Royal Plaza Hotel & Trade Center, Marlborough MA
             </li>
             <li className='p-4'>
-             Saturday, May 17 2025 <ExternalLink url="https://www.instagram.com/turners_falls_high_school/p/DGn0uiRu9OL/" text="Turners Falls High School Vendor Market" />&nbsp;
-             <br/>222 Turnpike Rd, Turners Falls MA
-            </li>
-            <li className='p-4'>
              Sunday, June 8, 2025 <ExternalLink url="https://belchertownfarmersmarket.weebly.com/" text="Belchertown Farmers Market" />&nbsp;
              <br/>Belchertown Town Common, 10am-2pm
             </li>
