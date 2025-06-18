@@ -5,7 +5,7 @@ export default function Subscribeform() {
 	return (
 		<div className="bg-paper w-[336px] p-2 mx-auto rounded border border-paper shadow">
           <div className="bg-goldenrod p-2 rounded">
-            <h2 className="my-2 text-center text-2xl"><strong>We're still learning to fly</strong></h2>
+            <h2 className="my-2 text-center text-2xl"><strong>Borbs for your inbox</strong></h2>
           </div>
           <Image 
 	          src="/subscribe_fledge.png"
