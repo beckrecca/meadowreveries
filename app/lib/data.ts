@@ -48,7 +48,7 @@ export async function fetchListedHandmadeProducts() {
 		  LEFT JOIN promos ON promos.id = productspromos.promoid
 			WHERE images.file NOT LIKE '%01.png'
 			AND products.producttype = 'handmade' AND products.unlisted = false
-			AND products.available = true
+			AND products.available = TRUE
 			GROUP BY products.name, products.id, productspromos.promoprice, promos.enabled
 			ORDER BY name ASC;
 		`;
@@ -132,7 +132,7 @@ export async function fetchSpringProducts() {
 		  LEFT JOIN promos ON promos.id = productspromos.promoid
 			WHERE images.file NOT LIKE '%01.png'
 			and categories.name='spring'
-			and available='true'
+			and products.available='true'
 			GROUP BY products.name, products.id, categories.name, productspromos.promoprice, promos.enabled
 			order by products.producttype
 			LIMIT 6
@@ -143,6 +143,38 @@ export async function fetchSpringProducts() {
 	catch (error) {
 		console.log("Whoopsies database error: ", error);
 		throw new Error('Failed to fetch spring products.');
+	}
+}
+
+export async function fetchHolidayProducts() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+		    products.*,
+		    MIN(images.file) as image2,
+		    categories.name as category,
+				productspromos.promoprice,
+				promos.enabled as promoenabled
+			FROM 
+			products
+			JOIN images ON images.productid = products.id
+			JOIN productscategories ON products.id = productscategories.productid
+			JOIN categories ON productscategories.categoryid = categories.id
+			LEFT JOIN productspromos ON productspromos.productid = products.id
+		  LEFT JOIN promos ON promos.id = productspromos.promoid
+			WHERE images.file NOT LIKE '%01.png'
+			and categories.name='holiday'
+			and available='true'
+			GROUP BY products.name, products.id, categories.name, productspromos.promoprice, promos.enabled
+			order by products.producttype
+			LIMIT 6
+			;
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch holiday products.');
 	}
 }
 
@@ -180,6 +212,7 @@ export async function fetchProductsByCategoryName(name: string) {
 			LEFT JOIN productspromos ON productspromos.productid = products.id
 		  LEFT JOIN promos ON promos.id = productspromos.promoid
 			WHERE images.file NOT LIKE '%01.png'
+			and available=TRUE
 			and categories.name=${name}
 			GROUP BY products.name, products.id, categories.name, productspromos.promoprice, promos.enabled
 			order by products.producttype
