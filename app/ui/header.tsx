@@ -44,9 +44,6 @@ export default function Header() {
 			        </div>
 				</div>
 		    </nav>
-	        <div className='bg-goldenrod p-4 m-auto text-center'>
-	          <strong>FREE</strong> USPS Ground shipping included on all orders
-	        </div>
     	</div>
 	)
 }
