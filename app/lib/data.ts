@@ -251,6 +251,61 @@ export async function fetchExampleProducts() {
 	}
 }
 
+/*
+* Example Gallery of any work
+*/
+
+export async function fetchFullGallery() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+				products.name,
+				products.price,
+				products.dimensions,
+				images.*
+			FROM products
+			JOIN images ON images.productid = products.id
+			where (products.producttype = 'customExample' OR products.producttype = 'handmade')
+			AND products.id != 'sylvie-example'
+			AND images.file NOT LIKE 'borbaments-tree%';
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch custom example products.');
+	}
+}
+
+/*
+* Category-less Gallery
+*/ 
+
+export async function fetchProductsWithNoCategory() {
+	try {
+		const products = await sql<Product>`
+			SELECT
+				products.name,
+				products.price,
+				products.dimensions,
+				images.*
+			FROM products
+			JOIN images ON images.productid = products.id
+			LEFT JOIN productscategories ON products.id = productscategories.productid
+			WHERE (products.producttype = 'customExample' OR products.producttype = 'handmade')
+			AND products.id != 'sylvie-example'
+			AND images.file NOT LIKE 'borbaments-tree%'
+			AND productscategories.productid IS NULL
+			ORDER BY images.id DESC
+		`;
+		return products.rows;
+	}
+	catch (error) {
+		console.log("Whoopsies database error: ", error);
+		throw new Error('Failed to fetch products with no category.');
+	}
+}
+
 export async function fetchSylviePortraits() {
 	try {
 		const products = await sql<Product>`

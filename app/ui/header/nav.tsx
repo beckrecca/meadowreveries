@@ -3,9 +3,10 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import clsx from 'clsx';
-import ShopDropdown from '@/app/ui/header/shopdropdown';
+//import ShopDropdown from '@/app/ui/header/shopdropdown';
 
 const links = [
+	{name: 'Gallery', href:'/gallery'},
 	{name: 'Learn', href:'/learn'},
 	{name: 'About', href:'/about'},
 ];
@@ -15,7 +16,7 @@ export default function Nav() {
 
 	return (
 		<div className="lg:inline-block">
-			<ShopDropdown pathname = {pathname} />
+			{/*<ShopDropdown pathname = {pathname} />
 			<div className="lg:inline-block ml-4">
 			<Link key="Shop"
 				  href="/shop"
@@ -27,7 +28,7 @@ export default function Nav() {
 						)}
 					>
 				Shop
-			</Link>
+			</Link> */}
 			{links.map((link) => {
 				return (
 						<Link 
@@ -44,7 +45,7 @@ export default function Nav() {
 						</Link>
 				);
 			})}
-			</div>
+			{/*<</div> */}
 		</div>
 	);
 }
