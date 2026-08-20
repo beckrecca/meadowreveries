@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/app/ui/header/nav'
-import CartButton from '@/app/ui/header/cartbutton';
+//import CartButton from '@/app/ui/header/cartbutton';
 import { useState } from 'react';
 
 export default function Header() {
@@ -40,7 +40,7 @@ export default function Header() {
 		      	<div className={'w-full ' + toggle + ' lg:block flex-grow lg:flex lg:items-center lg:w-auto'}>
 		        	<div className="lg:flex-grow lg:text-right">
 			          	<Nav />
-			          	<CartButton />
+			          	{/*<CartButton /> */}
 			        </div>
 				</div>
 		    </nav>
